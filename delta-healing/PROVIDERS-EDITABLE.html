@@ -1,0 +1,485 @@
+<section id="dhs-providers">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+#dhs-providers {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --border: #e6e8f2;
+    --text: #202332;
+    --muted: #666b7b;
+    --primary: #1e4d8b;
+    --accent: #3db8a8;
+    --shadow: 0 10px 28px rgba(26,32,44,.07);
+    --shadow-hover: 0 18px 40px rgba(26,32,44,.12);
+    --radius: 20px;
+    
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, rgba(30,77,139,.04), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(61,184,168,.035), transparent 20%),
+        var(--bg);
+    padding: 40px 0 70px;
+}
+
+#dhs-providers * {
+    box-sizing: border-box;
+}
+
+#dhs-providers .wrap {
+    width: min(1160px, calc(100% - 30px));
+    margin: auto;
+}
+
+#dhs-providers h1,
+#dhs-providers h2,
+#dhs-providers h3 {
+    margin: 0 0 12px;
+    line-height: 1.15;
+    color: var(--text);
+}
+
+#dhs-providers h1 {
+    font-size: clamp(32px, 4.2vw, 50px);
+    letter-spacing: -.03em;
+}
+
+#dhs-providers h2 {
+    font-size: clamp(25px, 2.5vw, 34px);
+    letter-spacing: -.02em;
+}
+
+#dhs-providers h3 {
+    font-size: 21px;
+}
+
+#dhs-providers p {
+    margin: 0 0 14px;
+    color: var(--muted);
+    line-height: 1.72;
+    font-size: 16px;
+}
+
+#dhs-providers ul {
+    margin: 0 0 14px;
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+#dhs-providers li {
+    margin-bottom: 6px;
+    color: var(--muted);
+}
+
+#dhs-providers .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Hero */
+#dhs-providers .hero {
+    padding: 38px;
+    margin-bottom: 24px;
+    background:
+        radial-gradient(circle at top right, rgba(30,77,139,.10), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(61,184,168,.07), transparent 25%),
+        #fff;
+}
+
+#dhs-providers .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+#dhs-providers .lead {
+    font-size: 17px;
+    max-width: 62ch;
+}
+
+/* Content Card */
+#dhs-providers .content-card {
+    padding: 32px;
+    margin-bottom: 24px;
+}
+
+#dhs-providers .highlight-box {
+    background: rgba(30,77,139,.05);
+    border-left: 4px solid var(--primary);
+    padding: 24px;
+    margin: 20px 0;
+    border-radius: 12px;
+}
+
+/* Stats Grid */
+#dhs-providers .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin: 20px 0;
+}
+
+#dhs-providers .stat-card {
+    padding: 24px;
+    background: rgba(30,77,139,.05);
+    border-radius: 16px;
+    text-align: center;
+}
+
+#dhs-providers .stat-card strong {
+    display: block;
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 8px;
+    letter-spacing: -.03em;
+}
+
+#dhs-providers .stat-card span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--muted);
+}
+
+/* Info Cards Grid */
+#dhs-providers .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#dhs-providers .info-card {
+    padding: 24px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+#dhs-providers .info-card h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#dhs-providers .info-card h3 i {
+    color: var(--accent);
+    font-size: 20px;
+}
+
+/* Referral Box */
+#dhs-providers .referral-box {
+    background: linear-gradient(135deg, #1e4d8b, #28224d);
+    color: #fff;
+    padding: 38px;
+    position: relative;
+    overflow: hidden;
+}
+
+#dhs-providers .referral-box::before {
+    content: "";
+    position: absolute;
+    inset: auto -60px -60px auto;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,.08), rgba(255,255,255,0));
+    pointer-events: none;
+}
+
+#dhs-providers .referral-box h2,
+#dhs-providers .referral-box h3,
+#dhs-providers .referral-box p,
+#dhs-providers .referral-box li {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#dhs-providers .referral-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+#dhs-providers .contact-box {
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+}
+
+#dhs-providers .contact-label {
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-weight: 800;
+    color: rgba(255,255,255,.78);
+    margin-bottom: 8px;
+}
+
+#dhs-providers .contact-value {
+    display: block;
+    font-size: 22px;
+    line-height: 1.18;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+}
+
+#dhs-providers .contact-value:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+#dhs-providers .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 0 24px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform .18s ease, background .18s ease;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+#dhs-providers .btn-primary {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(30,77,139,.22);
+}
+
+#dhs-providers .btn-primary:hover {
+    background: #2a5d9b;
+    transform: translateY(-1px);
+}
+
+#dhs-providers .btn-secondary {
+    background: #fff;
+    color: var(--primary);
+    border-color: #d5d9ea;
+}
+
+#dhs-providers .btn-secondary:hover {
+    transform: translateY(-1px);
+    background: #f8f9fd;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    #dhs-providers .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #dhs-providers .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    #dhs-providers {
+        padding: 20px 0 42px;
+    }
+    
+    #dhs-providers .wrap {
+        width: min(100% - 18px, 1160px);
+    }
+    
+    #dhs-providers .stats-grid,
+    #dhs-providers .referral-contact {
+        grid-template-columns: 1fr;
+    }
+    
+    #dhs-providers .hero,
+    #dhs-providers .content-card,
+    #dhs-providers .referral-box {
+        padding: 22px;
+    }
+}
+</style>
+
+<div class="wrap">
+
+    <!-- Hero -->
+    <div class="card hero">
+        <span class="eyebrow">For Healthcare Providers</span>
+        <h1>TMS Therapy & Patient Referrals</h1>
+        <p class="lead">
+            Delta Healing Solutions provides evidence-based Transcranial Magnetic Stimulation therapy for treatment-resistant depression. This portal provides clinical information, outcomes data, and referral guidance for healthcare providers.
+        </p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
+            <a href="#refer" class="btn btn-primary"><i class="fas fa-user-plus"></i> Refer a Patient</a>
+            <a href="#clinical" class="btn btn-secondary"><i class="fas fa-file-medical"></i> Clinical Resources</a>
+        </div>
+    </div>
+
+    <!-- Clinical Outcomes -->
+    <div class="card content-card" id="clinical">
+        <h2>Clinical Outcomes</h2>
+        <p>From March 2024 through December 2025, Delta Healing Solutions treated 126 patients with TMS therapy. Of those patients, 118 completed 30 or more sessions, representing a <strong>93.7% completion rate</strong> of an adequate course of treatment.</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <strong>82.1%</strong>
+                <span>Clinical response (≥50% reduction in PHQ-9)</span>
+            </div>
+            <div class="stat-card">
+                <strong>61.3%</strong>
+                <span>Achieved remission</span>
+            </div>
+            <div class="stat-card">
+                <strong>93.7%</strong>
+                <span>Treatment completion rate</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- TMS Information -->
+    <div class="card content-card">
+        <h2>About TMS Therapy</h2>
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <h3><i class="fas fa-check-circle"></i> FDA-Cleared Treatment</h3>
+                <p>NeuroStar TMS is FDA-cleared for treatment-resistant depression and backed by 20+ years of clinical research.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-brain"></i> Mechanism of Action</h3>
+                <p>Magnetic pulses stimulate underactive brain regions associated with mood regulation, particularly the left dorsolateral prefrontal cortex.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-calendar-alt"></i> Treatment Protocol</h3>
+                <p>Standard course: 36 sessions over 6-9 weeks, typically 5 days/week. Each session lasts 19-37 minutes depending on protocol.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-shield-alt"></i> Safety Profile</h3>
+                <p>Well-tolerated with minimal side effects. Most common: mild headache or scalp discomfort during treatment, typically transient.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ideal Candidates -->
+    <div class="card content-card">
+        <h2>Ideal Candidates for TMS</h2>
+        
+        <div class="highlight-box">
+            <h3 style="color:var(--primary);margin-top:0;">TMS may be appropriate for patients who:</h3>
+            <ul style="margin-bottom:0;">
+                <li>Have Major Depressive Disorder (MDD) or treatment-resistant depression</li>
+                <li>Have not achieved adequate symptom relief with antidepressant medications</li>
+                <li>Are unable to tolerate medication side effects</li>
+                <li>Are age 18 or older (some insurances cover 15+)</li>
+                <li>Do not have contraindications (ferromagnetic implants near head, active mania, seizure history)</li>
+            </ul>
+        </div>
+        
+        <p style="margin-top:20px;">Delta Healing Solutions completes formal medical appropriateness and insurance eligibility determinations for all referrals.</p>
+    </div>
+
+    <!-- PHQ-9 Monitoring -->
+    <div class="card content-card">
+        <h2>PHQ-9 Monitoring & Outcomes</h2>
+        <p>We use the PHQ-9 as a standardized clinical instrument for screening, establishing baseline symptom burden, and monitoring treatment progress.</p>
+        
+        <div class="info-grid" style="margin-top:20px;">
+            <div class="info-card">
+                <h3><i class="fas fa-chart-line"></i> Response Definition</h3>
+                <p>Patient achieves <strong>≥50% reduction</strong> in baseline PHQ-9 score during treatment.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-check-circle"></i> Remission Definition</h3>
+                <p>Final PHQ-9 score of <strong>≤4</strong> at treatment completion.</p>
+            </div>
+        </div>
+        
+        <p style="margin-top:16px;">After treatment completion, we send PHQ-9 follow-up surveys every 2-3 months to track durability and identify symptom recurrence early.</p>
+    </div>
+
+    <!-- Referral Process -->
+    <div class="card referral-box" id="refer">
+        <h2>How to Refer a Patient</h2>
+        <p>We welcome referrals from primary care providers, psychiatrists, and other healthcare professionals. Our team handles insurance verification and prior authorization.</p>
+        
+        <h3 style="margin-top:30px;">Required Information:</h3>
+        <ul>
+            <li>Referral order or prescription for TMS evaluation</li>
+            <li>Most recent psychiatric or primary care progress note</li>
+            <li>Diagnosis and brief treatment history (medications tried and outcomes)</li>
+            <li>Patient demographics and insurance information</li>
+        </ul>
+        
+        <h3 style="margin-top:30px;">Send Referrals To:</h3>
+        <div class="referral-contact">
+            <div class="contact-box">
+                <span class="contact-label">Fax</span>
+                <span class="contact-value">435-251-1572</span>
+            </div>
+            <div class="contact-box">
+                <span class="contact-label">Email</span>
+                <a class="contact-value" href="mailto:info@deltahealingsolutions.org">info@deltahealingsolutions.org</a>
+            </div>
+        </div>
+        
+        <div style="margin-top:30px;">
+            <h3>What We Handle:</h3>
+            <ul>
+                <li>Patient contact and clinical screening</li>
+                <li>Insurance verification and prior authorization</li>
+                <li>Comprehensive TMS evaluation with Psychiatrist Dr. Thomas Rayner</li>
+                <li>Treatment coordination and progress updates (with patient consent)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="card content-card">
+        <h2>Questions or Collaboration</h2>
+        <p>We value collaborative care and are happy to discuss specific patient cases, treatment protocols, or answer questions about TMS therapy.</p>
+        <p><strong>Phone:</strong> <a href="tel:+14358645151" style="color:var(--primary);">(435) 864-5151</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@deltahealingsolutions.org" style="color:var(--primary);">info@deltahealingsolutions.org</a></p>
+        <p><strong>Address:</strong> 95 White Sage Avenue, Delta, UT 84624</p>
+        
+        <p style="margin-top:24px; font-size:14px; color:var(--muted);">Thank you for partnering with Delta Healing Solutions to improve access to advanced mental health care in rural Utah communities.</p>
+    </div>
+
+</div>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "For Providers - Delta Healing Solutions",
+  "description": "Clinical information, outcomes data, and patient referral guidance for healthcare providers. Learn about TMS therapy effectiveness and how to refer patients.",
+  "url": "https://www.deltahealingsolutions.org/providers"
+}
+</script>
+
+</section>
