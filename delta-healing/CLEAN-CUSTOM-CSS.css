@@ -1,0 +1,259 @@
+/* ============================================ */
+/* DELTA HEALING SOLUTIONS - GLOBAL CUSTOM CSS */
+/* ============================================ */
+
+/* Modern Typography */
+body {
+ font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ font-weight: 400;
+ line-height: 1.7;
+ letter-spacing: -0.01em;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ font-weight: 700;
+ line-height: 1.2;
+ letter-spacing: -0.02em;
+ margin-bottom: 1.2rem;
+}
+
+h1 {
+ font-size: clamp(2rem, 5vw, 3.5rem);
+ line-height: 1.1;
+}
+
+h2 {
+ font-size: clamp(1.75rem, 4vw, 2.75rem);
+ margin-top: 2.5rem;
+}
+
+h3 {
+ font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+p {
+ font-size: clamp(1rem, 2vw, 1.125rem);
+ line-height: 1.7;
+ margin-bottom: 1.5rem;
+}
+
+/* Modern Header - DESKTOP ONLY */
+@media (min-width: 768px) {
+ .header {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ .header.shrink {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ }
+}
+
+/* Animated Navigation - DESKTOP ONLY */
+@media (min-width: 768px) {
+ .header-nav-item a {
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.5rem 1rem;
+ }
+
+ .header-nav-item a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transform: translateX(-50%);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ .header-nav-item a:hover::after,
+ .header-nav-item--active a::after {
+  width: 60%;
+ }
+
+ /* Patient Portal - Teal Outline */
+ .header-nav-item a[href*="patient-portal"] {
+  padding: 8px 18px !important;
+  border: 2px solid #3db8a8 !important;
+  border-radius: 999px !important;
+  color: #3db8a8 !important;
+  font-weight: 600 !important;
+  margin-left: 8px !important;
+ }
+
+ .header-nav-item a[href*="patient-portal"]:hover {
+  background: #3db8a8 !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+ }
+
+ .header-nav-item a[href*="patient-portal"]::after {
+  display: none !important;
+ }
+
+ /* Providers - Blue Outline */
+ .header-nav-item a[href*="providers"] {
+  padding: 8px 18px !important;
+  border: 2px solid #1e4d8b !important;
+  border-radius: 999px !important;
+  color: #1e4d8b !important;
+  font-weight: 600 !important;
+  margin-left: 8px !important;
+ }
+
+ .header-nav-item a[href*="providers"]:hover {
+  background: #1e4d8b !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+ }
+
+ .header-nav-item a[href*="providers"]::after {
+  display: none !important;
+ }
+}
+
+/* Modern Dropdown Menu - DESKTOP ONLY */
+@media (min-width: 768px) {
+ .header-nav-folder-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+  min-width: 240px;
+ }
+
+ .header-nav-folder-item a {
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease;
+  display: block;
+  border-radius: 6px;
+  margin: 0.25rem 0.5rem;
+ }
+
+ .header-nav-folder-item a:hover {
+  background: rgba(0, 0, 0, 0.04);
+  transform: translateX(4px);
+ }
+}
+
+/* Modern Button Styles */
+.sqs-block-button-element,
+.sqs-button-element--primary,
+a.sqs-button-element {
+ border-radius: 8px !important;
+ padding: 14px 32px !important;
+ font-weight: 600 !important;
+ letter-spacing: 0.02em !important;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ border: none !important;
+}
+
+.sqs-block-button-element:hover,
+.sqs-button-element--primary:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Hover Effect */
+.sqs-block-image {
+ border-radius: 12px;
+ overflow: hidden;
+}
+
+.sqs-block-image img {
+ transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sqs-block-image:hover img {
+ transform: scale(1.05);
+}
+
+/* Modern Form Styling */
+.form-wrapper input[type="text"],
+.form-wrapper input[type="email"],
+.form-wrapper input[type="tel"],
+.form-wrapper textarea,
+.form-wrapper select {
+ border-radius: 8px !important;
+ border: 2px solid rgba(0, 0, 0, 0.1) !important;
+ padding: 14px 18px !important;
+ font-size: 16px !important;
+ transition: all 0.3s ease !important;
+ background: white !important;
+}
+
+.form-wrapper input:focus,
+.form-wrapper textarea:focus,
+.form-wrapper select:focus {
+ border-color: var(--accent-color, #1e4d8b) !important;
+ box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1) !important;
+ outline: none !important;
+}
+
+/* Smooth Fade-in Animations */
+.fade-in {
+ opacity: 0;
+ transform: translateY(30px);
+ transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+ transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in.visible {
+ opacity: 1;
+ transform: translateY(0);
+}
+
+/* Modern Announcement Bar */
+.sqs-announcement-bar {
+ border-radius: 0 !important;
+ padding: 1rem 2rem !important;
+ font-weight: 500;
+ letter-spacing: 0.02em;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Mobile Typography ONLY - NO MENU STYLES */
+@media (max-width: 767px) {
+ h1 { font-size: 2rem; line-height: 1.2; }
+ h2 { font-size: 1.75rem; }
+ h3 { font-size: 1.4rem; }
+}
+
+/* Focus Styles for Accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+ outline: 3px solid rgba(0, 102, 204, 0.5) !important;
+ outline-offset: 2px !important;
+}
+
+/* Social Icons Animation */
+.sqs-svg-icon--social {
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sqs-svg-icon--social:hover {
+ transform: translateY(-3px) scale(1.1);
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+ }
+}
