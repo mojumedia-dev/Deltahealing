@@ -3,7 +3,7 @@
 .click-to-call {
   display: inline-block;
   padding: 12px 24px;
-  background: #0066cc;
+  background: #1e4d8b;
   color: white !important;
   text-decoration: none;
   border-radius: 5px;
@@ -78,3 +78,4 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.squarespace-cdn.com">
+

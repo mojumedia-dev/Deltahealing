@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
   backToTop.style.cssText = `
     position: fixed; bottom: 2rem; right: 2rem;
     width: 50px; height: 50px; border-radius: 50%;
-    background: #0066cc; color: white; border: none;
+    background: #1e4d8b; color: white; border: none;
     font-size: 1.5rem; cursor: pointer;
     opacity: 0; visibility: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -111,3 +111,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 </script>
+

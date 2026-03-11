@@ -1,0 +1,21 @@
+DELTA HEALING SOLUTIONS - BRAND COLORS
+======================================
+
+From Logo Analysis:
+
+PRIMARY BLUE: #1e4d8b (navy/royal blue)
+PRIMARY GREEN/TEAL: #3db8a8 (turquoise/teal)
+
+GRADIENT OPTIONS:
+- Hero sections: linear-gradient(135deg, #1e4d8b 0%, #3db8a8 100%)
+- Alternative: linear-gradient(135deg, #2563eb 0%, #10b981 100%)
+
+COLOR USAGE:
+- Buttons: Blue #1e4d8b with green #3db8a8 hover
+- Headings: Dark blue #1e4d8b
+- Accents: Teal #3db8a8
+- Links: Teal #3db8a8
+
+REPLACING:
+Old purple #667eea → New blue #1e4d8b
+Old purple #764ba2 → New teal #3db8a8

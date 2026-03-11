@@ -152,7 +152,7 @@ a.sqs-button-element {
 .form-wrapper input:focus,
 .form-wrapper textarea:focus,
 .form-wrapper select:focus {
-  border-color: var(--accent-color, #0066cc) !important;
+  border-color: var(--accent-color, #1e4d8b) !important;
   box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1) !important;
   outline: none !important;
 }
@@ -229,3 +229,4 @@ textarea:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
