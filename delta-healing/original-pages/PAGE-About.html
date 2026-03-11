@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html{scroll-behavior:smooth}*{margin:0;padding:0;box-sizing:border-box}body{--bg:#f6f7fb;--card:#fff;--border:#e6e8f2;--text:#202332;--muted:#666b7b;--primary:#1e4d8b;--accent:#3db8a8;--shadow:0 10px 28px rgba(26,32,44,.07);--shadow-hover:0 18px 40px rgba(26,32,44,.12);--radius:20px;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(30,77,139,.04),transparent 24%),radial-gradient(circle at bottom right,rgba(61,184,168,.035),transparent 20%),var(--bg);padding:40px 0 70px}.wrap{width:min(1160px,calc(100% - 30px));margin:auto}h1,h2,h3,h4{margin:0 0 12px;line-height:1.15;color:var(--text)}h1{font-size:clamp(32px,4.2vw,50px);letter-spacing:-.03em}h2{font-size:clamp(25px,2.5vw,34px);letter-spacing:-.02em}h3{font-size:21px}h4{font-size:17px}p{margin:0 0 14px;color:var(--muted);line-height:1.72;font-size:16px}ul{margin:0 0 14px;padding-left:20px;line-height:1.8}li{margin-bottom:6px;color:var(--muted)}.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}.hero{padding:38px;margin-bottom:24px;background:radial-gradient(circle at top right,rgba(30,77,139,.1),transparent 30%),radial-gradient(circle at bottom left,rgba(61,184,168,.07),transparent 25%),#fff}.eyebrow{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);font-weight:800;margin-bottom:12px}.content-card{padding:28px;margin-bottom:24px}.highlight-box{background:rgba(30,77,139,.05);border-left:4px solid var(--primary);padding:24px;margin:20px 0;border-radius:12px}.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:20px}.team-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;box-shadow:var(--shadow);transition:transform .2s ease,box-shadow .2s ease;cursor:pointer}.team-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}.team-photo{width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 16px;border:3px solid var(--border)}.team-card h4{color:var(--primary);margin-bottom:6px}.team-card .role{display:block;font-size:14px;color:var(--muted);margin-bottom:12px}.bio-btn{display:inline-block;margin-top:8px;padding:8px 16px;background:var(--primary);color:#fff;border-radius:999px;font-size:13px;font-weight:600;text-decoration:none;transition:background .2s ease}.bio-btn:hover{background:#2a5d9b}.modal{display:none;position:fixed;inset:0;background:rgba(15,18,35,.6);z-index:9999;align-items:flex-start;justify-content:center;padding:100px 20px 30px;overflow-y:auto;backdrop-filter:blur(4px)}.modal.active{display:flex;animation:fadeIn .18s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.modal-content{width:min(800px,100%);background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow-hover);max-height:calc(100vh - 140px);overflow:auto;animation:scaleIn .2s ease}@keyframes scaleIn{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}.modal-header{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:12px;padding:18px 24px 14px;border-bottom:1px solid var(--border);background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(10px)}.modal-header h3{flex:1;margin:0;color:var(--primary);font-size:29px}.modal-close{width:48px;height:48px;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--primary);font-size:28px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);transition:transform .15s ease}.modal-close:hover{background:#f7f8fd;transform:scale(1.03)}.modal-body{padding:24px}.modal-photo{width:150px;height:150px;border-radius:50%;object-fit:cover;margin:0 auto 20px;display:block;border:4px solid var(--border)}.values-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:20px}.value-card{padding:24px;background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);transition:transform .2s ease}.value-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}.value-card h4{font-size:1.3rem;margin-bottom:1rem;color:var(--primary)}@media (max-width:1000px){.team-grid,.values-grid{grid-template-columns:1fr 1fr}}@media (max-width:720px){body{padding:20px 0 42px}.wrap{width:min(100% - 18px,1160px)}.team-grid,.values-grid{grid-template-columns:1fr}.hero,.content-card{padding:22px}.modal{padding-top:80px}.modal-content{max-height:calc(100vh - 100px)}}
+    </style>
+</head>
+<body>
+
+<div class="wrap">
+    <div class="card hero">
+        <span class="eyebrow">Our Mission</span>
+        <h1>About Delta Healing Solutions</h1>
+        <p style="font-size:17px;max-width:62ch;color:var(--muted)">Compassionate Mental Health Care for Rural Utah</p>
+    </div>
+
+    <div class="card content-card">
+        <h2>Who We Are</h2>
+        <p>Delta Healing Solutions is a <strong>non-profit mental health clinic</strong> serving Delta, Fillmore, Oak City, Hinckley, and all of Millard County, Utah. We are committed to making high-quality psychiatric care accessible to rural communities that often lack mental health resources.</p>
+        <p>Founded on the belief that everyone deserves compassionate, evidence-based mental health treatment, we combine cutting-edge therapies like <strong>NeuroStar TMS</strong> and <strong>Spravato (esketamine)</strong> with traditional psychiatric services to provide comprehensive care for our community.</p>
+        
+        <div class="highlight-box">
+            <h3 style="color:var(--primary);margin-top:0">Our Mission</h3>
+            <p style="color:var(--text);margin-bottom:0">To provide accessible, compassionate, and evidence-based mental health care to underserved rural communities in Utah, reducing barriers to treatment and improving lives through innovative therapies and personalized psychiatric care.</p>
+        </div>
+    </div>
+
+    <div class="card content-card">
+        <h2>Our Team</h2>
+        <p>Meet the compassionate professionals who make Delta Healing Solutions possible.</p>
+        
+        <div class="team-grid">
+            <!-- Dr. Thomas Rayner -->
+            <div class="team-card" onclick="openModal('rayner')">
+                <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/e963a85e-40ca-4053-8ede-3abc6439152b/WholeMind18.jpg?format=500w" alt="Dr. Thomas Rayner" class="team-photo">
+                <h4>Thomas Rayner, MD</h4>
+                <span class="role">Clinical Director</span>
+                <span class="bio-btn">Read Bio</span>
+            </div>
+
+            <!-- Riddhi Patel -->
+            <div class="team-card" onclick="openModal('riddhi')">
+                <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/c69b02a6-b3e4-4088-b1c9-96a7534fe41c/Riddhi.jpg?format=500w" alt="Riddhi Patel" class="team-photo">
+                <h4>Riddhi Patel</h4>
+                <span class="role">MMS, PA-C</span>
+                <span class="bio-btn">Read Bio</span>
+            </div>
+
+            <!-- Tyla Weaver -->
+            <div class="team-card" onclick="openModal('tyla')">
+                <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/ffe24a4b-72cc-48f9-9fb1-c2d3bf8a452b/TYLA.jpg?format=500w" alt="Tyla Weaver" class="team-photo">
+                <h4>Tyla Weaver</h4>
+                <span class="role">Clinic Manager</span>
+                <span class="bio-btn">Read Bio</span>
+            </div>
+
+            <!-- Angie Young -->
+            <div class="team-card" onclick="openModal('angie')">
+                <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/18ef132a-a344-4382-a863-f5adf1872b0f/IMG_5093.jpg?format=500w" alt="Angie Young" class="team-photo">
+                <h4>Angie Young</h4>
+                <span class="role">Patient & Certification Coordinator | TMS Tech</span>
+                <span class="bio-btn">Read Bio</span>
+            </div>
+
+            <!-- Olivia LeBaron -->
+            <div class="team-card" onclick="openModal('olivia')">
+                <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/674ca3fa-f29e-4d1c-be94-e08f43af3254/IMG_5249.jpg?format=500w" alt="Olivia LeBaron" class="team-photo">
+                <h4>Olivia LeBaron</h4>
+                <span class="role">TMS Tech</span>
+                <span class="bio-btn">Read Bio</span>
+            </div>
+
+            <!-- Carla -->
+            <div class="team-card" onclick="openModal('carla')">
+                <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/43ff3ad8-4fde-4e69-a105-0b43630eba4f/CARLA.jpg?format=500w" alt="Carla Collins" class="team-photo">
+                <h4>Carla Collins</h4>
+                <span class="role">TMS Tech</span>
+                <span class="bio-btn">Read Bio</span>
+            </div>
+
+            <!-- Micah -->
+            <div class="team-card" onclick="openModal('micah')">
+                <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/b99cc662-a3a9-434a-af26-9c364bee66f2/MICAH.jpg?format=500w" alt="Micah" class="team-photo">
+                <h4>Micah</h4>
+                <span class="role">TMS Tech</span>
+                <span class="bio-btn">Read Bio</span>
+            </div>
+
+            <!-- Janel -->
+            <div class="team-card" onclick="openModal('janel')">
+                <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/f8300e28-8c4d-46ea-9280-173e4df9e44d/Janel.jpg?format=500w" alt="Janel" class="team-photo">
+                <h4>Janel</h4>
+                <span class="role">Insurance Specialist</span>
+                <span class="bio-btn">Read Bio</span>
+            </div>
+
+            <!-- Sarah -->
+            <div class="team-card" onclick="openModal('sarah')">
+                <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/d769cb63-361d-4fab-857f-fb25cc641c87/SARAH.jpg?format=500w" alt="Sarah" class="team-photo">
+                <h4>Sarah</h4>
+                <span class="role">Front Office Receptionist</span>
+                <span class="bio-btn">Read Bio</span>
+            </div>
+
+            <!-- Elend S LeBaron -->
+            <div class="team-card" onclick="openModal('elend')">
+                <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/placeholder.jpg?format=500w" alt="Elend S LeBaron" class="team-photo">
+                <h4>Elend S LeBaron</h4>
+                <span class="role">Founder</span>
+                <span class="bio-btn">Read Bio</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card content-card">
+        <h2>Our Values</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <h4>Compassion</h4>
+                <p>We treat every patient with empathy, respect, and dignity. Mental health challenges are real, and we're here to support you without judgment.</p>
+            </div>
+            <div class="value-card">
+                <h4>Accessibility</h4>
+                <p>We accept most insurance plans and work to ensure cost is not a barrier to quality mental health care in rural Utah.</p>
+            </div>
+            <div class="value-card">
+                <h4>Excellence</h4>
+                <p>Our team is trained in the latest evidence-based treatments and committed to providing the highest standard of psychiatric care.</p>
+            </div>
+            <div class="value-card">
+                <h4>Innovation</h4>
+                <p>We invest in cutting-edge therapies like TMS and Spravato to give our patients access to the most advanced treatment options available.</p>
+            </div>
+            <div class="value-card">
+                <h4>Community</h4>
+                <p>We're dedicated to serving Millard County and surrounding areas, bringing world-class mental health care close to home.</p>
+            </div>
+            <div class="value-card">
+                <h4>Hope</h4>
+                <p>We believe recovery is possible. Even when traditional treatments haven't worked, we offer new pathways to healing and wellness.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals for each team member -->
+<div id="modal-rayner" class="modal" onclick="closeModal(event, 'rayner')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h3>Thomas Rayner, MD</h3>
+            <button class="modal-close" onclick="closeModal(event, 'rayner')">×</button>
+        </div>
+        <div class="modal-body">
+            <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/e963a85e-40ca-4053-8ede-3abc6439152b/WholeMind18.jpg?format=500w" alt="Dr. Thomas Rayner" class="modal-photo">
+            <h4 style="text-align:center;color:var(--muted);margin-bottom:20px">Clinical Director</h4>
+            <p>Dr. Rayner is an alumnus of the University of Utah School of Medicine and has successfully completed his residency training in adult psychiatry at the University of Nevada, Reno.</p>
+            <p>A proud member of both the American Psychiatric Association and the clinical TMS society, Dr. Rayner is dedicated to the prevention, diagnosis, and treatment of a spectrum of mental health conditions. Dr. Rayner also serves as a medical officer in the Utah Army National Guard.</p>
+            <p>His expertise encompasses mental disorders, emotional disorders, psychotic disorders, mood disorders, anxiety disorders, substance-related disorders, as well as sexual and gender identity disorders, and adjustment disorders. Dr. Rayner's clinical focus revolves around providing comprehensive care to individuals and families grappling with serious mental illness.</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal-riddhi" class="modal" onclick="closeModal(event, 'riddhi')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h3>Riddhi Patel</h3>
+            <button class="modal-close" onclick="closeModal(event, 'riddhi')">×</button>
+        </div>
+        <div class="modal-body">
+            <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/c69b02a6-b3e4-4088-b1c9-96a7534fe41c/Riddhi.jpg?format=500w" alt="Riddhi Patel" class="modal-photo">
+            <h4 style="text-align:center;color:var(--muted);margin-bottom:20px">MMS, PA-C</h4>
+            <p>Riddhi is a graduate of Lincoln Memorial University where she earned her Master of Medical Science degree in Physician Assistant Studies. She attended Mercer University for her undergraduate studies where she studied Biology, Chemistry, and Religion. She is a member of the American Academy of Physician Associates and is committed to being a lifelong learner. Her passion for psychiatry stems from a strong desire to help positively impact the lives of those around her.</p>
+            <p>Riddhi is extremely passionate about medicine and its ongoing advances and hopes to holistically provide her patients with the best care. She hopes to serve as an advocate for her patients so that she can help them collaboratively advance their mental health and well-being. Outside of work, Riddhi values quality time with her family and friends. She also enjoys traveling, cooking, hiking, yoga, and giving back to the community.</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal-tyla" class="modal" onclick="closeModal(event, 'tyla')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h3>Tyla Weaver</h3>
+            <button class="modal-close" onclick="closeModal(event, 'tyla')">×</button>
+        </div>
+        <div class="modal-body">
+            <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/ffe24a4b-72cc-48f9-9fb1-c2d3bf8a452b/TYLA.jpg?format=500w" alt="Tyla Weaver" class="modal-photo">
+            <h4 style="text-align:center;color:var(--muted);margin-bottom:20px">Clinic Manager</h4>
+            <p>Tyla is a professional who is well-versed in accounting, financial management, and office organization. With a background spanning accounts management, litigation data support, and human resources, Tyla brings a diverse skill set to her work. Beyond her professional pursuits, she is deeply passionate about learning, teaching, and community service.</p>
+            <p>She is currently pursuing a Bachelor of Science in Business Administration with a focus on Accounting from WGU. Tyla's core values include faith, family, loyalty, knowledge, fun/adventure, and organization. Guided by her mission to 'always leave people and places better than I found them', she enjoys spending time with her husband of 27 years, five children, and two granddaughters.</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal-angie" class="modal" onclick="closeModal(event, 'angie')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h3>Angie Young</h3>
+            <button class="modal-close" onclick="closeModal(event, 'angie')">×</button>
+        </div>
+        <div class="modal-body">
+            <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/18ef132a-a344-4382-a863-f5adf1872b0f/IMG_5093.jpg?format=500w" alt="Angie Young" class="modal-photo">
+            <h4 style="text-align:center;color:var(--muted);margin-bottom:20px">Patient & Certification Coordinator | TMS Tech</h4>
+            <p>Angie's journey began in the Delta area and led to diverse experiences across the country and beyond. After completing massage school in 1995-96, she embarked on a fulfilling career as a massage therapist, with stints in Park City, Salt Lake City, UT, San Antonio, Texas, and Guadalajara, MX.</p>
+            <p>Returning to Delta in 2011, she established a massage practice within the Delta Physical Therapy office. She has since retired from that practice in December 2022. Her commitment to healthcare continued as she became a volunteer EMT for Millard County in 2017, finding fulfillment in serving the community until she remarried and relocated to Oak City to be closer to her parents.</p>
+            <p>Her passion for healthcare, especially mental health, remains unwavering. Having witnessed the challenges faced by loved ones, including her own experiences, with various mental health issues, Angie is thrilled to join Delta Healing Solutions. She is dedicated to being part of a team that offers hope to those silently struggling.</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal-olivia" class="modal" onclick="closeModal(event, 'olivia')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h3>Olivia LeBaron</h3>
+            <button class="modal-close" onclick="closeModal(event, 'olivia')">×</button>
+        </div>
+        <div class="modal-body">
+            <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/674ca3fa-f29e-4d1c-be94-e08f43af3254/IMG_5249.jpg?format=500w" alt="Olivia LeBaron" class="modal-photo">
+            <h4 style="text-align:center;color:var(--muted);margin-bottom:20px">TMS Tech</h4>
+            <p>Olivia LeBaron is a remarkable blend of entrepreneur and healer, with over three decades of experience merging business savvy with a profound sense of purpose. Beginning her journey with formal education at the University of Utah, Olivia quickly found her calling in the realms of healing and nurturing. As a trained Home Birth Midwife and a certified Life Coach, she has guided countless individuals through transformative experiences, embodying the sacredness of life's journey. Alongside her birthing experiences, Olivia's entrepreneurial spirit has led her to excel in various business endeavors, where she seamlessly integrates her passion for healing with her skills in management and leadership.</p>
+            <p>Beyond her professional pursuits, Olivia's personal philosophy is deeply rooted in reverence for all life and the interconnectedness of existence. Her hobby farm serves as a sanctuary where she tends to native plants, nurtures her animals, and restores ecosystems, embodying her commitment to environmental stewardship. In her downtime, Olivia finds solace in the simplicity of life, from wandering through wild spaces to introducing others to new experiences like the curious allure of wheatgrass juice powder.</p>
+            <p>At the core of Olivia's being lies a relentless drive to solve problems and foster collaboration. Whether strategizing in the boardroom or working alongside others on the farm, she thrives on the energy of collective effort and the transformative power of collaboration. While her achievements may not be measured in formal accolades, Olivia's impact is evident in the lives she has touched – from her thriving family to the countless individuals she has guided and supported on their healing journeys.</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal-carla" class="modal" onclick="closeModal(event, 'carla')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h3>Carla Collins</h3>
+            <button class="modal-close" onclick="closeModal(event, 'carla')">×</button>
+        </div>
+        <div class="modal-body">
+            <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/43ff3ad8-4fde-4e69-a105-0b43630eba4f/CARLA.jpg?format=500w" alt="Carla Collins" class="modal-photo">
+            <h4 style="text-align:center;color:var(--muted);margin-bottom:20px">TMS Tech</h4>
+            <p>Carla Collins is a passionate mental health advocate and addiction mentor dedicating to supporting individuals on their journey to healing and recovery. With a deep commitment to breaking the stigma surrounding mental health and substance use disorders, she provides compassionate guidance, education, and mentorship to those in need.</p>
+            <p>As a treater at Delta Healing Solutions, she works closely with patients from all walks of life, providing compassionate care and support to those struggling with mental health challenges. Her mission is to break the stigma surrounding mental health and empower individuals to reclaim their lives with strength and resilience.</p>
+            <p>Beyond her advocacy work, Carla is a devout mother of four and a proud grandmother of three. Her nurturing spirit extends not only to her family, but also to her love for animals, finding solace and companionship in their presence. She believes in the healing power of connection, whether with people or animals and encourages others to embrace every step of their recovery with courage and self compassion.</p>
+            <p><em>"Healing doesn't mean the damage never existed. It means it no longer controls your life"</em></p>
+        </div>
+    </div>
+</div>
+
+<div id="modal-micah" class="modal" onclick="closeModal(event, 'micah')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h3>Micah</h3>
+            <button class="modal-close" onclick="closeModal(event, 'micah')">×</button>
+        </div>
+        <div class="modal-body">
+            <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/b99cc662-a3a9-434a-af26-9c364bee66f2/MICAH.jpg?format=500w" alt="Micah" class="modal-photo">
+            <h4 style="text-align:center;color:var(--muted);margin-bottom:20px">TMS Tech</h4>
+            <p>I was drawn to the mental health field by a desire to bring more purpose into my life while helping others. As a Certified TMS Technician and Certified in the Teaching Family Association (TFA) behavioral health program, I strive to make a meaningful impact in the lives of the patients I work with.</p>
+            <p>At Delta Healing Solutions, I approach every patient interaction with presence and authenticity, ensuring they feel heard and supported. The most rewarding part of my job is witnessing the transformative effects of TMS therapy—seeing real change in people's lives is what keeps me motivated every day.</p>
+            <p>Mental health is one of the most unregulated soft sciences in the U.S., and I believe there's so much more we can do to improve awareness and care.</p>
+            <p>Outside of work, I focus on family and, well… more work! I wouldn't call myself a social person, but I take pride in the role I play in helping others. One of my guiding philosophies comes from Viktor E. Frankl's <em>Man's Search for Meaning</em>: "We cannot avoid suffering, but we can choose how to cope with it, find meaning in it, and move forward."</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal-janel" class="modal" onclick="closeModal(event, 'janel')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h3>Janel</h3>
+            <button class="modal-close" onclick="closeModal(event, 'janel')">×</button>
+        </div>
+        <div class="modal-body">
+            <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/f8300e28-8c4d-46ea-9280-173e4df9e44d/Janel.jpg?format=500w" alt="Janel" class="modal-photo">
+            <h4 style="text-align:center;color:var(--muted);margin-bottom:20px">Insurance Specialist</h4>
+            <p><em>Bio coming soon.</em></p>
+        </div>
+    </div>
+</div>
+
+<div id="modal-sarah" class="modal" onclick="closeModal(event, 'sarah')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h3>Sarah</h3>
+            <button class="modal-close" onclick="closeModal(event, 'sarah')">×</button>
+        </div>
+        <div class="modal-body">
+            <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/d769cb63-361d-4fab-857f-fb25cc641c87/SARAH.jpg?format=500w" alt="Sarah" class="modal-photo">
+            <h4 style="text-align:center;color:var(--muted);margin-bottom:20px">Front Office Receptionist</h4>
+            <p>I love the mission, the work I do, and the people I get to interact with—both my coworkers and our patients. I wish more people knew how common mental health struggles are and how much support is available to overcome them.</p>
+            <p>Outside of work, I love reading, gardening, hiking, and riding ATVs. My background is in mechanical engineering, and before joining the mental health field, I spent four years working with the Air Force, updating software on the A-10.</p>
+            <p>One of my favorite quotes is from Byron Katie: "When you realize that every stressful moment you experience is a gift that points you to your own freedom, life becomes very kind."</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal-elend" class="modal" onclick="closeModal(event, 'elend')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h3>Elend S LeBaron</h3>
+            <button class="modal-close" onclick="closeModal(event, 'elend')">×</button>
+        </div>
+        <div class="modal-body">
+            <img src="https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/placeholder.jpg?format=500w" alt="Elend S LeBaron" class="modal-photo">
+            <h4 style="text-align:center;color:var(--muted);margin-bottom:20px">Founder</h4>
+            <p>Elend S LeBaron stands as a distinguished entrepreneur, lauded for his unwavering commitment to excellence and sustainability. His path to success, however, was shaped by the trials of a challenging upbringing within a religious cult, where he witnessed and endured manipulation, mind control, and abuse. Despite these adversities, Elend emerged with a resilient spirit and a deep sense of empathy for others.</p>
+            <p>His personal journey took a transformative turn when he confronted his own mental health struggles, grappling with severe anxiety, depression, and despair. Despite seeking therapy for years, his battle with depression persisted until he discovered the life-changing benefits of Transcranial Magnetic Stimulation (TMS). This breakthrough treatment not only brought color back into his world but also ignited a newfound passion to make it more accessible and affordable for others.</p>
+            <p>In response to this calling, Elend founded Delta Healing Solutions, a beacon of hope for those seeking relief from mental health challenges. Through his business, he aims not only to provide access to innovative treatments but also to create supportive environments where individuals can heal and thrive. His commitment to kindness and sustainability permeates every aspect of his work, reflecting his belief in the power of compassion and community.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+function openModal(id) {
+    document.getElementById('modal-' + id).classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(event, id) {
+    event.stopPropagation();
+    document.getElementById('modal-' + id).classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal.active').forEach(m => {
+            m.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+});
+</script>
+
+</body>
+</html>
+
+
