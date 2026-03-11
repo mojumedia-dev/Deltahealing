@@ -1,0 +1,560 @@
+<!-- ============================================ -->
+<!-- DELTA HEALING SOLUTIONS - SEO OPTIMIZATION -->
+<!-- Squarespace Code Injection (Header/Footer) -->
+<!-- ============================================ -->
+
+<!-- PASTE THIS IN: Settings > Advanced > Code Injection > HEADER -->
+
+<style>
+/* Mobile-First Responsive Optimizations */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .header-title-logo img {
+    max-height: 60px !important;
+  }
+  
+  .sqs-block-content h1 {
+    font-size: 1.8rem !important;
+  }
+  
+  .sqs-block-content h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .sqs-block-content h3 {
+    font-size: 1.3rem !important;
+  }
+  
+  .header-nav-list {
+    padding: 10px 0;
+  }
+}
+
+/* Accessibility Improvements */
+a:focus, button:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* Performance - Lazy Load Images */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Local Business Click-to-Call Styling */
+.click-to-call {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #0066cc;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.click-to-call:hover {
+  background: #0052a3;
+}
+
+/* Service Cards Enhancement (if using grid layout) */
+.service-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+</style>
+
+<!-- Enhanced Schema.org Structured Data for Local SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Delta Healing Solutions",
+  "alternateName": "Delta Healing Solutions TMS Clinic",
+  "description": "Non-profit mental health clinic in Delta, UT providing TMS therapy, Spravato (esketamine) treatment for depression, psychiatric evaluation, medication management, and cognitive testing. Compassionate mental health care serving Millard County and surrounding areas.",
+  "url": "https://www.deltahealingsolutions.org",
+  "logo": "https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/ef9b868c-0580-4cb9-a1a1-a445980554f6/DeltaHealingSolutions_Logo.png",
+  "image": "https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/ef9b868c-0580-4cb9-a1a1-a445980554f6/DeltaHealingSolutions_Logo.png",
+  "telephone": "+1-435-864-5151",
+  "email": "info@deltahealingsolutions.org",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "95 White Sage Avenue",
+    "addressLocality": "Delta",
+    "addressRegion": "UT",
+    "postalCode": "84624",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "39.3510231",
+    "longitude": "-112.5593524"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "16:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61557053634976",
+    "https://www.instagram.com/deltahealingsolutions/"
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Delta",
+      "containedIn": {
+        "@type": "AdministrativeArea",
+        "name": "Utah"
+      }
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Millard County"
+    },
+    {
+      "@type": "City",
+      "name": "Fillmore"
+    },
+    {
+      "@type": "City",
+      "name": "Oak City"
+    },
+    {
+      "@type": "City",
+      "name": "Hinckley"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Mental Health Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "NeuroStar TMS Therapy",
+          "alternateName": "Transcranial Magnetic Stimulation",
+          "description": "FDA-approved non-invasive treatment for depression using NeuroStar TMS technology. Effective alternative for patients who haven't responded to traditional antidepressants.",
+          "procedureType": "Therapeutic procedure"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "Psychiatric Evaluation Services",
+          "description": "Comprehensive mental health assessments including diagnostic evaluations for depression, anxiety, ADHD, and other psychiatric conditions.",
+          "procedureType": "Diagnostic procedure"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalTherapy",
+          "name": "Psychiatric Medication Management",
+          "description": "Expert medication management and monitoring for mental health conditions by licensed psychiatric professionals.",
+          "therapyType": "Pharmacotherapy"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalTest",
+          "name": "Cognitive Testing",
+          "alternateName": "ADHD Testing",
+          "description": "Professional cognitive and neuropsychological testing for ADHD, memory issues, and other cognitive concerns.",
+          "usedToDiagnose": ["ADHD", "Cognitive impairment"]
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalTherapy",
+          "name": "Spravato (Esketamine) Treatment",
+          "alternateName": "Esketamine Nasal Spray",
+          "description": "FDA-approved Spravato treatment for treatment-resistant depression. Administered in-clinic under medical supervision for patients who haven't responded to traditional antidepressants.",
+          "therapyType": "Pharmacotherapy"
+        }
+      }
+    ]
+  },
+  "priceRange": "$$",
+  "paymentAccepted": ["Cash", "Credit Card", "Insurance"],
+  "currenciesAccepted": "USD",
+  "medicalSpecialty": [
+    "Psychiatry",
+    "Mental Health",
+    "Depression Treatment",
+    "ADHD Testing",
+    "Treatment-Resistant Depression"
+  ],
+  "availableService": [
+    {
+      "@type": "MedicalTherapy",
+      "name": "TMS Therapy for Depression",
+      "description": "Transcranial Magnetic Stimulation treatment for Major Depressive Disorder"
+    },
+    {
+      "@type": "MedicalTest",
+      "name": "Mental Health Evaluation",
+      "description": "Comprehensive psychiatric diagnostic assessment"
+    }
+  ]
+}
+</script>
+
+<!-- Breadcrumb Schema (improves search result display) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.deltahealingsolutions.org"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.deltahealingsolutions.org/services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "TMS Therapy",
+      "item": "https://www.deltahealingsolutions.org/neurostar-tms-therapy"
+    }
+  ]
+}
+</script>
+
+<!-- FAQ Schema (for FAQ page if you have one) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is TMS therapy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TMS (Transcranial Magnetic Stimulation) therapy is an FDA-approved, non-invasive treatment for depression that uses magnetic pulses to stimulate nerve cells in the brain. Delta Healing Solutions offers NeuroStar TMS therapy for patients who haven't responded well to traditional antidepressants."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Delta Healing Solutions serves Delta, UT and surrounding areas including Fillmore, Oak City, Hinckley, and all of Millard County. We're a non-profit mental health clinic committed to providing accessible mental health care to rural Utah communities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you accept insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Delta Healing Solutions accepts most major insurance plans. Please contact us at (435) 864-5151 to verify your specific insurance coverage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What services do you offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer NeuroStar TMS therapy for depression, Spravato (esketamine) treatment for treatment-resistant depression, comprehensive psychiatric evaluation services, psychiatric medication management, and cognitive testing including ADHD assessments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Spravato treatment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spravato (esketamine) is an FDA-approved nasal spray medication for treatment-resistant depression and major depressive disorder. It's administered in our clinic under medical supervision and has shown rapid effectiveness for patients who haven't responded to other antidepressants."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Open Graph Meta Tags for Social Sharing -->
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Delta Healing Solutions - Mental Health Clinic in Delta, UT" />
+<meta property="article:publisher" content="https://www.facebook.com/profile.php?id=61557053634976" />
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@deltahealingsolutions" />
+<meta name="twitter:creator" content="@deltahealingsolutions" />
+
+<!-- Additional SEO Meta Tags -->
+<meta name="geo.region" content="US-UT" />
+<meta name="geo.placename" content="Delta" />
+<meta name="geo.position" content="39.3510231;-112.5593524" />
+<meta name="ICBM" content="39.3510231, -112.5593524" />
+
+<!-- Local Business Keywords -->
+<meta name="keywords" content="TMS therapy Delta UT, Spravato treatment Delta Utah, esketamine Delta UT, depression treatment Delta Utah, mental health clinic Millard County, psychiatric services Delta UT, ADHD testing Utah, NeuroStar TMS Therapy, psychiatrist Delta Utah, medication management Delta, cognitive testing Millard County, non-profit mental health clinic, treatment-resistant depression Utah" />
+
+<!-- Preconnect to Speed Up External Resources -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.squarespace-cdn.com">
+
+<!-- DNS Prefetch for Performance -->
+<link rel="dns-prefetch" href="https://static1.squarespace.com">
+
+<!-- ============================================ -->
+<!-- END HEADER CODE INJECTION -->
+<!-- ============================================ -->
+
+
+<!-- ============================================ -->
+<!-- PASTE THIS IN: Settings > Advanced > Code Injection > FOOTER -->
+<!-- ============================================ -->
+
+<script>
+// Performance: Lazy Load Images
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll("img[loading='lazy']"));
+  
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.classList.add("loaded");
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+    
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  }
+});
+
+// Track Phone Clicks for Analytics
+document.addEventListener("DOMContentLoaded", function() {
+  var phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+  phoneLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'phone_call_click', {
+          'event_category': 'Contact',
+          'event_label': 'Phone Click'
+        });
+      }
+    });
+  });
+});
+
+// Track Email Clicks for Analytics
+document.addEventListener("DOMContentLoaded", function() {
+  var emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+  emailLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'email_click', {
+          'event_category': 'Contact',
+          'event_label': 'Email Click'
+        });
+      }
+    });
+  });
+});
+
+// Enhanced Click-to-Call Button (Auto-detect phone numbers)
+document.addEventListener("DOMContentLoaded", function() {
+  // Find all text nodes containing the phone number
+  var phoneRegex = /\(435\) 864-5151/g;
+  
+  function wrapPhoneNumbers(node) {
+    if (node.nodeType === 3) { // Text node
+      var text = node.textContent;
+      if (phoneRegex.test(text)) {
+        var span = document.createElement('span');
+        span.innerHTML = text.replace(phoneRegex, '<a href="tel:+14358645151" class="click-to-call">$&</a>');
+        node.parentNode.replaceChild(span, node);
+      }
+    } else if (node.nodeType === 1 && node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE") {
+      for (var i = 0; i < node.childNodes.length; i++) {
+        wrapPhoneNumbers(node.childNodes[i]);
+      }
+    }
+  }
+  
+  // Run on main content areas only to avoid header/footer duplication
+  var contentAreas = document.querySelectorAll('.sqs-block-content, .main-content');
+  contentAreas.forEach(function(area) {
+    wrapPhoneNumbers(area);
+  });
+});
+
+// Add "Open Now" / "Closed" indicator based on business hours
+document.addEventListener("DOMContentLoaded", function() {
+  function isBusinessOpen() {
+    var now = new Date();
+    var day = now.getDay(); // 0 = Sunday, 6 = Saturday
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var currentTime = hour * 60 + minute;
+    
+    // Closed on weekends
+    if (day === 0 || day === 6) {
+      return false;
+    }
+    
+    // Open Monday-Friday 9am-4pm (540 minutes = 9am, 960 minutes = 4pm)
+    return currentTime >= 540 && currentTime < 960;
+  }
+  
+  var statusElements = document.querySelectorAll('.business-hours, .contact-info');
+  if (statusElements.length > 0) {
+    var status = isBusinessOpen() ? 
+      '<span style="color: green; font-weight: bold;">● Open Now</span>' : 
+      '<span style="color: #999;">● Closed</span>';
+    
+    statusElements.forEach(function(el) {
+      var statusDiv = document.createElement('div');
+      statusDiv.innerHTML = status;
+      statusDiv.style.marginTop = '10px';
+      el.appendChild(statusDiv);
+    });
+  }
+});
+
+// Accessibility: Skip to Main Content Link
+document.addEventListener("DOMContentLoaded", function() {
+  var skipLink = document.createElement('a');
+  skipLink.href = '#main-content';
+  skipLink.textContent = 'Skip to main content';
+  skipLink.style.cssText = 'position:absolute;left:-9999px;z-index:999;';
+  skipLink.addEventListener('focus', function() {
+    this.style.left = '10px';
+    this.style.top = '10px';
+    this.style.background = 'white';
+    this.style.padding = '10px';
+    this.style.border = '2px solid #0066cc';
+  });
+  skipLink.addEventListener('blur', function() {
+    this.style.left = '-9999px';
+  });
+  document.body.insertBefore(skipLink, document.body.firstChild);
+  
+  // Add id to main content if not present
+  var mainContent = document.querySelector('main') || document.querySelector('.main-content');
+  if (mainContent && !mainContent.id) {
+    mainContent.id = 'main-content';
+  }
+});
+</script>
+
+<!-- ============================================ -->
+<!-- END FOOTER CODE INJECTION -->
+<!-- ============================================ -->
+
+
+<!-- ============================================ -->
+<!-- ADDITIONAL RECOMMENDATIONS -->
+<!-- ============================================ -->
+
+<!--
+  
+  📝 ADDITIONAL SEO IMPROVEMENTS TO MAKE IN SQUARESPACE:
+  
+  1. PAGE TITLES (Settings > SEO > SEO Tab):
+     - Home: "Delta Healing Solutions | TMS Therapy & Mental Health Clinic in Delta, UT"
+     - About: "About Us | Non-Profit Mental Health Clinic | Delta Healing Solutions"
+     - TMS Page: "NeuroStar TMS Therapy for Depression | Delta, UT | Delta Healing Solutions"
+     - Services: "Mental Health Services | Psychiatric Care in Delta, UT"
+     - Cognitive Testing: "ADHD Testing & Cognitive Evaluations | Delta, Utah"
+  
+  2. PAGE DESCRIPTIONS (Settings > SEO):
+     - Keep them 150-160 characters
+     - Include location (Delta, UT) and main service keywords
+     - Example: "Delta Healing Solutions offers TMS therapy, psychiatric services, and ADHD testing in Delta, UT. Non-profit mental health clinic serving Millard County."
+  
+  3. URL SLUGS (Edit page > Settings > URL Slug):
+     - Use descriptive, keyword-rich URLs
+     - Example: /tms-therapy-delta-utah
+     - Example: /adhd-testing-cognitive-evaluation
+  
+  4. IMAGE ALT TEXT:
+     - Every image should have descriptive alt text
+     - Example: "NeuroStar TMS therapy equipment at Delta Healing Solutions"
+     - Example: "Mental health professional at Delta Healing Solutions clinic"
+  
+  5. HEADER TAGS (H1, H2, H3):
+     - Home page H1: "Compassionate Mental Health Care in Delta, Utah"
+     - Use H2s for services: "TMS Therapy for Depression", "Psychiatric Medication Management"
+     - Include location keywords naturally: "Serving Delta and Millard County"
+  
+  6. GOOGLE MY BUSINESS:
+     - Claim and optimize your Google Business Profile
+     - Add photos, services, hours, posts regularly
+     - Respond to reviews
+     - Use categories: Mental Health Clinic, Psychiatrist, Medical Clinic
+  
+  7. LOCAL CITATIONS:
+     - Ensure NAP (Name, Address, Phone) consistency across:
+       * Yelp
+       * Healthgrades
+       * Psychology Today
+       * Vitals
+       * WebMD
+       * Local chamber of commerce
+  
+  8. CONTENT RECOMMENDATIONS:
+     - Blog about mental health topics with local angle
+     - Create service area pages for nearby cities
+     - Add patient testimonials (with permission)
+     - FAQs about TMS therapy, insurance, what to expect
+  
+  9. TECHNICAL SEO:
+     - Enable SSL (HTTPS) - Already done ✓
+     - Submit sitemap to Google Search Console
+     - Set up Google Analytics 4 - Already done ✓
+     - Mobile-friendly test: https://search.google.com/test/mobile-friendly
+  
+  10. SCHEMA MARKUP PAGES:
+      Add this schema to specific service pages by creating a Code Block:
+      
+      For TMS Therapy Page:
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        "name": "NeuroStar TMS Therapy",
+        "about": {
+          "@type": "MedicalProcedure",
+          "name": "Transcranial Magnetic Stimulation",
+          "usedToDiagnose": "Major Depressive Disorder"
+        }
+      }
+  
+-->

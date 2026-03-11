@@ -1,0 +1,587 @@
+/* ============================================ */
+/* DELTA HEALING SOLUTIONS - MODERN DESIGN CSS */
+/* Paste in: Design > Custom CSS (or Code Injection > Header wrapped in <style> tags) */
+/* ============================================ */
+
+/* ============================================ */
+/* MODERN DESIGN SYSTEM */
+/* ============================================ */
+
+/* Improved Typography - Modern, Clean, Readable */
+body {
+  font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.2rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  margin-top: 2.5rem;
+}
+
+h3 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* ============================================ */
+/* MODERN HEADER IMPROVEMENTS */
+/* ============================================ */
+
+.header {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header.shrink {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo Enhancement */
+.header-title-logo img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.header-title-logo:hover img {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/* Modern Navigation */
+.header-nav-item a,
+.header-nav-folder-title {
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.5rem 1rem;
+}
+
+.header-nav-item a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transform: translateX(-50%);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-nav-item a:hover::after,
+.header-nav-item--active a::after {
+  width: 60%;
+}
+
+/* Dropdown Menu Modernization */
+.header-nav-folder-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+  min-width: 240px;
+}
+
+.header-nav-folder-item a {
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease;
+  display: block;
+  border-radius: 6px;
+  margin: 0.25rem 0.5rem;
+}
+
+.header-nav-folder-item a:hover {
+  background: rgba(0, 0, 0, 0.04);
+  transform: translateX(4px);
+}
+
+/* ============================================ */
+/* MODERN BUTTON STYLES */
+/* ============================================ */
+
+.sqs-block-button-element,
+.sqs-button-element--primary,
+a.sqs-button-element {
+  border-radius: 8px !important;
+  padding: 14px 32px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: none !important;
+}
+
+.sqs-block-button-element:hover,
+.sqs-button-element--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Secondary Button Style */
+.sqs-button-element--secondary {
+  background: transparent !important;
+  border: 2px solid currentColor !important;
+  box-shadow: none !important;
+}
+
+.sqs-button-element--secondary:hover {
+  background: currentColor !important;
+  color: white !important;
+}
+
+/* ============================================ */
+/* MODERN CARD & SECTION LAYOUTS */
+/* ============================================ */
+
+/* Service Cards Enhancement */
+.sqs-block-content {
+  transition: all 0.3s ease;
+}
+
+.sqs-block:hover .sqs-block-content {
+  transform: translateY(-4px);
+}
+
+/* Add subtle borders and shadows */
+.page-section {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.page-section.background-width--full-bleed {
+  border-radius: 0;
+}
+
+/* Content Blocks with Cards */
+.sqs-layout .sqs-row {
+  gap: 2rem;
+}
+
+.sqs-block {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Image Blocks - Modern Aspect Ratio */
+.sqs-block-image {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sqs-block-image img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sqs-block-image:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================ */
+/* MODERN SPACING & LAYOUT */
+/* ============================================ */
+
+.content-wrapper {
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
+}
+
+.page-section {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+}
+
+/* Grid Improvements */
+.sqs-layout .sqs-col-12 {
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .sqs-layout .sqs-col-12 {
+    padding: 0 1.5rem;
+  }
+}
+
+/* ============================================ */
+/* MODERN FORM STYLING */
+/* ============================================ */
+
+.form-wrapper input[type="text"],
+.form-wrapper input[type="email"],
+.form-wrapper input[type="tel"],
+.form-wrapper textarea,
+.form-wrapper select {
+  border-radius: 8px !important;
+  border: 2px solid rgba(0, 0, 0, 0.1) !important;
+  padding: 14px 18px !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+  background: white !important;
+}
+
+.form-wrapper input:focus,
+.form-wrapper textarea:focus,
+.form-wrapper select:focus {
+  border-color: var(--accent-color, #0066cc) !important;
+  box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1) !important;
+  outline: none !important;
+}
+
+.form-wrapper .field-list .field {
+  margin-bottom: 1.5rem;
+}
+
+.form-wrapper .field-element {
+  border-radius: 8px;
+}
+
+/* Form Submit Button */
+.form-wrapper .sqs-editable-button {
+  border-radius: 8px !important;
+  padding: 14px 32px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.form-wrapper .sqs-editable-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ============================================ */
+/* MODERN FOOTER */
+/* ============================================ */
+
+.footer-blocks {
+  padding: clamp(3rem, 6vw, 5rem) 0 clamp(2rem, 4vw, 3rem);
+}
+
+.footer-blocks h4 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-blocks a {
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.footer-blocks a:hover {
+  transform: translateX(4px);
+  opacity: 0.8;
+}
+
+/* ============================================ */
+/* SMOOTH ANIMATIONS */
+/* ============================================ */
+
+/* Fade-in on scroll (requires JavaScript - included in footer code) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger animation delays */
+.fade-in:nth-child(1) { transition-delay: 0.1s; }
+.fade-in:nth-child(2) { transition-delay: 0.2s; }
+.fade-in:nth-child(3) { transition-delay: 0.3s; }
+.fade-in:nth-child(4) { transition-delay: 0.4s; }
+
+/* ============================================ */
+/* MODERN ANNOUNCEMENT BAR */
+/* ============================================ */
+
+.sqs-announcement-bar {
+  border-radius: 0 !important;
+  padding: 1rem 2rem !important;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.sqs-announcement-bar-close {
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.sqs-announcement-bar-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transform: rotate(90deg);
+}
+
+/* ============================================ */
+/* MODERN MOBILE MENU */
+/* ============================================ */
+
+@media (max-width: 767px) {
+  .header-menu {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px);
+  }
+  
+  .header-menu-nav-item a {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin: 0.25rem 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .header-menu-nav-item a:hover {
+    background: rgba(0, 0, 0, 0.04);
+    transform: translateX(8px);
+  }
+  
+  /* Mobile Menu Button */
+  .burger-inner,
+  .burger-inner::before,
+  .burger-inner::after {
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* ============================================ */
+/* ACCESSIBILITY IMPROVEMENTS */
+/* ============================================ */
+
+/* Focus Styles */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(0, 102, 204, 0.5) !important;
+  outline-offset: 2px !important;
+}
+
+/* Skip to Main Content Link */
+.skip-to-main {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: white;
+  color: black;
+  padding: 1rem 2rem;
+  z-index: 10000;
+  border-radius: 0 0 8px 0;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: top 0.3s ease;
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* ============================================ */
+/* MODERN SOCIAL ICONS */
+/* ============================================ */
+
+.sqs-svg-icon--social {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sqs-svg-icon--social:hover {
+  transform: translateY(-3px) scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* ============================================ */
+/* UTILITY CLASSES */
+/* ============================================ */
+
+/* Modern Card */
+.modern-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Glass Effect (for overlays) */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-color, #0066cc), var(--secondary-color, #00aaff));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Modern Divider */
+.modern-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+  margin: 3rem 0;
+  border: none;
+}
+
+/* ============================================ */
+/* RESPONSIVE IMPROVEMENTS */
+/* ============================================ */
+
+/* Tablet & Mobile Optimizations */
+@media (max-width: 1024px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  
+  .page-section {
+    padding: 3rem 0;
+  }
+  
+  .content-wrapper {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 { font-size: 2rem; line-height: 1.2; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.4rem; }
+  
+  p { font-size: 1rem; }
+  
+  .page-section {
+    padding: 2rem 0;
+  }
+  
+  .content-wrapper {
+    padding: 1.5rem 1rem;
+  }
+  
+  /* Stack columns on mobile */
+  .sqs-layout .sqs-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Larger touch targets */
+  .header-nav-item a,
+  button,
+  .sqs-block-button-element {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* ============================================ */
+/* PRINT STYLES */
+/* ============================================ */
+
+@media print {
+  .header,
+  .footer,
+  .header-announcement-bar,
+  .sqs-block-button {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: black;
+  }
+  
+  a {
+    text-decoration: underline;
+    color: black;
+  }
+}
+
+/* ============================================ */
+/* PERFORMANCE OPTIMIZATIONS */
+/* ============================================ */
+
+/* Will-change for animated elements */
+.header,
+.sqs-block-button-element,
+.sqs-block-image img {
+  will-change: transform;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================ */
+/* DARK MODE SUPPORT (Optional - commented out) */
+/* ============================================ */
+
+/*
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1a1a1a;
+    color: #f0f0f0;
+  }
+  
+  .header {
+    background: rgba(26, 26, 26, 0.95) !important;
+  }
+  
+  .modern-card {
+    background: #2a2a2a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  p {
+    color: rgba(255, 255, 255, 0.85);
+  }
+}
+*/

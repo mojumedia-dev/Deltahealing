@@ -1,0 +1,336 @@
+================================================================================
+DELTA HEALING SOLUTIONS - QUICK START SEO CODE
+Copy/paste sections below into Squarespace Code Injection
+================================================================================
+
+📍 HOW TO INSTALL:
+1. Go to: Settings > Advanced > Code Injection
+2. Copy Section A below → paste in HEADER field
+3. Copy Section B below → paste in FOOTER field
+4. Click Save
+
+================================================================================
+SECTION A - PASTE IN HEADER
+================================================================================
+
+<style>
+/* Mobile-First Responsive Optimizations */
+@media (max-width: 768px) {
+  body { font-size: 16px; line-height: 1.6; }
+  .header-title-logo img { max-height: 60px !important; }
+  .sqs-block-content h1 { font-size: 1.8rem !important; }
+  .sqs-block-content h2 { font-size: 1.5rem !important; }
+  .sqs-block-content h3 { font-size: 1.3rem !important; }
+  .header-nav-list { padding: 10px 0; }
+}
+
+/* Accessibility */
+a:focus, button:focus { outline: 2px solid #0066cc; outline-offset: 2px; }
+
+/* Click-to-Call Styling */
+.click-to-call {
+  display: inline-block; padding: 12px 24px; background: #0066cc;
+  color: white !important; text-decoration: none; border-radius: 5px;
+  font-weight: bold; transition: background 0.3s ease;
+}
+.click-to-call:hover { background: #0052a3; }
+</style>
+
+<!-- Enhanced Local Business Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Delta Healing Solutions",
+  "alternateName": "Delta Healing Solutions TMS Clinic",
+  "description": "Non-profit mental health clinic in Delta, UT providing TMS therapy, Spravato (esketamine) treatment for depression, psychiatric evaluation, medication management, and cognitive testing. Serving Millard County.",
+  "url": "https://www.deltahealingsolutions.org",
+  "logo": "https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/ef9b868c-0580-4cb9-a1a1-a445980554f6/DeltaHealingSolutions_Logo.png",
+  "telephone": "+1-435-864-5151",
+  "email": "info@deltahealingsolutions.org",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "95 White Sage Avenue",
+    "addressLocality": "Delta",
+    "addressRegion": "UT",
+    "postalCode": "84624",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "39.3510231",
+    "longitude": "-112.5593524"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "16:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61557053634976",
+    "https://www.instagram.com/deltahealingsolutions/"
+  ],
+  "areaServed": [
+    {"@type": "City", "name": "Delta"},
+    {"@type": "City", "name": "Fillmore"},
+    {"@type": "City", "name": "Oak City"},
+    {"@type": "City", "name": "Hinckley"},
+    {"@type": "AdministrativeArea", "name": "Millard County"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Mental Health Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "NeuroStar TMS Therapy",
+          "description": "FDA-approved treatment for depression using TMS technology"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "Psychiatric Evaluation Services",
+          "description": "Comprehensive mental health diagnostic assessments"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalTherapy",
+          "name": "Psychiatric Medication Management",
+          "description": "Expert medication management by licensed professionals"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalTest",
+          "name": "Cognitive Testing",
+          "alternateName": "ADHD Testing",
+          "description": "Professional cognitive and ADHD assessments"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalTherapy",
+          "name": "Spravato (Esketamine) Treatment",
+          "alternateName": "Esketamine Nasal Spray",
+          "description": "FDA-approved Spravato treatment for treatment-resistant depression"
+        }
+      }
+    ]
+  },
+  "medicalSpecialty": ["Psychiatry", "Mental Health", "Depression Treatment", "ADHD Testing", "Treatment-Resistant Depression"]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is TMS therapy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TMS (Transcranial Magnetic Stimulation) is FDA-approved, non-invasive treatment for depression using magnetic pulses. Delta Healing Solutions offers NeuroStar TMS therapy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Delta Healing Solutions serves Delta, UT and surrounding areas including Fillmore, Oak City, Hinckley, and all of Millard County."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you accept insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we accept most major insurance plans. Contact us at (435) 864-5151 to verify coverage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Spravato treatment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spravato (esketamine) is an FDA-approved nasal spray medication for treatment-resistant depression. It's administered in our clinic under medical supervision and has shown effectiveness for patients who haven't responded to other antidepressants."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Local SEO Meta Tags -->
+<meta name="geo.region" content="US-UT" />
+<meta name="geo.placename" content="Delta" />
+<meta name="geo.position" content="39.3510231;-112.5593524" />
+<meta name="keywords" content="TMS therapy Delta UT, Spravato treatment Delta Utah, esketamine Delta UT, depression treatment Delta Utah, mental health clinic Millard County, psychiatric services Delta UT, ADHD testing Utah, NeuroStar TMS, psychiatrist Delta Utah, treatment-resistant depression" />
+
+<!-- Performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.squarespace-cdn.com">
+
+
+================================================================================
+SECTION B - PASTE IN FOOTER
+================================================================================
+
+<script>
+// Track Phone Clicks
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'phone_call_click', {
+          'event_category': 'Contact',
+          'event_label': 'Phone Click'
+        });
+      }
+    });
+  });
+});
+
+// Track Email Clicks
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'email_click', {
+          'event_category': 'Contact',
+          'event_label': 'Email Click'
+        });
+      }
+    });
+  });
+});
+
+// Auto-wrap Phone Numbers with Click-to-Call
+document.addEventListener("DOMContentLoaded", function() {
+  var phoneRegex = /\(435\) 864-5151/g;
+  function wrapPhoneNumbers(node) {
+    if (node.nodeType === 3) {
+      var text = node.textContent;
+      if (phoneRegex.test(text)) {
+        var span = document.createElement('span');
+        span.innerHTML = text.replace(phoneRegex, '<a href="tel:+14358645151" class="click-to-call">$&</a>');
+        node.parentNode.replaceChild(span, node);
+      }
+    } else if (node.nodeType === 1 && node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE") {
+      for (var i = 0; i < node.childNodes.length; i++) {
+        wrapPhoneNumbers(node.childNodes[i]);
+      }
+    }
+  }
+  document.querySelectorAll('.sqs-block-content, .main-content').forEach(function(area) {
+    wrapPhoneNumbers(area);
+  });
+});
+
+// Show "Open Now" / "Closed" Status
+document.addEventListener("DOMContentLoaded", function() {
+  function isBusinessOpen() {
+    var now = new Date();
+    var day = now.getDay();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var currentTime = hour * 60 + minute;
+    if (day === 0 || day === 6) return false;
+    return currentTime >= 540 && currentTime < 960;
+  }
+  var statusElements = document.querySelectorAll('.business-hours, .contact-info');
+  if (statusElements.length > 0) {
+    var status = isBusinessOpen() ? 
+      '<span style="color: green; font-weight: bold;">● Open Now</span>' : 
+      '<span style="color: #999;">● Closed</span>';
+    statusElements.forEach(function(el) {
+      var statusDiv = document.createElement('div');
+      statusDiv.innerHTML = status;
+      statusDiv.style.marginTop = '10px';
+      el.appendChild(statusDiv);
+    });
+  }
+});
+
+// Accessibility: Skip to Main Content
+document.addEventListener("DOMContentLoaded", function() {
+  var skipLink = document.createElement('a');
+  skipLink.href = '#main-content';
+  skipLink.textContent = 'Skip to main content';
+  skipLink.style.cssText = 'position:absolute;left:-9999px;z-index:999;';
+  skipLink.addEventListener('focus', function() {
+    this.style.left = '10px';
+    this.style.top = '10px';
+    this.style.background = 'white';
+    this.style.padding = '10px';
+    this.style.border = '2px solid #0066cc';
+  });
+  skipLink.addEventListener('blur', function() {
+    this.style.left = '-9999px';
+  });
+  document.body.insertBefore(skipLink, document.body.firstChild);
+  var mainContent = document.querySelector('main') || document.querySelector('.main-content');
+  if (mainContent && !mainContent.id) {
+    mainContent.id = 'main-content';
+  }
+});
+</script>
+
+
+================================================================================
+✅ DONE! Now do these 5 quick things:
+================================================================================
+
+1. Update HOME page title:
+   Settings > Marketing > SEO
+   Title: "Delta Healing Solutions | TMS Therapy & Mental Health Clinic in Delta, UT"
+
+2. Update HOME page description:
+   "Non-profit mental health clinic in Delta, UT offering TMS therapy, Spravato (esketamine) treatment for depression, psychiatric evaluations, medication management, and ADHD testing. Serving Millard County. (435) 864-5151"
+
+3. Add image alt text:
+   Click any image > Design > ALT TEXT
+   Example: "Delta Healing Solutions mental health clinic in Delta Utah"
+
+4. Claim Google My Business:
+   Go to: https://business.google.com
+   Search for your clinic and claim it
+
+5. Test mobile-friendly:
+   https://search.google.com/test/mobile-friendly
+   Enter: www.deltahealingsolutions.org
+
+
+================================================================================
+📈 TRACK YOUR RESULTS:
+================================================================================
+
+Week 1: Check if Google indexed your schema
+  → Google: site:www.deltahealingsolutions.org
+
+Week 2-4: Monitor Google My Business views
+  → business.google.com > Insights
+
+Month 2-3: Check keyword rankings
+  → Google yourself: "TMS therapy Delta UT"
+  → Google yourself: "Spravato treatment Delta Utah"
+  → Google yourself: "mental health clinic Delta Utah"
+
+Month 3-6: Organic traffic should increase 30-50%
+  → Check Google Analytics
+
+================================================================================

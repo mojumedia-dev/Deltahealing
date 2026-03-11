@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials - MrsHobby.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: white;
+            padding: 20px 30px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 30px;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .page-title {
+            font-size: 48px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .page-subtitle {
+            font-size: 18px;
+            color: #6c757d;
+        }
+        
+        .search-filter-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .search-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        
+        .search-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .search-btn:hover {
+            background: #0056b3;
+        }
+        
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-tab {
+            padding: 10px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 20px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .filter-tab:hover {
+            border-color: #007bff;
+            background: #e7f3ff;
+        }
+        
+        .filter-tab.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        
+        .brand-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .brand-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #007bff;
+        }
+        
+        .brand-logo-circle {
+            width: 60px;
+            height: 60px;
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #6c757d;
+        }
+        
+        .brand-info {
+            flex: 1;
+        }
+        
+        .brand-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .tutorial-count {
+            font-size: 14px;
+            color: #6c757d;
+        }
+        
+        .tutorials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .tutorial-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .tutorial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .tutorial-thumbnail {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            position: relative;
+        }
+        
+        .play-icon {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #2c3e50;
+        }
+        
+        .tutorial-duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .tutorial-info {
+            padding: 15px;
+        }
+        
+        .tutorial-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            min-height: 40px;
+        }
+        
+        .tutorial-meta {
+            display: flex;
+            gap: 10px;
+            font-size: 12px;
+            color: #6c757d;
+        }
+        
+        .tutorial-tag {
+            background: #e7f3ff;
+            color: #007bff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .view-all-btn {
+            display: block;
+            margin: 30px auto 0;
+            padding: 12px 30px;
+            background: transparent;
+            border: 2px solid #007bff;
+            color: #007bff;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .view-all-btn:hover {
+            background: #007bff;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 36px;
+            }
+            
+            .search-bar {
+                flex-direction: column;
+            }
+            
+            .search-btn {
+                width: 100%;
+            }
+            
+            .tutorials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .brand-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">MrsHobby.com</div>
+        <div>← Back to Home</div>
+    </div>
+    
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">🎓 Tutorials & Guides</h1>
+            <p class="page-subtitle">Learn from the pros - painting, building, and gaming tips organized by brand</p>
+        </div>
+        
+        <div class="search-filter-section">
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search tutorials... (e.g., 'painting techniques', 'weathering', 'airbrushing')">
+                <button class="search-btn">Search</button>
+            </div>
+            
+            <div class="filter-tabs">
+                <div class="filter-tab active">All Brands</div>
+                <div class="filter-tab">Citadel</div>
+                <div class="filter-tab">The Army Painter</div>
+                <div class="filter-tab">Vallejo</div>
+                <div class="filter-tab">Tamiya</div>
+                <div class="filter-tab">Games Workshop</div>
+                <div class="filter-tab">AK Interactive</div>
+            </div>
+        </div>
+        
+        <!-- Citadel Tutorials -->
+        <div class="brand-section">
+            <div class="brand-header">
+                <div class="brand-logo-circle">CITADEL</div>
+                <div class="brand-info">
+                    <div class="brand-name">Citadel</div>
+                    <div class="tutorial-count">24 tutorials available</div>
+                </div>
+            </div>
+            
+            <div class="tutorials-grid">
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        🎨
+                        <div class="play-icon">▶</div>
+                        <div class="tutorial-duration">12:34</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <div class="tutorial-title">How to Paint Space Marines - Complete Guide</div>
+                        <div class="tutorial-meta">
+                            <span class="tutorial-tag">Beginner</span>
+                            <span class="tutorial-tag">Painting</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        🖌️
+                        <div class="play-icon">▶</div>
+                        <div class="tutorial-duration">8:15</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <div class="tutorial-title">Contrast Paints: Tips & Techniques</div>
+                        <div class="tutorial-meta">
+                            <span class="tutorial-tag">Intermediate</span>
+                            <span class="tutorial-tag">Techniques</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        ⚔️
+                        <div class="play-icon">▶</div>
+                        <div class="tutorial-duration">15:42</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <div class="tutorial-title">Edge Highlighting Master Class</div>
+                        <div class="tutorial-meta">
+                            <span class="tutorial-tag">Advanced</span>
+                            <span class="tutorial-tag">Techniques</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        🎭
+                        <div class="play-icon">▶</div>
+                        <div class="tutorial-duration">10:28</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <div class="tutorial-title">Painting Faces & Skin Tones</div>
+                        <div class="tutorial-meta">
+                            <span class="tutorial-tag">Intermediate</span>
+                            <span class="tutorial-tag">Painting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="view-all-btn">View All 24 Citadel Tutorials →</button>
+        </div>
+        
+        <!-- The Army Painter Tutorials -->
+        <div class="brand-section">
+            <div class="brand-header">
+                <div class="brand-logo-circle">ARMY PAINTER</div>
+                <div class="brand-info">
+                    <div class="brand-name">The Army Painter</div>
+                    <div class="tutorial-count">18 tutorials available</div>
+                </div>
+            </div>
+            
+            <div class="tutorials-grid">
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        💨
+                        <div class="play-icon">▶</div>
+                        <div class="tutorial-duration">9:45</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <div class="tutorial-title">Speedpainting with Color Primer</div>
+                        <div class="tutorial-meta">
+                            <span class="tutorial-tag">Beginner</span>
+                            <span class="tutorial-tag">Speed Painting</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        🎨
+                        <div class="play-icon">▶</div>
+                        <div class="tutorial-duration">14:20</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <div class="tutorial-title">Quick Shade & Dipping Technique</div>
+                        <div class="tutorial-meta">
+                            <span class="tutorial-tag">Beginner</span>
+                            <span class="tutorial-tag">Techniques</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        🖌️
+                        <div class="play-icon">▶</div>
+                        <div class="tutorial-duration">11:33</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <div class="tutorial-title">Fanatic Paints - Complete Overview</div>
+                        <div class="tutorial-meta">
+                            <span class="tutorial-tag">All Levels</span>
+                            <span class="tutorial-tag">Product Review</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        ⚡
+                        <div class="play-icon">▶</div>
+                        <div class="tutorial-duration">7:18</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <div class="tutorial-title">Metallic Paints - Gold & Silver</div>
+                        <div class="tutorial-meta">
+                            <span class="tutorial-tag">Intermediate</span>
+                            <span class="tutorial-tag">Painting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="view-all-btn">View All 18 Army Painter Tutorials →</button>
+        </div>
+        
+        <!-- Vallejo Tutorials -->
+        <div class="brand-section">
+            <div class="brand-header">
+                <div class="brand-logo-circle">VALLEJO</div>
+                <div class="brand-info">
+                    <div class="brand-name">Vallejo</div>
+                    <div class="tutorial-count">16 tutorials available</div>
+                </div>
+            </div>
+            
+            <div class="tutorials-grid">
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        💧
+                        <div class="play-icon">▶</div>
+                        <div class="tutorial-duration">13:52</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <div class="tutorial-title">Airbrushing with Model Air Paints</div>
+                        <div class="tutorial-meta">
+                            <span class="tutorial-tag">Intermediate</span>
+                            <span class="tutorial-tag">Airbrush</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        🌊
+                        <div class="play-icon">▶</div>
+                        <div class="tutorial-duration">16:40</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <div class="tutorial-title">Water Effects & Realistic Bases</div>
+                        <div class="tutorial-meta">
+                            <span class="tutorial-tag">Advanced</span>
+                            <span class="tutorial-tag">Basing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        🎨
+                        <div class="play-icon">▶</div>
+                        <div class="tutorial-duration">10:15</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <div class="tutorial-title">Game Color vs Model Color Guide</div>
+                        <div class="tutorial-meta">
+                            <span class="tutorial-tag">Beginner</span>
+                            <span class="tutorial-tag">Product Guide</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        🔥
+                        <div class="play-icon">▶</div>
+                        <div class="tutorial-duration">12:08</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <div class="tutorial-title">Weathering Powders & Pigments</div>
+                        <div class="tutorial-meta">
+                            <span class="tutorial-tag">Advanced</span>
+                            <span class="tutorial-tag">Weathering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="view-all-btn">View All 16 Vallejo Tutorials →</button>
+        </div>
+        
+    </div>
+</body>
+</html>
