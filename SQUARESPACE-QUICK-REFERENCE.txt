@@ -1,0 +1,196 @@
+================================================================================
+DELTA HEALING SOLUTIONS - SQUARESPACE INSTALLATION QUICK REFERENCE
+================================================================================
+
+📁 FILES & WHERE THEY GO:
+
+GLOBAL FILES (Install Once, Affects Entire Site):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✅ 1-GLOBAL-CUSTOM-CSS.txt
+     📍 WHERE: Design > Custom CSS
+     ⚙️ WHAT: Modern design, animations, buttons, forms, typography
+     
+  ✅ 2-GLOBAL-HEADER.txt
+     📍 WHERE: Settings > Advanced > Code Injection > HEADER
+     ⚙️ WHAT: Global business schema, meta tags, preconnect tags
+     
+  ✅ 3-GLOBAL-FOOTER.txt
+     📍 WHERE: Settings > Advanced > Code Injection > FOOTER
+     ⚙️ WHAT: Smooth scrolling, animations, back-to-top button, tracking
+
+
+PAGE CODE BLOCKS (Add to Individual Pages):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✅ HOME-page-code-block.html
+     📍 WHERE: Home page > Add Code Block
+     ⚙️ WHAT: FAQ schema, breadcrumbs for home page
+     
+  ✅ TMS-page-code-block.html
+     📍 WHERE: /neurostar-tms-therapy page > Add Code Block
+     ⚙️ WHAT: TMS therapy schema, service FAQs, breadcrumbs
+     
+  ✅ SPRAVATO-page-code-block.html
+     📍 WHERE: /spravato-treatment page > Add Code Block
+     ⚙️ WHAT: Spravato treatment schema, FAQs, breadcrumbs
+     
+  ✅ PSYCH-EVAL-page-code-block.html
+     📍 WHERE: /services page (or psychiatric evaluation page) > Add Code Block
+     ⚙️ WHAT: Psychiatric evaluation schema and FAQs
+     
+  ✅ MED-MGMT-page-code-block.html
+     📍 WHERE: /psychiatric-medication-management page > Add Code Block
+     ⚙️ WHAT: Medication management schema and FAQs
+     
+  ✅ ADHD-page-code-block.html
+     📍 WHERE: /cognitive-testing page > Add Code Block
+     ⚙️ WHAT: ADHD/cognitive testing schema and FAQs
+
+
+================================================================================
+⚡ QUICK INSTALL STEPS:
+================================================================================
+
+STEP 1 - Install Global CSS:
+  1. Open: 1-GLOBAL-CUSTOM-CSS.txt
+  2. Copy all contents (Ctrl+A, Ctrl+C)
+  3. Go to: Design > Custom CSS
+  4. Paste (Ctrl+V)
+  5. Save
+
+STEP 2 - Install Global Header:
+  1. Open: 2-GLOBAL-HEADER.txt
+  2. Copy all contents
+  3. Go to: Settings > Advanced > Code Injection
+  4. Paste in HEADER field
+  5. Save
+
+STEP 3 - Install Global Footer:
+  1. Open: 3-GLOBAL-FOOTER.txt
+  2. Copy all contents
+  3. Stay in Code Injection
+  4. Paste in FOOTER field
+  5. Save
+
+STEP 4 - Add Code Blocks to Pages:
+  For each page:
+    1. Edit the page
+    2. Click where you want the code
+    3. Add > Code (under "Advanced" section)
+    4. Open the corresponding HTML file
+    5. Copy and paste entire contents
+    6. Save page
+  
+  NOTE: Code blocks can go at top or bottom of page - doesn't matter visually
+        (the schema code is invisible to visitors but visible to search engines)
+
+
+================================================================================
+🧪 TESTING CHECKLIST:
+================================================================================
+
+After Global Install:
+  ✅ Visit homepage and scroll down (check fade-in animations)
+  ✅ Hover over navigation items (see underline effect)
+  ✅ Test dropdown menu (modern styling)
+  ✅ Scroll past 500px (back-to-top button appears)
+  ✅ Test on mobile device (responsive check)
+  ✅ Fill out contact form (check input styling)
+
+After Page Code Blocks:
+  ✅ View page source (Ctrl+U) and search for "schema.org" to verify
+  ✅ Test at: https://search.google.com/test/rich-results
+  ✅ Paste each page URL and verify schema is detected
+
+
+================================================================================
+📊 VERIFY SCHEMA MARKUP:
+================================================================================
+
+For each page with a code block:
+  1. Visit the page
+  2. Go to: https://search.google.com/test/rich-results
+  3. Enter the page URL
+  4. Click "Test URL"
+  5. Check for valid schema (no errors)
+
+You should see:
+  ✅ MedicalWebPage
+  ✅ FAQPage
+  ✅ BreadcrumbList
+  ✅ Organization (from global)
+
+
+================================================================================
+❓ FAQ:
+================================================================================
+
+Q: Do I need to add code blocks to EVERY page?
+A: No! Only add code blocks to your main service pages (listed above).
+   The global code works on all pages automatically.
+
+Q: Can I add the code blocks anywhere on the page?
+A: Yes! Top or bottom doesn't matter. The schema code is invisible to
+   visitors - it's only for search engines.
+
+Q: What if I don't have a Spravato page yet?
+A: That's fine! Add it when you create the page. See the full content
+   guide in: delta-healing-spravato-content.md
+
+Q: Will this mess up my existing design?
+A: No! The modern CSS uses your existing colors and just enhances the look.
+   Everything is non-destructive and can be removed if needed.
+
+Q: How long until I see SEO results?
+A: Google typically indexes changes within 1-2 weeks. Rankings improve
+   over 2-3 months. Full results in 3-6 months.
+
+
+================================================================================
+📈 NEXT STEPS AFTER INSTALL:
+================================================================================
+
+1. ✅ Update page titles and descriptions (see: delta-healing-seo-checklist.md)
+2. ✅ Add alt text to images
+3. ✅ Claim Google My Business
+4. ✅ Submit sitemap to Google Search Console
+5. ✅ Create Spravato service page (if not done yet)
+6. ✅ Add local citations to healthcare directories
+
+
+================================================================================
+🆘 NEED HELP?
+================================================================================
+
+All files are plain text and can be opened with any text editor:
+  - Notepad (Windows)
+  - TextEdit (Mac)
+  - VS Code, Sublime, etc.
+
+Just copy the entire contents of each file and paste where indicated.
+
+
+================================================================================
+📚 DOCUMENTATION:
+================================================================================
+
+For detailed explanations:
+  📖 SQUARESPACE-INSTALL-GUIDE.md ........ Complete installation guide
+  📖 delta-healing-seo-checklist.md ...... 11-step SEO action plan
+  📖 delta-healing-spravato-content.md ... Spravato page content guide
+
+
+================================================================================
+✨ YOU'RE ALL SET!
+================================================================================
+
+Install order:
+  1. Global CSS
+  2. Global Header
+  3. Global Footer
+  4. Page code blocks
+
+Time estimate: 20-30 minutes total
+
+Good luck! 🚀

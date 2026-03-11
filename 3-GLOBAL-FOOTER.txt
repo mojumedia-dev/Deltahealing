@@ -1,0 +1,113 @@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  // Smooth scroll animations
+  const blocks = document.querySelectorAll('.sqs-block, .page-section');
+  blocks.forEach(block => {
+    if (!block.classList.contains('fade-in') && !block.classList.contains('no-animate')) {
+      block.classList.add('fade-in');
+    }
+  });
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Shrinking header on scroll
+  const header = document.querySelector('.header');
+  if (header) {
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 100) {
+        header.classList.add('shrink');
+      } else {
+        header.classList.remove('shrink');
+      }
+    });
+  }
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href === '#' || href.indexOf('#') !== 0) return;
+      
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Back to top button
+  const backToTop = document.createElement('button');
+  backToTop.innerHTML = '↑';
+  backToTop.setAttribute('aria-label', 'Back to top');
+  backToTop.style.cssText = `
+    position: fixed; bottom: 2rem; right: 2rem;
+    width: 50px; height: 50px; border-radius: 50%;
+    background: #0066cc; color: white; border: none;
+    font-size: 1.5rem; cursor: pointer;
+    opacity: 0; visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+  `;
+  
+  document.body.appendChild(backToTop);
+  
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 500) {
+      backToTop.style.opacity = '1';
+      backToTop.style.visibility = 'visible';
+    } else {
+      backToTop.style.opacity = '0';
+      backToTop.style.visibility = 'hidden';
+    }
+  });
+  
+  backToTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  
+  backToTop.addEventListener('mouseenter', function() {
+    this.style.transform = 'translateY(-4px) scale(1.1)';
+  });
+  
+  backToTop.addEventListener('mouseleave', function() {
+    this.style.transform = 'translateY(0) scale(1)';
+  });
+
+  // Track analytics events
+  if (typeof gtag !== 'undefined') {
+    // Track phone clicks
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+      link.addEventListener('click', function() {
+        gtag('event', 'phone_call_click', {
+          'event_category': 'Contact',
+          'event_label': 'Phone Click'
+        });
+      });
+    });
+    
+    // Track button clicks
+    document.querySelectorAll('.sqs-block-button-element').forEach(btn => {
+      btn.addEventListener('click', function() {
+        gtag('event', 'button_click', {
+          'event_category': 'CTA',
+          'event_label': this.textContent.trim()
+        });
+      });
+    });
+  }
+
+});
+</script>

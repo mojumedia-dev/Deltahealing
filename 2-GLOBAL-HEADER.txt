@@ -1,0 +1,80 @@
+<style>
+/* Click-to-Call Button Style */
+.click-to-call {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #0066cc;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.click-to-call:hover {
+  background: #0052a3;
+}
+</style>
+
+<!-- Global Business Schema (appears on all pages) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Delta Healing Solutions",
+  "alternateName": "Delta Healing Solutions TMS Clinic",
+  "description": "Non-profit mental health clinic in Delta, UT providing TMS therapy, Spravato treatment, psychiatric evaluation, medication management, and cognitive testing. Serving Millard County.",
+  "url": "https://www.deltahealingsolutions.org",
+  "logo": "https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/ef9b868c-0580-4cb9-a1a1-a445980554f6/DeltaHealingSolutions_Logo.png",
+  "telephone": "+1-435-864-5151",
+  "email": "info@deltahealingsolutions.org",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "95 White Sage Avenue",
+    "addressLocality": "Delta",
+    "addressRegion": "UT",
+    "postalCode": "84624",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "39.3510231",
+    "longitude": "-112.5593524"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "16:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61557053634976",
+    "https://www.instagram.com/deltahealingsolutions/"
+  ],
+  "areaServed": [
+    {"@type": "City", "name": "Delta"},
+    {"@type": "City", "name": "Fillmore"},
+    {"@type": "City", "name": "Oak City"},
+    {"@type": "City", "name": "Hinckley"},
+    {"@type": "AdministrativeArea", "name": "Millard County"}
+  ],
+  "medicalSpecialty": [
+    "Psychiatry",
+    "Mental Health",
+    "Depression Treatment",
+    "ADHD Testing",
+    "Treatment-Resistant Depression"
+  ]
+}
+</script>
+
+<!-- Local SEO Meta Tags -->
+<meta name="geo.region" content="US-UT" />
+<meta name="geo.placename" content="Delta" />
+<meta name="geo.position" content="39.3510231;-112.5593524" />
+
+<!-- Performance - Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.squarespace-cdn.com">
