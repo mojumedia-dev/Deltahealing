@@ -225,13 +225,44 @@ a.sqs-button-element {
  display: none !important;
 }
 
-/* Mobile Menu Adjustments */
+/* Mobile Menu - Highlighted Buttons */
 @media (max-width: 768px) {
- .header-nav-item a[href*="patient-portal"],
- .header-nav-item a[href*="providers"] {
- display: inline-block;
- margin: 8px 0 !important;
- width: auto;
+ /* Patient Portal - Mobile */
+ .header-menu-nav-item a[href*="patient-portal"] {
+ padding: 12px 20px !important;
+ border: 2px solid #3db8a8 !important;
+ border-radius: 999px !important;
+ color: #3db8a8 !important;
+ font-weight: 600 !important;
+ display: inline-block !important;
+ margin: 8px 1rem !important;
+ width: calc(100% - 2rem) !important;
+ text-align: center !important;
+ }
+ 
+ .header-menu-nav-item a[href*="patient-portal"]:hover {
+ background: #3db8a8 !important;
+ color: #fff !important;
+ transform: none !important;
+ }
+ 
+ /* Providers - Mobile */
+ .header-menu-nav-item a[href*="providers"] {
+ padding: 12px 20px !important;
+ border: 2px solid #1e4d8b !important;
+ border-radius: 999px !important;
+ color: #1e4d8b !important;
+ font-weight: 600 !important;
+ display: inline-block !important;
+ margin: 8px 1rem !important;
+ width: calc(100% - 2rem) !important;
+ text-align: center !important;
+ }
+ 
+ .header-menu-nav-item a[href*="providers"]:hover {
+ background: #1e4d8b !important;
+ color: #fff !important;
+ transform: none !important;
  }
 }
 
