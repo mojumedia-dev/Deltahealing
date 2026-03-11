@@ -1,0 +1,382 @@
+<section id="dhs-donate">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+#dhs-donate {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --border: #e6e8f2;
+    --text: #202332;
+    --muted: #666b7b;
+    --primary: #1e4d8b;
+    --accent: #3db8a8;
+    --shadow: 0 10px 28px rgba(26,32,44,.07);
+    --shadow-hover: 0 18px 40px rgba(26,32,44,.12);
+    --radius: 20px;
+    
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, rgba(30,77,139,.04), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(61,184,168,.035), transparent 20%),
+        var(--bg);
+    padding: 40px 0 70px;
+}
+
+#dhs-donate * {
+    box-sizing: border-box;
+}
+
+#dhs-donate .wrap {
+    width: min(1160px, calc(100% - 30px));
+    margin: auto;
+}
+
+#dhs-donate h1,
+#dhs-donate h2,
+#dhs-donate h3 {
+    margin: 0 0 12px;
+    line-height: 1.15;
+    color: var(--text);
+}
+
+#dhs-donate h1 {
+    font-size: clamp(32px, 4.2vw, 50px);
+    letter-spacing: -.03em;
+}
+
+#dhs-donate h2 {
+    font-size: clamp(25px, 2.5vw, 34px);
+    letter-spacing: -.02em;
+}
+
+#dhs-donate h3 {
+    font-size: 21px;
+}
+
+#dhs-donate p {
+    margin: 0 0 14px;
+    color: var(--muted);
+    line-height: 1.72;
+    font-size: 16px;
+}
+
+#dhs-donate ul {
+    margin: 0 0 14px;
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+#dhs-donate li {
+    margin-bottom: 6px;
+    color: var(--muted);
+}
+
+#dhs-donate .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Hero */
+#dhs-donate .hero {
+    padding: 38px;
+    margin-bottom: 24px;
+    text-align: center;
+    background:
+        radial-gradient(circle at top right, rgba(30,77,139,.10), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(61,184,168,.07), transparent 25%),
+        #fff;
+}
+
+#dhs-donate .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+#dhs-donate .lead {
+    font-size: 18px;
+    max-width: 62ch;
+    margin: 0 auto 24px;
+    color: var(--text);
+}
+
+/* Content Card */
+#dhs-donate .content-card {
+    padding: 32px;
+    margin-bottom: 24px;
+}
+
+#dhs-donate .highlight-box {
+    background: rgba(30,77,139,.05);
+    border-left: 4px solid var(--primary);
+    padding: 24px;
+    margin: 20px 0;
+    border-radius: 12px;
+}
+
+#dhs-donate .highlight-box p {
+    margin: 0;
+    color: var(--text);
+}
+
+/* Impact Grid */
+#dhs-donate .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+#dhs-donate .impact-card {
+    text-align: center;
+    padding: 28px 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+#dhs-donate .impact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+#dhs-donate .impact-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+#dhs-donate .impact-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+#dhs-donate .impact-card p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Donate Button */
+#dhs-donate .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 56px;
+    padding: 0 32px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform .18s ease, background .18s ease;
+    cursor: pointer;
+}
+
+#dhs-donate .btn-primary {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(30,77,139,.22);
+}
+
+#dhs-donate .btn-primary:hover {
+    background: #2a5d9b;
+    transform: translateY(-1px);
+}
+
+/* Ways to Help Grid */
+#dhs-donate .ways-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#dhs-donate .way-card {
+    padding: 24px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+#dhs-donate .way-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+#dhs-donate .way-card h3 i {
+    font-size: 24px;
+    color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    #dhs-donate .impact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    #dhs-donate {
+        padding: 20px 0 42px;
+    }
+    
+    #dhs-donate .wrap {
+        width: min(100% - 18px, 1160px);
+    }
+    
+    #dhs-donate .impact-grid,
+    #dhs-donate .ways-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #dhs-donate .hero,
+    #dhs-donate .content-card {
+        padding: 22px;
+    }
+}
+</style>
+
+<div class="wrap">
+
+    <!-- Hero -->
+    <div class="card hero">
+        <span class="eyebrow">Support Our Mission</span>
+        <h1>Donate to Delta Healing Solutions</h1>
+        <p class="lead">
+            Help us bring life-changing mental health care to rural Utah communities. Your tax-deductible donation makes breakthrough treatments accessible to those who need it most.
+        </p>
+        <a href="#donate-form" class="btn btn-primary"><i class="fas fa-heart"></i> Make a Donation</a>
+    </div>
+
+    <!-- Mission -->
+    <div class="card content-card">
+        <h2>Why We Need Your Support</h2>
+        <p>Delta Healing Solutions is a <strong>501(c)(3) non-profit organization</strong> dedicated to providing accessible, compassionate mental health care in underserved rural communities. We believe that where you live shouldn't determine whether you can access life-changing treatments like TMS therapy and Spravato.</p>
+        
+        <div class="highlight-box">
+            <p><strong>Your donation is 100% tax-deductible</strong> and directly supports patients who cannot afford the full cost of treatment, community education programs, and expanding access to innovative mental health therapies in Millard County and beyond.</p>
+        </div>
+    </div>
+
+    <!-- Impact -->
+    <div class="card content-card">
+        <h2>Your Impact</h2>
+        <p>Every dollar you give makes a real difference in someone's life. Here's how your donation helps:</p>
+        
+        <div class="impact-grid">
+            <div class="impact-card">
+                <div class="impact-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <h3>$100</h3>
+                <p>Covers one TMS therapy session for a patient in financial need</p>
+            </div>
+            
+            <div class="impact-card">
+                <div class="impact-icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3>$500</h3>
+                <p>Funds a week of treatment for someone battling depression</p>
+            </div>
+            
+            <div class="impact-card">
+                <div class="impact-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>$1,000+</h3>
+                <p>Sponsors a full treatment course and changes a life forever</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Donation Form Placeholder -->
+    <div class="card content-card" id="donate-form">
+        <h2>Make Your Tax-Deductible Donation</h2>
+        <p style="margin-bottom: 24px;">Choose your donation amount and payment method below.</p>
+        
+        <!-- ADD DONATION FORM OR BUTTON HERE -->
+        <div style="padding: 60px 20px; background: #f9fafb; border: 2px dashed #d1d5db; border-radius: 12px; text-align: center;">
+            <p style="color: #6b7280; font-size: 14px; margin: 0;">
+                <strong>⬇️ Add Donation Form or PayPal Button Here ⬇️</strong><br>
+                After pasting this code, add your donation form, PayPal button, or payment processor.<br>
+                Or simply add a "Donate via Venmo/Zelle" with account details.
+            </p>
+        </div>
+    </div>
+
+    <!-- Other Ways to Help -->
+    <div class="card content-card">
+        <h2>Other Ways to Support Us</h2>
+        
+        <div class="ways-grid">
+            <div class="way-card">
+                <h3><i class="fas fa-share-alt"></i> Spread the Word</h3>
+                <p>Share our mission on social media and help us reach more people who need mental health support.</p>
+            </div>
+            
+            <div class="way-card">
+                <h3><i class="fas fa-hands-helping"></i> Volunteer</h3>
+                <p>Contact us about volunteer opportunities to support our clinic and community outreach programs.</p>
+            </div>
+            
+            <div class="way-card">
+                <h3><i class="fas fa-briefcase"></i> Corporate Partnerships</h3>
+                <p>Interested in corporate giving or sponsorship? Reach out to discuss partnership opportunities.</p>
+            </div>
+            
+            <div class="way-card">
+                <h3><i class="fas fa-gift"></i> Legacy Giving</h3>
+                <p>Include Delta Healing Solutions in your estate planning to create lasting impact.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="card content-card">
+        <h2>Questions About Donating?</h2>
+        <p>We're happy to discuss how your donation will be used or answer any questions you have about supporting our mission.</p>
+        <p><strong>Contact us:</strong> <a href="mailto:info@deltahealingsolutions.org" style="color:var(--primary);">info@deltahealingsolutions.org</a> | <a href="tel:+14358645151" style="color:var(--primary);">(435) 864-5151</a></p>
+        <p style="font-size: 14px; color: var(--muted); margin-top: 20px;">Delta Healing Solutions is a 501(c)(3) non-profit organization. Tax ID: [Add EIN Here]<br>All donations are tax-deductible to the fullest extent allowed by law.</p>
+    </div>
+
+</div>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Donate - Delta Healing Solutions",
+  "description": "Support our mission to bring accessible mental health care to rural Utah. Tax-deductible donations fund TMS therapy, Spravato treatment, and community mental health programs.",
+  "url": "https://www.deltahealingsolutions.org/donate"
+}
+</script>
+
+</section>
