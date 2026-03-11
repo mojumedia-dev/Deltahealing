@@ -225,50 +225,8 @@ a.sqs-button-element {
  display: none !important;
 }
 
-/* Mobile Menu - Highlighted Buttons */
-@media (max-width: 768px) {
- /* Patient Portal - Mobile */
- .header-menu-nav-item a[href*="patient-portal"] {
- padding: 12px 20px !important;
- border: 2px solid #3db8a8 !important;
- border-radius: 999px !important;
- color: #3db8a8 !important;
- font-weight: 600 !important;
- display: inline-block !important;
- margin: 8px 1rem !important;
- width: calc(100% - 2rem) !important;
- text-align: center !important;
- }
- 
- .header-menu-nav-item a[href*="patient-portal"]:hover {
- background: #3db8a8 !important;
- color: #fff !important;
- transform: none !important;
- }
- 
- /* Providers - Mobile */
- .header-menu-nav-item a[href*="providers"] {
- padding: 12px 20px !important;
- border: 2px solid #1e4d8b !important;
- border-radius: 999px !important;
- color: #1e4d8b !important;
- font-weight: 600 !important;
- display: inline-block !important;
- margin: 8px 1rem !important;
- width: calc(100% - 2rem) !important;
- text-align: center !important;
- }
- 
- .header-menu-nav-item a[href*="providers"]:hover {
- background: #1e4d8b !important;
- color: #fff !important;
- transform: none !important;
- }
-}
-
-/* Mobile Menu Enhancement */
+/* Mobile Typography Only - No Menu Styling */
 @media (max-width: 767px) {
- /* Simplified - removed potential conflicts */
  h1 { font-size: 2rem; line-height: 1.2; }
  h2 { font-size: 1.75rem; }
  h3 { font-size: 1.4rem; }
