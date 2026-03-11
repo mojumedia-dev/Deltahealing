@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -12,186 +16,250 @@
         }
 
         body {
-            font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: #333;
+            --bg: #f6f7fb;
+            --card: #ffffff;
+            --border: #e6e8f2;
+            --text: #202332;
+            --muted: #666b7b;
+            --primary: #1e4d8b;
+            --accent: #3db8a8;
+            --shadow: 0 10px 28px rgba(26,32,44,.07);
+            --shadow-hover: 0 18px 40px rgba(26,32,44,.12);
+            --radius: 20px;
+            
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(30,77,139,.04), transparent 24%),
+                radial-gradient(circle at bottom right, rgba(61,184,168,.035), transparent 20%),
+                var(--bg);
+            padding: 40px 0 70px;
         }
 
-        .container {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 0 5px;
+        .wrap {
+            width: min(1160px, calc(100% - 30px));
+            margin: auto;
         }
 
-        /* Hero Section */
+        h1, h2, h3 {
+            margin: 0 0 12px;
+            line-height: 1.15;
+            color: var(--text);
+        }
+
+        h1 {
+            font-size: clamp(32px, 4.2vw, 50px);
+            letter-spacing: -.03em;
+        }
+
+        h2 {
+            font-size: clamp(25px, 2.5vw, 34px);
+            letter-spacing: -.02em;
+        }
+
+        h3 {
+            font-size: 21px;
+        }
+
+        p {
+            margin: 0 0 14px;
+            color: var(--muted);
+            line-height: 1.72;
+            font-size: 16px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* Hero */
         .hero {
-            background: linear-gradient(135deg, #1e4d8b 0%, #3db8a8 100%);
-            color: white;
-            padding: 20px 5px;
-            text-align: center;
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 30px;
+            padding: 38px;
+            margin-bottom: 24px;
+            background:
+                radial-gradient(circle at top right, rgba(30,77,139,.10), transparent 30%),
+                radial-gradient(circle at bottom left, rgba(61,184,168,.07), transparent 25%),
+                #fff;
         }
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
+        .eyebrow {
+            display: inline-block;
+            font-size: 12px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 12px;
         }
 
-        .hero p {
-            font-size: clamp(1.1rem, 2vw, 1.5rem);
-            margin-bottom: 2rem;
-            opacity: 0.95;
+        .lead {
+            font-size: 17px;
+            max-width: 62ch;
         }
 
-        .hero-buttons {
+        .hero-art {
+            min-height: 300px;
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            background:
+                linear-gradient(145deg, rgba(30,77,139,.94), rgba(61,184,168,.84)),
+                url('https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/9b813b55-0652-4e1d-8db7-5ac8c491fd2b/depression_help_therapy.jpg') center/cover no-repeat;
             display: flex;
-            gap: 1rem;
-            justify-content: center;
+            align-items: flex-end;
+            padding: 22px;
+            border: 1px solid rgba(255,255,255,.18);
+        }
+
+        .hero-art::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(16,18,34,.42), rgba(16,18,34,.04));
+        }
+
+        .hero-note {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+            max-width: 28ch;
+            line-height: 1.65;
+            font-size: 14px;
+        }
+
+        .hero-note strong {
+            display: block;
+            font-size: 19px;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+
+        .btn-row {
+            display: flex;
             flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 18px;
         }
 
         .btn {
-            display: inline-block;
-            padding: 16px 40px;
-            border-radius: 8px;
-            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 48px;
+            padding: 0 18px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 14px;
             text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
+            border: 1px solid transparent;
+            transition: transform .18s ease, background .18s ease;
+            cursor: pointer;
         }
 
         .btn-primary {
-            background: white;
-            color: #1e4d8b;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 10px 24px rgba(30,77,139,.22);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background: #2a5d9b;
+            transform: translateY(-1px);
         }
 
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #1e4d8b;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 20px 5px;
-            background: #f8f9fa;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        .section-header h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 1rem;
-            color: #2d3748;
-        }
-
-        .section-header p {
-            font-size: 1.2rem;
-            color: #4a5568;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
+        /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-bottom: 24px;
         }
 
         .service-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            text-align: center;
+            padding: 24px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            min-height: 230px;
+            transition: transform .2s ease, box-shadow .2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            opacity: .9;
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
         }
 
         .service-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
-            color: #1e4d8b;
+            color: var(--primary);
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #2d3748;
+            color: var(--primary);
+            margin-bottom: 10px;
         }
 
         .service-card p {
-            color: #4a5568;
-            margin-bottom: 1.5rem;
+            margin-bottom: 16px;
+            font-size: 15px;
         }
 
-        .service-card a {
-            color: #1e4d8b;
-            font-weight: 600;
+        .service-link {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--primary);
             text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .service-card a:hover {
-            color: #3db8a8;
         }
 
         /* About Section */
         .about {
-            padding: 20px 5px;
-            background: white;
+            padding: 28px;
+            margin-bottom: 24px;
         }
 
-        .about-content {
+        .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            margin-bottom: 1.5rem;
-            color: #2d3748;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            color: #4a5568;
-            margin-bottom: 1.5rem;
+            gap: 30px;
+            margin-top: 20px;
         }
 
         .about-features {
             list-style: none;
-            margin-top: 2rem;
+            padding: 0;
         }
 
         .about-features li {
-            padding: 12px 0;
-            padding-left: 35px;
+            padding: 12px 0 12px 35px;
             position: relative;
             font-size: 1.1rem;
-            color: #2d3748;
+            color: var(--text);
         }
 
         .about-features li:before {
@@ -203,314 +271,166 @@
             font-size: 1.5rem;
         }
 
-        .about-image {
-            background: linear-gradient(135deg, #1e4d8b 0%, #3db8a8 100%);
-            height: 500px;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 6rem;
-        }
-
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(135deg, #1e4d8b 0%, #3db8a8 100%);
-            color: white;
-            padding: 20px 5px;
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 1.5rem;
-        }
-
-        .cta p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-        }
-
-        .contact-item {
-            text-align: center;
-        }
-
-        .contact-item .icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            border-bottom-color: white;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
+        /* Responsive */
+        @media (max-width: 1000px) {
             .hero {
-                padding: 20px 5px;
-            }
-
-            .services {
-                padding: 20px 5px;
-            }
-
-            .about-content {
                 grid-template-columns: 1fr;
-                gap: 40px;
             }
-
-            .about-image {
-                height: 300px;
-                order: -1;
+            
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
             }
-
-            .contact-info {
-                flex-direction: column;
-                gap: 30px;
+            
+            .about-grid {
+                grid-template-columns: 1fr;
             }
+        }
 
-            .hero-buttons {
-                flex-direction: column;
+        @media (max-width: 720px) {
+            body {
+                padding: 20px 0 42px;
             }
-
-            .btn {
-                width: 100%;
-                max-width: 350px;
+            
+            .wrap {
+                width: min(100% - 18px, 1160px);
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero, .about, .service-card {
+                padding: 22px;
+            }
+            
+            .hero-art {
+                min-height: 235px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
+<div class="wrap">
+
+    <!-- Hero -->
+    <div class="card hero">
+        <div>
+            <span class="eyebrow">Mental Health Care</span>
             <h1>Compassionate Mental Health Care in Delta, Utah</h1>
-            <p>Non-profit clinic offering TMS therapy, Spravato treatment, psychiatric services, and ADHD testing. Serving Millard County and surrounding areas.</p>
-            <div class="hero-buttons">
-                <a href="tel:+14358645151" class="btn btn-primary">Call (435) 864-5151</a>
-                <a href="#services" class="btn btn-secondary">Explore Services</a>
+            <p class="lead">
+                Non-profit clinic offering TMS therapy, Spravato treatment, psychiatric services, and ADHD testing. Serving Millard County and surrounding areas.
+            </p>
+            <div class="btn-row">
+                <a href="tel:+14358645151" class="btn btn-primary"><i class="fas fa-phone"></i> Call (435) 864-5151</a>
             </div>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Evidence-based mental health treatments delivered with compassion and expertise</p>
-            </div>
-
-            <div class="services-grid">
-                <!-- TMS Therapy -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-brain"></i></div>
-                    <h3>NeuroStar TMS Therapy</h3>
-                    <p>FDA-approved, non-invasive magnetic brain stimulation for treatment-resistant depression. No medication, no anesthesia, no downtime.</p>
-                    <a href="/neurostar-tms-therapy">Learn More →</a>
-                </div>
-
-                <!-- Spravato -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-pills"></i></div>
-                    <h3>Spravato Treatment</h3>
-                    <p>Breakthrough esketamine nasal spray for adults with treatment-resistant depression. Fast-acting relief administered under medical supervision.</p>
-                    <a href="/spravato-treatment">Learn More →</a>
-                </div>
-
-                <!-- Psychiatric Evaluation -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-clipboard-list"></i></div>
-                    <h3>Psychiatric Evaluation</h3>
-                    <p>Comprehensive mental health assessments to diagnose depression, anxiety, ADHD, and other conditions. Expert diagnostic care.</p>
-                    <a href="/services">Learn More →</a>
-                </div>
-
-                <!-- Medication Management -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-prescription-bottle"></i></div>
-                    <h3>Medication Management</h3>
-                    <p>Ongoing psychiatric medication monitoring and adjustment. Personalized treatment plans to optimize your mental health.</p>
-                    <a href="/psychiatric-medication-management">Learn More →</a>
-                </div>
-
-                <!-- Cognitive Testing -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-bullseye"></i></div>
-                    <h3>ADHD & Cognitive Testing</h3>
-                    <p>Professional neuropsychological assessments for children and adults. Comprehensive ADHD evaluations and cognitive testing.</p>
-                    <a href="/cognitive-testing">Learn More →</a>
-                </div>
-
-                <!-- General Mental Health -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-heart"></i></div>
-                    <h3>General Mental Health</h3>
-                    <p>Treatment for depression, anxiety, bipolar disorder, PTSD, and other mental health conditions. Compassionate, individualized care.</p>
-                    <a href="/services">Learn More →</a>
-                </div>
+        <div class="hero-art">
+            <div class="hero-note">
+                <strong>Evidence-based treatment</strong>
+                Breakthrough therapies including TMS and Spravato for treatment-resistant depression.
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="services-grid">
+        <!-- TMS Therapy -->
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-brain"></i></div>
+            <h3>NeuroStar TMS Therapy</h3>
+            <p>FDA-approved, non-invasive magnetic brain stimulation for treatment-resistant depression. No medication, no anesthesia, no downtime.</p>
+            <a href="/neurostar-tms-therapy" class="service-link">Learn More →</a>
+        </div>
+
+        <!-- Spravato -->
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-pills"></i></div>
+            <h3>Spravato Treatment</h3>
+            <p>Breakthrough esketamine nasal spray for adults with treatment-resistant depression. Fast-acting relief administered under medical supervision.</p>
+            <a href="/spravato-treatment" class="service-link">Learn More →</a>
+        </div>
+
+        <!-- Psychiatric Evaluation -->
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-clipboard-list"></i></div>
+            <h3>Psychiatric Evaluation</h3>
+            <p>Comprehensive mental health assessments to diagnose depression, anxiety, ADHD, and other conditions. Expert diagnostic care.</p>
+            <a href="/services" class="service-link">Learn More →</a>
+        </div>
+
+        <!-- Medication Management -->
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-prescription-bottle"></i></div>
+            <h3>Medication Management</h3>
+            <p>Ongoing psychiatric medication monitoring and adjustment. Personalized treatment plans to optimize your mental health.</p>
+            <a href="/psychiatric-medication-management" class="service-link">Learn More →</a>
+        </div>
+
+        <!-- Cognitive Testing -->
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-bullseye"></i></div>
+            <h3>ADHD & Cognitive Testing</h3>
+            <p>Professional neuropsychological assessments for children and adults. Comprehensive ADHD evaluations and cognitive testing.</p>
+            <a href="/cognitive-testing" class="service-link">Learn More →</a>
+        </div>
+
+        <!-- General Mental Health -->
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-heart"></i></div>
+            <h3>General Mental Health</h3>
+            <p>Treatment for depression, anxiety, bipolar disorder, PTSD, and other mental health conditions. Compassionate, individualized care.</p>
+            <a href="/services" class="service-link">Learn More →</a>
+        </div>
+    </div>
 
     <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About Delta Healing Solutions</h2>
-                    <p>We are a <strong>non-profit mental health clinic</strong> dedicated to providing accessible, compassionate psychiatric care to Delta, Fillmore, Oak City, Hinckley, and all of Millard County, Utah.</p>
-                    <p>Our experienced team offers cutting-edge treatments like TMS therapy and Spravato, combined with traditional psychiatric services, to give you the best possible care for your mental health journey.</p>
-                    
-                    <ul class="about-features">
-                        <li>Non-profit organization committed to accessible care</li>
-                        <li>FDA-approved breakthrough treatments</li>
-                        <li>Experienced psychiatric professionals</li>
-                        <li>Most insurance plans accepted</li>
-                        <li>Serving rural Utah communities</li>
-                        <li>Comprehensive mental health services</li>
-                    </ul>
-
-                    <div style="margin-top: 2rem;">
-                        <a href="/about" class="btn btn-primary" style="color: #1e4d8b;">Learn About Us →</a>
-                    </div>
-                </div>
-
-                <div class="about-image">
-                    <i class="fas fa-hospital" style="font-size: 8rem; color: white;"></i>
-                </div>
+    <div class="card about">
+        <h2>About Delta Healing Solutions</h2>
+        <div class="about-grid">
+            <div>
+                <p>We are a <strong>non-profit mental health clinic</strong> dedicated to providing accessible, compassionate psychiatric care to Delta, Fillmore, Oak City, Hinckley, and all of Millard County, Utah.</p>
+                <p>Our experienced team offers cutting-edge treatments like TMS therapy and Spravato, combined with traditional psychiatric services, to give you the best possible care for your mental health journey.</p>
+            </div>
+            <div>
+                <ul class="about-features">
+                    <li>Non-profit organization committed to accessible care</li>
+                    <li>FDA-approved breakthrough treatments</li>
+                    <li>Experienced psychiatric professionals</li>
+                    <li>Most insurance plans accepted</li>
+                    <li>Serving rural Utah communities</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Call to Action Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Take the Next Step?</h2>
-            <p>Schedule your consultation today. We accept most insurance plans.</p>
-            
-            <div class="hero-buttons">
-                <a href="tel:+14358645151" class="btn btn-primary" style="color: #1e4d8b;">Call (435) 864-5151</a>
-                <a href="mailto:info@deltahealingsolutions.org" class="btn btn-secondary">Email Us</a>
-            </div>
+</div>
 
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <h3>Location</h3>
-                    <p>95 White Sage Avenue<br>Delta, UT 84624</p>
-                </div>
-
-                <div class="contact-item">
-                    <div class="icon"><i class="fas fa-phone"></i></div>
-                    <h3>Phone</h3>
-                    <a href="tel:+14358645151">(435) 864-5151</a>
-                </div>
-
-                <div class="contact-item">
-                    <div class="icon"><i class="fas fa-clock"></i></div>
-                    <h3>Hours</h3>
-                    <p>Monday - Friday<br>9:00 AM - 4:00 PM</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is TMS therapy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "TMS (Transcranial Magnetic Stimulation) is FDA-approved, non-invasive treatment for depression using magnetic pulses. Delta Healing Solutions offers NeuroStar TMS therapy for patients who haven't responded to traditional antidepressants."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Spravato treatment?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Spravato (esketamine) is an FDA-approved nasal spray medication for treatment-resistant depression. It's administered in our clinic under medical supervision and has shown rapid effectiveness for patients who haven't responded to other antidepressants."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What areas do you serve?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Delta Healing Solutions serves Delta, UT and surrounding areas including Fillmore, Oak City, Hinckley, and all of Millard County. We're a non-profit mental health clinic committed to accessible care."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you accept insurance?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we accept most major insurance plans. Contact us at (435) 864-5151 to verify coverage."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What services do you offer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We offer NeuroStar TMS therapy, Spravato (esketamine) treatment for treatment-resistant depression, comprehensive psychiatric evaluations, psychiatric medication management, and cognitive testing including ADHD assessments."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script type="application/ld+json">
+      "@type": "Question",
+      "name": "What is TMS therapy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TMS (Transcranial Magnetic Stimulation) is FDA-approved, non-invasive treatment for depression using magnetic pulses. Delta Healing Solutions offers NeuroStar TMS therapy for patients who haven't responded to traditional antidepressants."
+      }
+    },
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.deltahealingsolutions.org"
-        }
-      ]
+      "@type": "Question",
+      "name": "What is Spravato treatment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spravato (esketamine) is an FDA-approved nasal spray medication for treatment-resistant depression. It's administered in our clinic under medical supervision and has shown rapid effectiveness for patients who haven't responded to other antidepressants."
+      }
     }
-    </script>
+  ]
+}
+</script>
 
 </body>
 </html>
-
-
-
-
-
-
