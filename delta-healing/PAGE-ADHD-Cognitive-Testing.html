@@ -4,178 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; }
-        .container { max-width: 100%; margin: 0 auto; padding: 0 5px; }
-        .hero { background: linear-gradient(135deg, #1e4d8b 0%, #3db8a8 100%); color: white; padding: 20px 5px; text-align: center; }
-        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; margin-bottom: 1rem; }
-        .hero p { font-size: clamp(1.1rem, 2vw, 1.4rem); opacity: 0.95; }
-        .content { padding: 20px 5px; }
-        .content h2 { font-size: 2.5rem; margin-bottom: 2rem; color: #2d3748; }
-        .content h3 { font-size: 1.8rem; margin-top: 3rem; margin-bottom: 1rem; color: #2d3748; }
-        .content p { font-size: 1.15rem; color: #4a5568; margin-bottom: 1.5rem; line-height: 1.8; }
-        ul { margin-left: 20px; margin-bottom: 1.5rem; }
-        li { margin-bottom: 0.8rem; font-size: 1.1rem; color: #4a5568; }
-        .highlight-box { background: #edf2f7; border-left: 4px solid #1e4d8b; padding: 30px; margin: 15px 0; border-radius: 8px; }
-        .cta-box { background: linear-gradient(135deg, #1e4d8b 0%, #3db8a8 100%); color: white; padding: 60px 40px; border-radius: 16px; text-align: center; margin-top: 60px; }
-        .cta-box h2 { color: white; margin-bottom: 1rem; }
-        .btn { display: inline-block; padding: 16px 40px; background: white; color: #1e4d8b; text-decoration: none; border-radius: 8px; font-weight: 600; margin-top: 1rem; transition: transform 0.3s ease; }
-        .btn:hover { transform: translateY(-2px); }
-        @media (max-width: 768px) { .hero, .content { padding: 20px 5px; } }
+        html{scroll-behavior:smooth}*{margin:0;padding:0;box-sizing:border-box}body{--bg:#f6f7fb;--card:#fff;--border:#e6e8f2;--text:#202332;--muted:#666b7b;--primary:#1e4d8b;--accent:#3db8a8;--shadow:0 10px 28px rgba(26,32,44,.07);--radius:20px;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(30,77,139,.04),transparent 24%),radial-gradient(circle at bottom right,rgba(61,184,168,.035),transparent 20%),var(--bg);padding:40px 0 70px}.wrap{width:min(1160px,calc(100% - 30px));margin:auto}h1,h2,h3{margin:0 0 12px;line-height:1.15;color:var(--text)}h1{font-size:clamp(32px,4.2vw,50px);letter-spacing:-.03em}h2{font-size:clamp(25px,2.5vw,34px);letter-spacing:-.02em}h3{font-size:21px}p{margin:0 0 14px;color:var(--muted);line-height:1.72;font-size:16px}ul{margin:0 0 14px;padding-left:20px;line-height:1.8}li{margin-bottom:6px;color:var(--muted)}.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}.hero{padding:38px;margin-bottom:24px;background:radial-gradient(circle at top right,rgba(30,77,139,.1),transparent 30%),radial-gradient(circle at bottom left,rgba(61,184,168,.07),transparent 25%),#fff}.eyebrow{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);font-weight:800;margin-bottom:12px}.content-card{padding:28px;margin-bottom:24px}.highlight-box{background:rgba(30,77,139,.05);border-left:4px solid var(--primary);padding:24px;margin:20px 0;border-radius:12px}@media (max-width:720px){body{padding:20px 0 42px}.wrap{width:min(100% - 18px,1160px)}.hero,.content-card{padding:22px}}
     </style>
 </head>
 <body>
+<div class="wrap">
+    <div class="card hero">
+        <span class="eyebrow">Diagnostic Testing</span>
+        <h1>ADHD Testing & Cognitive Evaluations</h1>
+        <p style="font-size:17px;max-width:62ch;color:var(--muted)">Professional Neuropsychological Assessments for Children & Adults</p>
+    </div>
 
-    <section class="hero">
-        <div class="container">
-            <h1>ADHD Testing & Cognitive Evaluations</h1>
-            <p>Professional Neuropsychological Assessments for Children & Adults</p>
+    <div class="card content-card">
+        <h2>Comprehensive ADHD & Cognitive Testing</h2>
+        <p>Delta Healing Solutions provides professional <strong>ADHD testing and cognitive evaluations</strong> for children and adults in Delta, UT and surrounding areas. Our assessments help diagnose attention issues, learning disabilities, memory problems, and other cognitive concerns.</p>
+        <p>Whether you're struggling to focus at work, your child is having trouble in school, or you suspect undiagnosed ADHD, we're here to help.</p>
+    </div>
+
+    <div class="card content-card">
+        <h2>What is ADHD?</h2>
+        <div class="highlight-box">
+            <p style="color:var(--text);margin-bottom:0"><strong>ADHD (Attention-Deficit/Hyperactivity Disorder)</strong> is a neurodevelopmental condition characterized by persistent inattention, hyperactivity, and/or impulsivity that interferes with daily functioning. Many people with ADHD go undiagnosed for years, struggling unnecessarily. Proper diagnosis opens the door to effective treatment and support.</p>
         </div>
-    </section>
+    </div>
 
-    <section class="content">
-        <div class="container">
-            <h2>Comprehensive ADHD & Cognitive Testing</h2>
-            <p>Delta Healing Solutions provides professional <strong>ADHD testing and cognitive evaluations</strong> for children and adults in Delta, UT and surrounding areas. Our assessments help diagnose attention issues, learning disabilities, memory problems, and other cognitive concerns.</p>
+    <div class="card content-card">
+        <h2>Signs You or Your Child May Have ADHD</h2>
+        
+        <h3>Inattention Symptoms</h3>
+        <ul>
+            <li>Difficulty sustaining attention on tasks</li>
+            <li>Makes careless mistakes</li>
+            <li>Doesn't seem to listen when spoken to</li>
+            <li>Fails to finish tasks</li>
+            <li>Difficulty organizing tasks and activities</li>
+            <li>Avoids tasks requiring sustained mental effort</li>
+            <li>Loses things frequently</li>
+            <li>Easily distracted</li>
+            <li>Forgetful in daily activities</li>
+        </ul>
 
-            <p>Whether you're struggling to focus at work, your child is having trouble in school, or you suspect undiagnosed ADHD, we're here to help.</p>
+        <h3>Hyperactivity/Impulsivity Symptoms</h3>
+        <ul>
+            <li>Fidgets or squirms</li>
+            <li>Difficulty staying seated</li>
+            <li>Runs/climbs excessively (children) or feels restless (adults)</li>
+            <li>Difficulty engaging in quiet activities</li>
+            <li>Always "on the go"</li>
+            <li>Talks excessively</li>
+            <li>Blurts out answers</li>
+            <li>Difficulty waiting turn</li>
+            <li>Interrupts or intrudes on others</li>
+        </ul>
+    </div>
 
-            <div class="highlight-box">
-                <h3>What is ADHD?</h3>
-                <p><strong>ADHD (Attention-Deficit/Hyperactivity Disorder)</strong> is a neurodevelopmental condition characterized by persistent inattention, hyperactivity, and/or impulsivity that interferes with daily functioning.</p>
-                <p>Many people with ADHD go undiagnosed for years, struggling unnecessarily. Proper diagnosis opens the door to effective treatment and support.</p>
-            </div>
+    <div class="card content-card">
+        <h2>What Does ADHD Testing Involve?</h2>
+        <p>Our comprehensive ADHD evaluation includes:</p>
+        <ul>
+            <li><strong>Clinical Interview</strong> - Detailed discussion of symptoms and history</li>
+            <li><strong>Standardized Assessment Tools</strong> - Validated ADHD rating scales</li>
+            <li><strong>Cognitive Testing</strong> - Assessments of attention and executive function</li>
+            <li><strong>Computerized Tests</strong> - Objective measures of attention (when appropriate)</li>
+            <li><strong>Collateral Information</strong> - Input from family, teachers, or partners</li>
+            <li><strong>Ruling Out Other Conditions</strong> - Depression, anxiety can mimic ADHD</li>
+        </ul>
+    </div>
 
-            <h3>Signs You or Your Child May Have ADHD</h3>
-            <p><strong>Inattention symptoms:</strong></p>
-            <ul>
-                <li>Difficulty sustaining attention on tasks</li>
-                <li>Makes careless mistakes</li>
-                <li>Doesn't seem to listen when spoken to</li>
-                <li>Fails to finish tasks</li>
-                <li>Difficulty organizing tasks and activities</li>
-                <li>Avoids tasks requiring sustained mental effort</li>
-                <li>Loses things frequently</li>
-                <li>Easily distracted</li>
-                <li>Forgetful in daily activities</li>
-            </ul>
+    <div class="card content-card">
+        <h2>Adult ADHD Testing</h2>
+        <p><strong>Yes, we test adults for ADHD!</strong> Many adults discover they have ADHD later in life when struggling with:</p>
+        <ul>
+            <li>Work performance and organization</li>
+            <li>Time management and procrastination</li>
+            <li>Relationship difficulties</li>
+            <li>Chronic forgetfulness</li>
+            <li>Difficulty completing tasks</li>
+            <li>Impulsive decisions</li>
+        </ul>
+        <p>Adult ADHD testing can provide clarity and open pathways to effective treatment, improving quality of life significantly.</p>
+    </div>
 
-            <p><strong>Hyperactivity/Impulsivity symptoms:</strong></p>
-            <ul>
-                <li>Fidgets or squirms</li>
-                <li>Difficulty staying seated</li>
-                <li>Runs/climbs excessively (children) or feels restless (adults)</li>
-                <li>Difficulty engaging in quiet activities</li>
-                <li>Always "on the go"</li>
-                <li>Talks excessively</li>
-                <li>Blurts out answers</li>
-                <li>Difficulty waiting turn</li>
-                <li>Interrupts or intrudes on others</li>
-            </ul>
+    <div class="card content-card">
+        <h2>Cognitive Testing for Other Concerns</h2>
+        <p>Beyond ADHD, we provide cognitive evaluations for:</p>
+        <ul>
+            <li><strong>Memory Problems</strong> - Assessing memory concerns and cognitive decline</li>
+            <li><strong>Learning Disabilities</strong> - Identifying specific learning challenges</li>
+            <li><strong>Executive Function Deficits</strong> - Planning, organization, problem-solving</li>
+            <li><strong>Processing Speed</strong> - How quickly information is processed</li>
+            <li><strong>Brain Injury/Concussion</strong> - Cognitive effects of head trauma</li>
+        </ul>
+    </div>
 
-            <h3>What Does ADHD Testing Involve?</h3>
-            <p>Our comprehensive ADHD evaluation includes:</p>
-            <ul>
-                <li><strong>Clinical Interview</strong> - Detailed discussion of symptoms and history</li>
-                <li><strong>Standardized Assessment Tools</strong> - Validated ADHD rating scales and questionnaires</li>
-                <li><strong>Cognitive Testing</strong> - Assessments of attention, concentration, and executive function</li>
-                <li><strong>Computerized Tests</strong> - Objective measures of attention and impulsivity (when appropriate)</li>
-                <li><strong>Collateral Information</strong> - Input from family members, teachers, or partners</li>
-                <li><strong>Ruling Out Other Conditions</strong> - Depression, anxiety, and other issues can mimic ADHD</li>
-            </ul>
+    <div class="card content-card">
+        <h2>After Testing</h2>
+        <p>Following your evaluation, you'll receive:</p>
+        <ul>
+            <li><strong>Detailed Written Report</strong> - Comprehensive results and findings</li>
+            <li><strong>Diagnostic Clarity</strong> - Clear diagnosis if ADHD or other conditions are present</li>
+            <li><strong>Treatment Recommendations</strong> - Personalized suggestions for next steps</li>
+            <li><strong>School/Work Accommodations</strong> - Documentation for needed supports</li>
+            <li><strong>Follow-Up Appointment</strong> - Review results and discuss treatment options</li>
+        </ul>
+    </div>
 
-            <h3>Adult ADHD Testing</h3>
-            <p><strong>Yes, we test adults for ADHD!</strong> Many adults discover they have ADHD later in life when struggling with:</p>
-            <ul>
-                <li>Work performance and organization</li>
-                <li>Time management and procrastination</li>
-                <li>Relationship difficulties</li>
-                <li>Chronic forgetfulness</li>
-                <li>Difficulty completing tasks</li>
-                <li>Impulsive decisions</li>
-            </ul>
-            <p>Adult ADHD testing can provide clarity and open pathways to effective treatment, improving quality of life significantly.</p>
+    <div class="card content-card">
+        <h2>Treatment Options for ADHD</h2>
+        <p>If ADHD is diagnosed, we offer comprehensive treatment including:</p>
+        <ul>
+            <li><strong>Medication Management</strong> - Stimulants (Adderall, Ritalin, Vyvanse) and non-stimulants</li>
+            <li><strong>Behavioral Strategies</strong> - Organization, time management, coping skills</li>
+            <li><strong>Therapy Referrals</strong> - CBT and other evidence-based therapies</li>
+            <li><strong>Ongoing Monitoring</strong> - Regular follow-ups to optimize treatment</li>
+            <li><strong>School/Work Accommodations</strong> - Support for needed adjustments</li>
+        </ul>
+    </div>
 
-            <h3>Cognitive Testing for Other Concerns</h3>
-            <p>Beyond ADHD, we provide cognitive evaluations for:</p>
-            <ul>
-                <li><strong>Memory Problems</strong> - Assessing memory concerns and cognitive decline</li>
-                <li><strong>Learning Disabilities</strong> - Identifying specific learning challenges</li>
-                <li><strong>Executive Function Deficits</strong> - Planning, organization, and problem-solving skills</li>
-                <li><strong>Processing Speed</strong> - How quickly information is processed</li>
-                <li><strong>Brain Injury/Concussion</strong> - Cognitive effects of head trauma</li>
-            </ul>
+</div>
 
-            <h3>How Long Does Testing Take?</h3>
-            <p>Cognitive testing typically takes <strong>2-4 hours</strong> depending on the complexity of the evaluation. Testing may be completed in one session or split across multiple appointments for younger children or those who fatigue easily.</p>
-
-            <h3>What Happens After Testing?</h3>
-            <p>Following your evaluation, you'll receive:</p>
-            <ul>
-                <li><strong>Detailed Written Report</strong> - Comprehensive results and findings</li>
-                <li><strong>Diagnostic Clarity</strong> - Clear diagnosis if ADHD or other conditions are present</li>
-                <li><strong>Treatment Recommendations</strong> - Personalized suggestions for next steps</li>
-                <li><strong>School/Work Accommodations</strong> - Documentation for needed supports</li>
-                <li><strong>Follow-Up Appointment</strong> - Review results and discuss treatment options</li>
-            </ul>
-
-            <h3>Treatment Options for ADHD</h3>
-            <p>If ADHD is diagnosed, we offer comprehensive treatment including:</p>
-            <ul>
-                <li><strong>Medication Management</strong> - Stimulants (Adderall, Ritalin, Vyvanse) and non-stimulant options (Strattera, Intuniv)</li>
-                <li><strong>Behavioral Strategies</strong> - Organization, time management, coping skills</li>
-                <li><strong>Therapy Referrals</strong> - CBT and other evidence-based therapies</li>
-                <li><strong>Ongoing Monitoring</strong> - Regular follow-ups to optimize treatment</li>
-                <li><strong>School/Work Accommodations</strong> - Support for needed adjustments</li>
-            </ul>
-
-            <h3>Insurance Coverage</h3>
-            <p>Many insurance plans cover cognitive and ADHD testing when medically necessary. We will:</p>
-            <ul>
-                <li>Verify your coverage</li>
-                <li>Obtain prior authorization if required</li>
-                <li>Help you understand your out-of-pocket costs</li>
-            </ul>
-            <p><strong>Call (435) 864-5151 for benefit verification.</strong></p>
-
-            <h3>Who Can Benefit from Testing?</h3>
-            <ul>
-                <li>Children struggling in school</li>
-                <li>Adults with lifelong attention difficulties</li>
-                <li>Anyone who suspects ADHD</li>
-                <li>Students needing academic accommodations</li>
-                <li>Workers needing workplace support</li>
-                <li>Individuals with memory or cognitive concerns</li>
-            </ul>
-
-            <div class="cta-box">
-                <h2>Schedule Your ADHD Evaluation Today</h2>
-                <p>Get the answers you need. Professional testing can change your life.</p>
-                <a href="tel:+14358645151" class="btn">Call (435) 864-5151</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "ADHD Testing & Cognitive Evaluations in Delta, UT",
-      "about": {
-        "@type": "MedicalTest",
-        "name": "Cognitive Testing",
-        "alternateName": "ADHD Testing",
-        "usedToDiagnose": ["ADHD", "Cognitive Impairment", "Learning Disabilities"]
-      }
-    }
-    </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalWebPage","name":"ADHD Testing & Cognitive Evaluations","about":{"@type":"MedicalTest","name":"Cognitive Testing","alternateName":"ADHD Testing","usedToDiagnose":["ADHD","Cognitive Impairment"]}}
+</script>
 
 </body>
 </html>
-
-
-
-
-
-
