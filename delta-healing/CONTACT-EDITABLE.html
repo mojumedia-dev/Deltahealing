@@ -1,0 +1,485 @@
+<section id="dhs-contact">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+#dhs-contact {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --border: #e6e8f2;
+    --text: #202332;
+    --muted: #666b7b;
+    --primary: #1e4d8b;
+    --accent: #3db8a8;
+    --shadow: 0 10px 28px rgba(26,32,44,.07);
+    --shadow-hover: 0 18px 40px rgba(26,32,44,.12);
+    --radius: 20px;
+    
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, rgba(30,77,139,.04), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(61,184,168,.035), transparent 20%),
+        var(--bg);
+    padding: 40px 0 70px;
+}
+
+#dhs-contact * {
+    box-sizing: border-box;
+}
+
+#dhs-contact .wrap {
+    width: min(1160px, calc(100% - 30px));
+    margin: auto;
+}
+
+#dhs-contact h1,
+#dhs-contact h2,
+#dhs-contact h3 {
+    margin: 0 0 12px;
+    line-height: 1.15;
+    color: var(--text);
+}
+
+#dhs-contact h1 {
+    font-size: clamp(32px, 4.2vw, 50px);
+    letter-spacing: -.03em;
+}
+
+#dhs-contact h2 {
+    font-size: clamp(25px, 2.5vw, 34px);
+    letter-spacing: -.02em;
+}
+
+#dhs-contact h3 {
+    font-size: 21px;
+}
+
+#dhs-contact p {
+    margin: 0 0 14px;
+    color: var(--muted);
+    line-height: 1.72;
+    font-size: 16px;
+}
+
+#dhs-contact .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Hero */
+#dhs-contact .hero {
+    padding: 38px;
+    margin-bottom: 24px;
+    text-align: center;
+    background:
+        radial-gradient(circle at top right, rgba(30,77,139,.10), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(61,184,168,.07), transparent 25%),
+        #fff;
+}
+
+#dhs-contact .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+#dhs-contact .lead {
+    font-size: 17px;
+    max-width: 62ch;
+    margin: 0 auto 18px;
+}
+
+/* Contact Cards Grid */
+#dhs-contact .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+#dhs-contact .contact-card {
+    padding: 28px 24px;
+    text-align: center;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+#dhs-contact .contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+#dhs-contact .contact-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+#dhs-contact .contact-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+#dhs-contact .contact-card p {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+#dhs-contact .contact-card a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#dhs-contact .contact-card a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* Form & Map Section */
+#dhs-contact .form-map-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+#dhs-contact .form-container {
+    padding: 32px;
+}
+
+#dhs-contact .map-container {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+#dhs-contact .map-embed {
+    flex: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    min-height: 400px;
+}
+
+#dhs-contact .map-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    min-height: 400px;
+}
+
+#dhs-contact .directions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 12px 24px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background .2s ease, transform .2s ease;
+}
+
+#dhs-contact .directions-btn:hover {
+    background: #2a5d9b;
+    transform: translateY(-1px);
+}
+
+/* Form Styles */
+#dhs-contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#dhs-contact label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text);
+    font-size: 14px;
+}
+
+#dhs-contact input,
+#dhs-contact textarea,
+#dhs-contact select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+#dhs-contact input:focus,
+#dhs-contact textarea:focus,
+#dhs-contact select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(30, 77, 139, .1);
+}
+
+#dhs-contact textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#dhs-contact .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#dhs-contact .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#dhs-contact .checkbox-item input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+#dhs-contact .submit-btn {
+    padding: 14px 32px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+    box-shadow: 0 10px 24px rgba(30,77,139,.22);
+}
+
+#dhs-contact .submit-btn:hover {
+    background: #2a5d9b;
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    #dhs-contact .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #dhs-contact .form-map-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    #dhs-contact {
+        padding: 20px 0 42px;
+    }
+    
+    #dhs-contact .wrap {
+        width: min(100% - 18px, 1160px);
+    }
+    
+    #dhs-contact .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #dhs-contact .hero,
+    #dhs-contact .form-container,
+    #dhs-contact .map-container,
+    #dhs-contact .contact-card {
+        padding: 22px;
+    }
+}
+</style>
+
+<div class="wrap">
+
+    <!-- Hero -->
+    <div class="card hero">
+        <span class="eyebrow">Get In Touch</span>
+        <h1>Contact Delta Healing Solutions</h1>
+        <p class="lead">
+            Have questions about our services? Ready to schedule a consultation? Our compassionate team is here to help you on your mental health journey.
+        </p>
+    </div>
+
+    <!-- Contact Info Cards -->
+    <div class="contact-grid">
+        <!-- Phone -->
+        <div class="card contact-card">
+            <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+            </div>
+            <h3>Phone</h3>
+            <p><a href="tel:+14358645151">(435) 864-5151</a></p>
+        </div>
+
+        <!-- Email -->
+        <div class="card contact-card">
+            <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p><a href="mailto:info@deltahealingsolutions.org">info@deltahealingsolutions.org</a></p>
+        </div>
+
+        <!-- Address -->
+        <div class="card contact-card">
+            <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Address</h3>
+            <p>95 White Sage Avenue<br>Delta, UT 84624</p>
+        </div>
+
+        <!-- Hours -->
+        <div class="card contact-card">
+            <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+            </div>
+            <h3>Hours</h3>
+            <p>Mon-Fri: 9 AM - 4 PM<br>Sat-Sun: Closed</p>
+        </div>
+    </div>
+
+    <!-- Form & Map Section -->
+    <div class="form-map-section">
+        <!-- Contact Form -->
+        <div class="card form-container">
+            <h2>Send Us a Message</h2>
+            <p style="margin-bottom: 24px;">Fill out the form below and our team will get back to you shortly.</p>
+            
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="hidden" name="_to" value="Angie@deltahealingsolutions.org">
+                <input type="hidden" name="_subject" value="New Contact Form Submission - Delta Healing Solutions">
+                <input type="hidden" name="_next" value="https://www.deltahealingsolutions.org/thank-you">
+                
+                <div>
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div>
+                    <label>Service(s) Interested In</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="services[]" value="TMS Therapy">
+                            <span>TMS Therapy</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="services[]" value="Spravato Treatment">
+                            <span>Spravato Treatment</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="services[]" value="Psychiatric Evaluation">
+                            <span>Psychiatric Evaluation</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="services[]" value="Medication Management">
+                            <span>Medication Management</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="services[]" value="ADHD Testing">
+                            <span>ADHD/Cognitive Testing</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Map -->
+        <div class="card map-container">
+            <h2>Visit Our Clinic</h2>
+            <p style="margin-bottom: 16px;">We're located in Delta, Utah, serving Millard County and surrounding areas.</p>
+            
+            <div class="map-embed">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3089.8247891234567!2d-112.5593524!3d39.3510231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDIxJzAzLjciTiAxMTLCsDMzJzMzLjciVw!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                    width="600"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <a href="https://maps.app.goo.gl/zr9KbmTedrrQesBr6" target="_blank" class="directions-btn">
+                <i class="fas fa-directions"></i>
+                Get Directions
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "mainEntity": {
+    "@type": "MedicalClinic",
+    "name": "Delta Healing Solutions",
+    "telephone": "+1-435-864-5151",
+    "email": "info@deltahealingsolutions.org",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "95 White Sage Avenue",
+      "addressLocality": "Delta",
+      "addressRegion": "UT",
+      "postalCode": "84624",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "16:00"
+      }
+    ]
+  }
+}
+</script>
+
+</section>
