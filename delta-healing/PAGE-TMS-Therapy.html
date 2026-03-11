@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding: 80px 20px;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2d3748;
+        }
+
+        .content h3 {
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .content p {
+            font-size: 1.15rem;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: #edf2f7;
+            border-left: 4px solid #667eea;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .benefit-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .benefit-item h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            color: #4a5568;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .cta-box h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero, .content {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <h1>NeuroStar TMS Therapy</h1>
+            <p>FDA-Cleared, Non-Invasive Treatment for Depression</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <h2>What is TMS Therapy?</h2>
+            <p><strong>TMS (Transcranial Magnetic Stimulation)</strong> is an FDA-cleared, non-invasive procedure that uses magnetic fields to stimulate nerve cells in the brain to improve symptoms of depression. TMS is proven effective for patients who haven't responded adequately to antidepressant medications.</p>
+
+            <p>Delta Healing Solutions offers <strong>NeuroStar TMS</strong>, the #1 TMS system with over 6 million treatments performed nationwide.</p>
+
+            <div class="highlight-box">
+                <h3>How TMS Works</h3>
+                <p>During a TMS session, a treatment coil is placed against your head. The coil delivers brief magnetic pulses to stimulate nerve cells in the region of your brain involved in mood control and depression. These pulses help "wake up" underactive areas of the brain, restoring normal function and alleviating depression symptoms.</p>
+            </div>
+
+            <h3>Benefits of TMS Therapy</h3>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4>✓ Non-Invasive</h4>
+                    <p>No surgery, no anesthesia</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ No Medication</h4>
+                    <p>No systemic side effects</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ Effective</h4>
+                    <p>83% of patients improve</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ Convenient</h4>
+                    <p>Return to normal activities immediately</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ FDA-Cleared</h4>
+                    <p>Backed by 20+ years of research</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ Insurance Covered</h4>
+                    <p>Most plans cover TMS</p>
+                </div>
+            </div>
+
+            <h3>Who is TMS For?</h3>
+            <p>TMS therapy may be right for you if:</p>
+            <ul>
+                <li>You've been diagnosed with major depressive disorder (MDD)</li>
+                <li>You haven't responded adequately to antidepressant medications</li>
+                <li>You can't tolerate the side effects of antidepressants</li>
+                <li>You're looking for a non-medication treatment option</li>
+                <li>Previous treatments haven't provided lasting relief</li>
+            </ul>
+
+            <h3>What to Expect</h3>
+            <p><strong>Treatment Schedule:</strong></p>
+            <ul>
+                <li>Daily sessions, Monday through Friday</li>
+                <li>Each session lasts 20-40 minutes</li>
+                <li>Typical course: 4-6 weeks (20-30 total sessions)</li>
+                <li>You can drive yourself to and from appointments</li>
+            </ul>
+
+            <p><strong>During Treatment:</strong></p>
+            <ul>
+                <li>You'll sit in a comfortable treatment chair</li>
+                <li>The NeuroStar coil is positioned on your head</li>
+                <li>You'll feel a tapping sensation during the session</li>
+                <li>You can read, listen to music, or relax</li>
+                <li>No recovery time needed afterward</li>
+            </ul>
+
+            <p><strong>Results Timeline:</strong></p>
+            <ul>
+                <li>Most patients notice improvement within 2-4 weeks</li>
+                <li>Improvement continues to build throughout treatment</li>
+                <li>83% of patients experience significant symptom relief</li>
+                <li>Many patients achieve complete remission</li>
+            </ul>
+
+            <h3>Side Effects</h3>
+            <p>TMS is well-tolerated with minimal side effects. The most common side effect is mild scalp discomfort during or after treatment, which typically resolves after the first week. Unlike antidepressants, TMS does not cause:</p>
+            <ul>
+                <li>Weight gain</li>
+                <li>Sexual dysfunction</li>
+                <li>Nausea or digestive issues</li>
+                <li>Drowsiness or sedation</li>
+                <li>Memory problems</li>
+            </ul>
+
+            <h3>Insurance Coverage</h3>
+            <p>Most major insurance plans, including Medicare and Medicaid, cover TMS therapy for treatment-resistant depression when medically necessary. Delta Healing Solutions will work with your insurance provider to verify coverage and obtain pre-authorization.</p>
+
+            <p><strong>Call (435) 864-5151</strong> to verify your specific coverage.</p>
+
+            <h3>Why Choose NeuroStar at Delta Healing Solutions?</h3>
+            <ul>
+                <li><strong>Proven Results:</strong> NeuroStar is the most studied TMS system with over 75 clinical studies</li>
+                <li><strong>Local Access:</strong> No need to travel to Salt Lake City – receive treatment in Delta</li>
+                <li><strong>Experienced Team:</strong> Our providers are certified in NeuroStar TMS therapy</li>
+                <li><strong>Comprehensive Care:</strong> We combine TMS with medication management and ongoing support</li>
+                <li><strong>Non-Profit Commitment:</strong> Our focus is on your recovery, not profits</li>
+            </ul>
+
+            <div class="cta-box">
+                <h2>Ready to Learn if TMS is Right for You?</h2>
+                <p>Schedule a consultation to discuss whether NeuroStar TMS therapy can help with your depression.</p>
+                <a href="tel:+14358645151" class="btn">Call (435) 864-5151</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "NeuroStar TMS Therapy for Depression",
+      "description": "FDA-approved NeuroStar TMS therapy for treatment-resistant depression in Delta, UT. Non-invasive magnetic brain stimulation treatment.",
+      "about": {
+        "@type": "MedicalProcedure",
+        "name": "Transcranial Magnetic Stimulation (TMS)",
+        "alternateName": "NeuroStar TMS Therapy",
+        "procedureType": "Therapeutic procedure",
+        "usedToTreat": {
+          "@type": "MedicalCondition",
+          "name": "Major Depressive Disorder"
+        }
+      }
+    }
+    </script>
+
+</body>
+</html>

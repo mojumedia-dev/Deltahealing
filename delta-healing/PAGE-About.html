@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            opacity: 0.95;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 80px 20px;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2d3748;
+        }
+
+        .content h3 {
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .content p {
+            font-size: 1.15rem;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .mission-box {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+
+        .mission-box h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .value-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .value-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            color: #4a5568;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .cta-box h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 20px;
+            }
+            .content {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <h1>About Delta Healing Solutions</h1>
+            <p>Compassionate Mental Health Care for Rural Utah</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <h2>Who We Are</h2>
+            <p>Delta Healing Solutions is a <strong>non-profit mental health clinic</strong> serving Delta, Fillmore, Oak City, Hinckley, and all of Millard County, Utah. We are committed to making high-quality psychiatric care accessible to rural communities that often lack mental health resources.</p>
+
+            <p>Founded on the belief that everyone deserves compassionate, evidence-based mental health treatment, we combine cutting-edge therapies like <strong>NeuroStar TMS</strong> and <strong>Spravato (esketamine)</strong> with traditional psychiatric services to provide comprehensive care for our community.</p>
+
+            <div class="mission-box">
+                <h3>Our Mission</h3>
+                <p>To provide accessible, compassionate, and evidence-based mental health care to underserved rural communities in Utah, reducing barriers to treatment and improving lives through innovative therapies and personalized psychiatric care.</p>
+            </div>
+
+            <h3>Why We're Different</h3>
+            <p>As a <strong>non-profit organization</strong>, our focus is on patient outcomes, not profits. We work with most insurance providers and strive to make mental health care affordable and accessible to all who need it.</p>
+
+            <p>We bring <strong>advanced treatments</strong> to rural Utah that are typically only available in major cities:</p>
+            <ul>
+                <li><strong>NeuroStar TMS Therapy</strong> - FDA-cleared magnetic brain stimulation for depression</li>
+                <li><strong>Spravato Treatment</strong> - Breakthrough esketamine therapy for treatment-resistant depression</li>
+                <li><strong>Comprehensive Psychiatric Services</strong> - Evaluations, medication management, and ongoing care</li>
+                <li><strong>ADHD & Cognitive Testing</strong> - Professional assessments for children and adults</li>
+            </ul>
+
+            <h3>Our Values</h3>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h4>Compassion</h4>
+                    <p>We treat every patient with empathy, respect, and dignity. Mental health challenges are real, and we're here to support you without judgment.</p>
+                </div>
+
+                <div class="value-card">
+                    <h4>Accessibility</h4>
+                    <p>We accept most insurance plans and work to ensure cost is not a barrier to quality mental health care in rural Utah.</p>
+                </div>
+
+                <div class="value-card">
+                    <h4>Excellence</h4>
+                    <p>Our team is trained in the latest evidence-based treatments and committed to providing the highest standard of psychiatric care.</p>
+                </div>
+
+                <div class="value-card">
+                    <h4>Innovation</h4>
+                    <p>We invest in cutting-edge therapies like TMS and Spravato to give our patients access to the most advanced treatment options available.</p>
+                </div>
+
+                <div class="value-card">
+                    <h4>Community</h4>
+                    <p>We're dedicated to serving Millard County and surrounding areas, bringing world-class mental health care close to home.</p>
+                </div>
+
+                <div class="value-card">
+                    <h4>Hope</h4>
+                    <p>We believe recovery is possible. Even when traditional treatments haven't worked, we offer new pathways to healing and wellness.</p>
+                </div>
+            </div>
+
+            <h3>Serving Rural Utah</h3>
+            <p>Mental health care is often harder to access in rural communities. Long drives, limited providers, and stigma can prevent people from getting the help they need. We're changing that.</p>
+
+            <p>Delta Healing Solutions brings specialized psychiatric treatments directly to Millard County, eliminating the need to travel hours to Salt Lake City or other urban centers. We're here, in your community, ready to help.</p>
+
+            <h3>Areas We Serve</h3>
+            <ul>
+                <li>Delta, UT</li>
+                <li>Fillmore, UT</li>
+                <li>Oak City, UT</li>
+                <li>Hinckley, UT</li>
+                <li>All of Millard County</li>
+                <li>Surrounding rural Utah communities</li>
+            </ul>
+
+            <h3>Insurance & Payment</h3>
+            <p>We accept most major insurance plans, including:</p>
+            <ul>
+                <li>Medicare</li>
+                <li>Medicaid</li>
+                <li>Most private insurance plans</li>
+                <li>Self-pay options available</li>
+            </ul>
+            <p>Call us at <strong>(435) 864-5151</strong> to verify your specific coverage.</p>
+
+            <div class="cta-box">
+                <h2>Ready to Start Your Journey to Better Mental Health?</h2>
+                <p>Our compassionate team is here to help. Schedule your consultation today.</p>
+                <a href="tel:+14358645151" class="btn">Call (435) 864-5151</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
