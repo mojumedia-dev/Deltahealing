@@ -61,6 +61,9 @@ p {
   letter-spacing: 0.02em;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0.5rem 1rem;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
  }
 
  .header-nav-item a::after {
@@ -82,12 +85,15 @@ p {
 
  /* Patient Portal - Teal Outline */
  .header-nav-item a[href*="patient-portal"] {
-  padding: 8px 18px !important;
+  padding: 6px 18px !important;
   border: 2px solid #3db8a8 !important;
   border-radius: 999px !important;
   color: #3db8a8 !important;
   font-weight: 600 !important;
   margin-left: 8px !important;
+  vertical-align: middle !important;
+  display: inline-flex !important;
+  align-items: center !important;
  }
 
  .header-nav-item a[href*="patient-portal"]:hover {
@@ -102,12 +108,15 @@ p {
 
  /* Providers - Blue Outline */
  .header-nav-item a[href*="providers"] {
-  padding: 8px 18px !important;
+  padding: 6px 18px !important;
   border: 2px solid #1e4d8b !important;
   border-radius: 999px !important;
   color: #1e4d8b !important;
   font-weight: 600 !important;
   margin-left: 8px !important;
+  vertical-align: middle !important;
+  display: inline-flex !important;
+  align-items: center !important;
  }
 
  .header-nav-item a[href*="providers"]:hover {
