@@ -344,50 +344,208 @@
   box-shadow: 0 4px 24px rgba(0,0,0,0.1);
 }
 
-/* Override Squarespace form styles */
+/* ENHANCED SQUARESPACE FORM STYLES */
+
+/* Form Container - Remove default padding/margins */
 #regal-tule-homepage .rts-form-container .sqs-block-form {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#regal-tule-homepage .rts-form-container .form-wrapper {
   padding: 0 !important;
 }
 
+#regal-tule-homepage .rts-form-container .field-list {
+  padding: 0 !important;
+}
+
+#regal-tule-homepage .rts-form-container .form-item {
+  margin-bottom: 20px !important;
+}
+
+/* Labels */
+#regal-tule-homepage .rts-form-container .field-element label,
+#regal-tule-homepage .rts-form-container .title {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #1a5490 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+#regal-tule-homepage .rts-form-container .required {
+  color: #e74c3c !important;
+}
+
+/* Text Inputs, Email, Tel, Textarea, Select */
 #regal-tule-homepage .rts-form-container input[type="text"],
 #regal-tule-homepage .rts-form-container input[type="email"],
 #regal-tule-homepage .rts-form-container input[type="tel"],
+#regal-tule-homepage .rts-form-container input[type="url"],
 #regal-tule-homepage .rts-form-container textarea,
 #regal-tule-homepage .rts-form-container select {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 12px;
-  font-size: 15px;
-  transition: border-color 0.3s ease;
+  width: 100% !important;
+  padding: 14px 16px !important;
+  font-size: 15px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  color: #333 !important;
+  background: #ffffff !important;
+  border: 2px solid #ddd !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: none !important;
+  outline: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
 }
 
-#regal-tule-homepage .rts-form-container input:focus,
+#regal-tule-homepage .rts-form-container input::placeholder,
+#regal-tule-homepage .rts-form-container textarea::placeholder {
+  color: #999 !important;
+  opacity: 1 !important;
+}
+
+#regal-tule-homepage .rts-form-container input[type="text"]:hover,
+#regal-tule-homepage .rts-form-container input[type="email"]:hover,
+#regal-tule-homepage .rts-form-container input[type="tel"]:hover,
+#regal-tule-homepage .rts-form-container textarea:hover,
+#regal-tule-homepage .rts-form-container select:hover {
+  border-color: #2c7bb6 !important;
+}
+
+#regal-tule-homepage .rts-form-container input[type="text"]:focus,
+#regal-tule-homepage .rts-form-container input[type="email"]:focus,
+#regal-tule-homepage .rts-form-container input[type="tel"]:focus,
 #regal-tule-homepage .rts-form-container textarea:focus,
 #regal-tule-homepage .rts-form-container select:focus {
-  border-color: #2c7bb6;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(44, 123, 182, 0.1);
+  border-color: #2c7bb6 !important;
+  box-shadow: 0 0 0 4px rgba(44, 123, 182, 0.15) !important;
+  outline: none !important;
+}
+
+#regal-tule-homepage .rts-form-container textarea {
+  min-height: 120px !important;
+  resize: vertical !important;
+  line-height: 1.6 !important;
+}
+
+/* Select Dropdown with Custom Arrow */
+#regal-tule-homepage .rts-form-container select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232c7bb6' d='M6 9L1 4h10z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  background-size: 12px !important;
+  padding-right: 45px !important;
+  cursor: pointer !important;
+}
+
+/* Radio & Checkbox */
+#regal-tule-homepage .rts-form-container input[type="radio"],
+#regal-tule-homepage .rts-form-container input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 10px !important;
+  cursor: pointer !important;
+  accent-color: #2c7bb6 !important;
+}
+
+#regal-tule-homepage .rts-form-container .option label {
+  display: flex !important;
+  align-items: center !important;
+  font-size: 15px !important;
+  color: #555 !important;
+  cursor: pointer !important;
+  margin-bottom: 12px !important;
+}
+
+/* Submit Button - Enhanced */
+#regal-tule-homepage .rts-form-container .form-button-wrapper,
+#regal-tule-homepage .rts-form-container .form-submit-button {
+  margin-top: 25px !important;
 }
 
 #regal-tule-homepage .rts-form-container button[type="submit"],
-#regal-tule-homepage .rts-form-container .sqs-editable-button {
-  background: #2c7bb6 !important;
+#regal-tule-homepage .rts-form-container .sqs-editable-button,
+#regal-tule-homepage .rts-form-container input[type="submit"] {
+  width: 100% !important;
+  padding: 16px 32px !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   color: #ffffff !important;
+  background: linear-gradient(135deg, #2c7bb6 0%, #1a5490 100%) !important;
   border: none !important;
-  border-radius: 6px !important;
-  padding: 14px 32px !important;
-  font-size: 16px !important;
-  font-weight: 600 !important;
+  border-radius: 8px !important;
   cursor: pointer !important;
   transition: all 0.3s ease !important;
-  width: 100%;
+  text-transform: none !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 16px rgba(44, 123, 182, 0.3) !important;
 }
 
 #regal-tule-homepage .rts-form-container button[type="submit"]:hover,
-#regal-tule-homepage .rts-form-container .sqs-editable-button:hover {
-  background: #1a5490 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(26, 84, 144, 0.3) !important;
+#regal-tule-homepage .rts-form-container .sqs-editable-button:hover,
+#regal-tule-homepage .rts-form-container input[type="submit"]:hover {
+  background: linear-gradient(135deg, #1a5490 0%, #0f3a6b 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(44, 123, 182, 0.4) !important;
+}
+
+#regal-tule-homepage .rts-form-container button[type="submit"]:active,
+#regal-tule-homepage .rts-form-container input[type="submit"]:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(44, 123, 182, 0.3) !important;
+}
+
+/* Error & Success Messages */
+#regal-tule-homepage .rts-form-container .field-error,
+#regal-tule-homepage .rts-form-container .form-submission-text {
+  font-size: 14px !important;
+  color: #e74c3c !important;
+  margin-top: 8px !important;
+  padding: 10px 12px !important;
+  background: #fee !important;
+  border-radius: 6px !important;
+  border-left: 3px solid #e74c3c !important;
+}
+
+#regal-tule-homepage .rts-form-container .form-submission-text.success {
+  color: #27ae60 !important;
+  background: #d4edda !important;
+  border-left-color: #27ae60 !important;
+}
+
+/* GDPR Checkbox */
+#regal-tule-homepage .rts-form-container .sqs-form-block-gdpr {
+  margin-top: 15px !important;
+  padding: 15px !important;
+  background: #f8f9fa !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  color: #666 !important;
+}
+
+/* Field List Columns */
+#regal-tule-homepage .rts-form-container .field-list--two-column {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 20px !important;
+}
+
+/* Mobile Form Adjustments */
+@media (max-width: 640px) {
+  #regal-tule-homepage .rts-form-container .field-list--two-column {
+    grid-template-columns: 1fr !important;
+  }
+  
+  #regal-tule-homepage .rts-form-container input,
+  #regal-tule-homepage .rts-form-container textarea,
+  #regal-tule-homepage .rts-form-container select {
+    font-size: 16px !important; /* Prevents iOS zoom */
+  }
 }
 
 /* Footer CTA */
