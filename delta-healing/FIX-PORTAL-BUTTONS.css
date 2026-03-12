@@ -1,0 +1,76 @@
+/* ============================================ */
+/* PORTAL BUTTON FIX - Correct URL selectors */
+/* ============================================ */
+
+/* Replace the Patient Portal and Providers sections in Custom CSS with this */
+
+@media (min-width: 768px) {
+  
+  /* ============================================ */
+  /* PATIENT PORTAL - TEAL OUTLINE (AdvancedMD link) */
+  /* ============================================ */
+  .header-nav-item a[href*="advancedmd.com"],
+  .header-nav-item a[href*="pp-wfe"],
+  .header-nav-folder-item a[href*="advancedmd.com"] {
+    padding: 6px 18px !important;
+    border: 2px solid #3db8a8 !important;
+    border-radius: 999px !important;
+    color: #3db8a8 !important;
+    font-weight: 600 !important;
+    margin-left: 16px !important;
+    vertical-align: middle !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  .header-nav-item a[href*="advancedmd.com"]:hover,
+  .header-nav-item a[href*="pp-wfe"]:hover,
+  .header-nav-folder-item a[href*="advancedmd.com"]:hover {
+    background: #3db8a8 !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(61, 184, 168, 0.3);
+  }
+
+  .header-nav-item a[href*="advancedmd.com"]::after,
+  .header-nav-item a[href*="pp-wfe"]::after {
+    display: none !important;
+  }
+
+  /* ============================================ */
+  /* PROVIDERS - BLUE OUTLINE */
+  /* ============================================ */
+  .header-nav-item a[href="/providers"],
+  .header-nav-item a[href*="/providers"],
+  .header-nav-item a[href="providers"],
+  .header-nav-folder-item a[href*="providers"] {
+    padding: 6px 18px !important;
+    border: 2px solid #1e4d8b !important;
+    border-radius: 999px !important;
+    color: #1e4d8b !important;
+    font-weight: 600 !important;
+    margin-left: 16px !important;
+    vertical-align: middle !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  .header-nav-item a[href="/providers"]:hover,
+  .header-nav-item a[href*="/providers"]:hover,
+  .header-nav-item a[href="providers"]:hover,
+  .header-nav-folder-item a[href*="providers"]:hover {
+    background: #1e4d8b !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 77, 139, 0.3);
+  }
+
+  .header-nav-item a[href="/providers"]::after,
+  .header-nav-item a[href*="/providers"]::after,
+  .header-nav-item a[href="providers"]::after {
+    display: none !important;
+  }
+
+}
