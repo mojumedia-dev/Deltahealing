@@ -43,14 +43,14 @@ a:focus, button:focus { outline: 2px solid #0066cc; outline-offset: 2px; }
   "@type": "MedicalClinic",
   "name": "Delta Healing Solutions",
   "alternateName": "Delta Healing Solutions TMS Clinic",
-  "description": "Non-profit mental health clinic in Delta, UT providing TMS therapy, Spravato (esketamine) treatment for depression, psychiatric evaluation, medication management, and cognitive testing. Serving Millard County.",
+  "description": "Non-profit mental health clinic in Delta, UT providing TMS therapy, ketamine-assisted therapy for depression, psychiatric evaluation, medication management, and cognitive testing. Serving Millard County.",
   "url": "https://www.deltahealingsolutions.org",
   "logo": "https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/ef9b868c-0580-4cb9-a1a1-a445980554f6/DeltaHealingSolutions_Logo.png",
   "telephone": "+1-435-864-5151",
   "email": "info@deltahealingsolutions.org",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "95 White Sage Avenue",
+    "streetAddress": "95 White Sage Avenue, Suite A",
     "addressLocality": "Delta",
     "addressRegion": "UT",
     "postalCode": "84624",
@@ -121,9 +121,9 @@ a:focus, button:focus { outline: 2px solid #0066cc; outline-offset: 2px; }
         "@type": "Offer",
         "itemOffered": {
           "@type": "MedicalTherapy",
-          "name": "Spravato (Esketamine) Treatment",
-          "alternateName": "Esketamine Nasal Spray",
-          "description": "FDA-approved Spravato treatment for treatment-resistant depression"
+          "name": "Ketamine-Assisted Therapy",
+          "alternateName": "Ketamine Therapy",
+          "description": "Medically supervised ketamine therapy (IM injections, with IV also available) for adults with treatment-resistant depression"
         }
       }
     ]
@@ -164,10 +164,10 @@ a:focus, button:focus { outline: 2px solid #0066cc; outline-offset: 2px; }
     },
     {
       "@type": "Question",
-      "name": "What is Spravato treatment?",
+      "name": "What is ketamine-assisted therapy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Spravato (esketamine) is an FDA-approved nasal spray medication for treatment-resistant depression. It's administered in our clinic under medical supervision and has shown effectiveness for patients who haven't responded to other antidepressants."
+        "text": "Ketamine-assisted therapy uses medically supervised ketamine (IM injections, with IV also available) to help adults with treatment-resistant depression. It is administered on-site at Delta Healing Solutions under clinical monitoring, and has shown effectiveness for patients who haven't responded to traditional antidepressants."
       }
     }
   ]
@@ -178,7 +178,7 @@ a:focus, button:focus { outline: 2px solid #0066cc; outline-offset: 2px; }
 <meta name="geo.region" content="US-UT" />
 <meta name="geo.placename" content="Delta" />
 <meta name="geo.position" content="39.3510231;-112.5593524" />
-<meta name="keywords" content="TMS therapy Delta UT, Spravato treatment Delta Utah, esketamine Delta UT, depression treatment Delta Utah, mental health clinic Millard County, psychiatric services Delta UT, ADHD testing Utah, NeuroStar TMS, psychiatrist Delta Utah, treatment-resistant depression" />
+<meta name="keywords" content="TMS therapy Delta UT, ketamine therapy Delta Utah, ketamine-assisted therapy Delta UT, depression treatment Delta Utah, mental health clinic Millard County, psychiatric services Delta UT, ADHD testing Utah, NeuroStar TMS, psychiatrist Delta Utah, treatment-resistant depression" />
 
 <!-- Performance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -300,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function() {
    Title: "Delta Healing Solutions | TMS Therapy & Mental Health Clinic in Delta, UT"
 
 2. Update HOME page description:
-   "Non-profit mental health clinic in Delta, UT offering TMS therapy, Spravato (esketamine) treatment for depression, psychiatric evaluations, medication management, and ADHD testing. Serving Millard County. (435) 864-5151"
+   "Non-profit mental health clinic in Delta, UT offering TMS therapy, ketamine-assisted therapy for depression, psychiatric evaluations, medication management, and ADHD testing. Serving Millard County. (435) 864-5151"
 
 3. Add image alt text:
    Click any image > Design > ALT TEXT
@@ -327,7 +327,7 @@ Week 2-4: Monitor Google My Business views
 
 Month 2-3: Check keyword rankings
   → Google yourself: "TMS therapy Delta UT"
-  → Google yourself: "Spravato treatment Delta Utah"
+  → Google yourself: "ketamine therapy Delta Utah"
   → Google yourself: "mental health clinic Delta Utah"
 
 Month 3-6: Organic traffic should increase 30-50%

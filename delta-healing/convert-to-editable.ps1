@@ -1,9 +1,13 @@
 # Convert full HTML pages to section-wrapped editable format for Squarespace
+# NOTE (2026-07-13): The PAGE-Spravato.html conversion entry was removed because
+# Delta Healing Solutions no longer offers Spravato. The retired file was moved
+# to _archive/. Use AUDIT-2026-07-13-KETAMINE-EDITABLE.html for the current
+# ketamine-assisted therapy page — it is authored directly and does not need
+# to be produced by this script.
 
 $pages = @(
     @{Original="PAGE-About.html"; New="ABOUT-EDITABLE.html"; ID="dhs-about"},
     @{Original="PAGE-TMS-Therapy.html"; New="TMS-EDITABLE.html"; ID="dhs-tms"},
-    @{Original="PAGE-Spravato.html"; New="SPRAVATO-EDITABLE.html"; ID="dhs-spravato"},
     @{Original="PAGE-Psychiatric-Evaluation.html"; New="PSYCH-EVAL-EDITABLE.html"; ID="dhs-psych-eval"},
     @{Original="PAGE-Medication-Management.html"; New="MED-MGMT-EDITABLE.html"; ID="dhs-med-mgmt"},
     @{Original="PAGE-ADHD-Cognitive-Testing.html"; New="ADHD-EDITABLE.html"; ID="dhs-adhd"}

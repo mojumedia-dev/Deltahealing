@@ -31,9 +31,12 @@ PAGE CODE BLOCKS (Add to Individual Pages):
      📍 WHERE: /neurostar-tms-therapy page > Add Code Block
      ⚙️ WHAT: TMS therapy schema, service FAQs, breadcrumbs
      
-  ✅ SPRAVATO-page-code-block.html
-     📍 WHERE: /spravato-treatment page > Add Code Block
-     ⚙️ WHAT: Spravato treatment schema, FAQs, breadcrumbs
+  ✅ AUDIT-2026-07-13-KETAMINE-EDITABLE.html
+     📍 WHERE: /ketamine-therapy page > Add Code Block
+     ⚙️ WHAT: Ketamine-assisted therapy page + MedicalTherapy & FAQ schema
+     ℹ️ NOTE: Replaces retired Spravato page (2026-07-13). If a legacy
+             /spravato-treatment URL exists, delete it from nav and add
+             a 301 redirect to /ketamine-therapy.
      
   ✅ PSYCH-EVAL-page-code-block.html
      📍 WHERE: /services page (or psychiatric evaluation page) > Add Code Block
@@ -134,9 +137,12 @@ Q: Can I add the code blocks anywhere on the page?
 A: Yes! Top or bottom doesn't matter. The schema code is invisible to
    visitors - it's only for search engines.
 
-Q: What if I don't have a Spravato page yet?
-A: That's fine! Add it when you create the page. See the full content
-   guide in: delta-healing-spravato-content.md
+Q: What about the old Spravato page?
+A: As of 2026-07-13, Delta Healing Solutions no longer offers Spravato.
+   Do NOT publish a Spravato page. Use the /ketamine-therapy page instead
+   (see: AUDIT-2026-07-13-KETAMINE-EDITABLE.html and
+   AUDIT-2026-07-13-INSTALL-GUIDE.md for details). The old Spravato content
+   files are archived under _archive/ for historical reference only.
 
 Q: Will this mess up my existing design?
 A: No! The modern CSS uses your existing colors and just enhances the look.
@@ -155,7 +161,7 @@ A: Google typically indexes changes within 1-2 weeks. Rankings improve
 2. ✅ Add alt text to images
 3. ✅ Claim Google My Business
 4. ✅ Submit sitemap to Google Search Console
-5. ✅ Create Spravato service page (if not done yet)
+5. ✅ Publish Ketamine-Assisted Therapy page at /ketamine-therapy (do NOT create a Spravato page — service was retired 2026-07-13)
 6. ✅ Add local citations to healthcare directories
 
 
@@ -178,7 +184,8 @@ Just copy the entire contents of each file and paste where indicated.
 For detailed explanations:
   📖 SQUARESPACE-INSTALL-GUIDE.md ........ Complete installation guide
   📖 delta-healing-seo-checklist.md ...... 11-step SEO action plan
-  📖 delta-healing-spravato-content.md ... Spravato page content guide
+  📖 AUDIT-2026-07-13-KETAMINE-EDITABLE.html ... Ketamine-assisted therapy page (current)
+  📖 AUDIT-2026-07-13-INSTALL-GUIDE.md ......... 2026-07-13 audit batch install guide
 
 
 ================================================================================

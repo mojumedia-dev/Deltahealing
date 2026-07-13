@@ -1,4 +1,10 @@
-# Spravato Service Page - Content Recommendations
+# ARCHIVED 2026-07-13 - Spravato Service Page - Content Recommendations
+
+> **ARCHIVED 2026-07-13.** Delta Healing Solutions no longer offers Spravato.
+> This page's content was superseded by ketamine-assisted therapy (IM injections plus IV) on 2026-07-13.
+> DO NOT use this file for any current work. Use `AUDIT-2026-07-13-KETAMINE-EDITABLE.html` instead.
+> Kept only as a historical reference for the old Spravato service page copy.
+
 
 ## 🎯 CREATE NEW PAGE: Spravato Treatment
 
@@ -175,7 +181,7 @@ If traditional antidepressants haven't worked for you, Spravato may be the break
 
 📞 **Call (435) 864-5151** to schedule your consultation.  
 📧 **Email**: info@deltahealingsolutions.org  
-📍 **Location**: 95 White Sage Avenue, Delta, UT 84624
+📍 **Location**: 95 White Sage Avenue, Suite A, Delta, UT 84624
 
 **Serving Delta, Fillmore, Oak City, Hinckley, and all of Millard County.**
 

@@ -42,7 +42,7 @@ Below the first code block, add ONE of the following:
    ```
    Donate via Venmo: @DeltaHealing
    Donate via Zelle: info@deltahealingsolutions.org
-   Mail checks to: 95 White Sage Avenue, Delta, UT 84624
+   Mail checks to: 95 White Sage Avenue, Suite A, Delta, UT 84624
    ```
 
 #### **Option D: Third-Party Form**
@@ -127,7 +127,7 @@ This is required for donors to claim tax deductions.
 - Specify it's for "Delta Healing Solutions - 501c3"
 
 **Mail-in Donations:**
-- Provide clear address: 95 White Sage Avenue, Delta, UT 84624
+- Provide clear address: 95 White Sage Avenue, Suite A, Delta, UT 84624
 - Specify checks should be made out to: "Delta Healing Solutions"
 
 ---

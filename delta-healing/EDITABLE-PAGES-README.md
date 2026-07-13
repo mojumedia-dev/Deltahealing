@@ -9,10 +9,12 @@
 1. **HOMEPAGE-EDITABLE.html** - Homepage with services grid
 2. **ABOUT-EDITABLE.html** - About page with team bios & modal popups
 3. **TMS-EDITABLE.html** - NeuroStar TMS Therapy service page
-4. **SPRAVATO-EDITABLE.html** - Spravato treatment service page
+4. **AUDIT-2026-07-13-KETAMINE-EDITABLE.html** - Ketamine-Assisted Therapy service page (replaces retired Spravato page as of 2026-07-13)
 5. **PSYCH-EVAL-EDITABLE.html** - Psychiatric Evaluation service page
 6. **MED-MGMT-EDITABLE.html** - Medication Management service page
 7. **ADHD-EDITABLE.html** - ADHD & Cognitive Testing service page
+
+> **Note (2026-07-13):** Delta Healing Solutions no longer offers Spravato. The former `SPRAVATO-EDITABLE.html` was moved to `_archive/ARCHIVED-SPRAVATO-EDITABLE.html`. Use `AUDIT-2026-07-13-KETAMINE-EDITABLE.html` for the ketamine-assisted therapy service page instead.
 
 ### 📦 Backup Files (For Reference Only)
 
@@ -20,7 +22,7 @@
 - COMPLETE-HOMEPAGE.html
 - PAGE-About.html
 - PAGE-TMS-Therapy.html
-- PAGE-Spravato.html
+- PAGE-Spravato.html *(historical only — service retired 2026-07-13)*
 - PAGE-Psychiatric-Evaluation.html
 - PAGE-Medication-Management.html
 - PAGE-ADHD-Cognitive-Testing.html

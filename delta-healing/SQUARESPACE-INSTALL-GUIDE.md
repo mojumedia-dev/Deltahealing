@@ -11,7 +11,7 @@ GLOBAL (site-wide):
 PAGE-SPECIFIC CODE BLOCKS:
 ├── HOME-page-code-block.html ......... Home page code block
 ├── TMS-page-code-block.html .......... TMS Therapy page code block
-├── SPRAVATO-page-code-block.html ..... Spravato page code block
+├── AUDIT-2026-07-13-KETAMINE-EDITABLE.html   Ketamine-Assisted Therapy page (replaces retired Spravato page)
 ├── PSYCH-EVAL-page-code-block.html ... Psychiatric Evaluation page
 ├── MED-MGMT-page-code-block.html ..... Medication Management page
 └── ADHD-page-code-block.html ......... Cognitive Testing/ADHD page
@@ -63,12 +63,14 @@ For each page:
 4. Paste code
 5. Save
 
-### Spravato Page
-1. Create new page: `/spravato-treatment`
+### Ketamine-Assisted Therapy Page (as of 2026-07-13)
+> Delta Healing Solutions no longer offers Spravato. A `/ketamine-therapy` page has replaced it in the live nav.
+1. Edit the existing `/ketamine-therapy` page (or create it if it does not yet exist)
 2. Add **Code Block**
-3. Open: `SPRAVATO-page-code-block.html`
+3. Open: `AUDIT-2026-07-13-KETAMINE-EDITABLE.html`
 4. Paste code
 5. Save
+6. If a legacy `/spravato-treatment` URL still exists in Squarespace, delete that page from the nav and add a 301 redirect (`/spravato-treatment` → `/ketamine-therapy`) under **Settings > Advanced > URL Mappings**.
 
 ### Other Service Pages
 Repeat for:

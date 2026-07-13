@@ -33,7 +33,7 @@ The contact page is split into **3 sections** to allow you to use Squarespace's 
 - Name (required)
 - Email (required)
 - Phone (optional)
-- **Checkboxes:** TMS Therapy, **Spravato Treatment**, Psychiatric Evaluation, Medication Management, ADHD/Cognitive Testing
+- **Checkboxes:** TMS Therapy, **Ketamine-Assisted Therapy**, Psychiatric Evaluation, Medication Management, ADHD/Cognitive Testing
 - Message (required, textarea)
 
 **Form Settings:**
@@ -99,11 +99,11 @@ The Squarespace form will use your site's default form styling. If you want to c
 
 ## 📌 **Important Notes**
 
-1. **Correct Address:** 95 White Sage Avenue (no "Suite A")
+1. **Correct Address:** 95 White Sage Avenue, Suite A, Delta, UT 84624 (2026-07-13 correction — earlier revision of this guide said "no Suite A" which was wrong)
 2. **Fixed Typo:** "Get Directions" (was "Directtions")
 3. **Form Recipient:** Angie@deltahealingsolutions.org
 4. **Spam Protection:** Built-in with Squarespace forms
-5. **Don't forget Spravato:** Make sure it's in the service checkboxes!
+5. **Don't add Spravato:** Spravato is no longer offered (as of 2026-07-13). Use "Ketamine-Assisted Therapy" instead.
 
 ---
 

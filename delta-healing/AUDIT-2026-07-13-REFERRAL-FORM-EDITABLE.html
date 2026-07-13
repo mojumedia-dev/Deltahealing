@@ -1,0 +1,176 @@
+<!-- =========================================================
+     Delta Healing Solutions - Provider Referral Form (printable)
+     Paste in: new page at /refer-a-patient > add Code Block
+     Created: 2026-07-13
+     Visual design: mirrors #dhs-providers pattern already on the site
+     (same CSS variables and scoping). No new colors, fonts, or layouts
+     invented — the CSS is a copy of the PROVIDERS-EDITABLE.html patterns
+     with printable-page CSS added at the bottom (print-only, no visual
+     change to the on-screen page).
+
+     Purpose (per PROPOSAL-authority-and-ai-trust-strategy.md item #3):
+     A one-page referral form providers can print, complete, and attach
+     to a chart or fax to us at 435-251-1572.
+     ========================================================= -->
+<section id="dhs-refer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+html{scroll-behavior:smooth}
+#dhs-refer{--bg:#f6f7fb;--card:#fff;--border:#e6e8f2;--text:#202332;--muted:#666b7b;--primary:#1e4d8b;--accent:#3db8a8;--shadow:0 10px 28px rgba(26,32,44,.07);--shadow-hover:0 18px 40px rgba(26,32,44,.12);--radius:20px;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(30,77,139,.04),transparent 24%),radial-gradient(circle at bottom right,rgba(61,184,168,.035),transparent 20%),var(--bg);padding:40px 0 70px}
+#dhs-refer *{box-sizing:border-box}
+#dhs-refer .wrap{width:min(1000px,calc(100% - 30px));margin:auto}
+#dhs-refer h1,#dhs-refer h2,#dhs-refer h3{margin:0 0 12px;line-height:1.15;color:var(--text)}
+#dhs-refer h1{font-size:clamp(28px,3.6vw,42px);letter-spacing:-.03em}
+#dhs-refer h2{font-size:clamp(20px,2.2vw,26px);letter-spacing:-.02em}
+#dhs-refer h3{font-size:18px}
+#dhs-refer p{margin:0 0 14px;color:var(--muted);line-height:1.72;font-size:15px}
+#dhs-refer .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+#dhs-refer .hero{padding:32px;margin-bottom:20px;background:radial-gradient(circle at top right,rgba(30,77,139,.1),transparent 30%),radial-gradient(circle at bottom left,rgba(61,184,168,.07),transparent 25%),#fff}
+#dhs-refer .eyebrow{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);font-weight:800;margin-bottom:10px}
+#dhs-refer .content-card{padding:28px;margin-bottom:20px}
+#dhs-refer .send-to{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}
+#dhs-refer .send-to div{background:rgba(30,77,139,.06);border-radius:14px;padding:14px;text-align:center}
+#dhs-refer .send-to strong{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:4px}
+#dhs-refer .send-to span{font-size:16px;font-weight:800;color:var(--primary);word-break:break-word}
+#dhs-refer .field{margin-bottom:14px}
+#dhs-refer .field label{display:block;font-weight:700;font-size:13px;color:var(--text);margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em}
+#dhs-refer .field .fill-line{display:block;border-bottom:1px solid var(--text);min-height:22px;padding:2px 4px}
+#dhs-refer .row-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+#dhs-refer .row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+#dhs-refer .checkbox-row{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;margin-top:6px}
+#dhs-refer .checkbox-row label{font-weight:500;font-size:14px;color:var(--text);letter-spacing:0}
+#dhs-refer .checkbox-row label::before{content:"☐  ";color:var(--primary);font-weight:700}
+#dhs-refer .print-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--primary);color:#fff;text-decoration:none;border:none;border-radius:999px;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 10px 24px rgba(30,77,139,.22)}
+#dhs-refer .print-btn:hover{background:#2a5d9b}
+#dhs-refer .footnote{font-size:12px;color:var(--muted);margin-top:20px;border-top:1px dashed var(--border);padding-top:14px}
+
+@media (max-width:720px){
+  #dhs-refer{padding:20px 0 42px}
+  #dhs-refer .wrap{width:min(100% - 18px,1000px)}
+  #dhs-refer .send-to,#dhs-refer .row-2,#dhs-refer .row-3,#dhs-refer .checkbox-row{grid-template-columns:1fr}
+  #dhs-refer .hero,#dhs-refer .content-card{padding:22px}
+}
+
+/* Print styles - only affect printed output, not on-screen appearance */
+@media print{
+  #dhs-refer{background:#fff;padding:0}
+  #dhs-refer .card{box-shadow:none;border:1px solid #888}
+  #dhs-refer .print-btn,#dhs-refer .no-print{display:none !important}
+  #dhs-refer .fill-line{border-bottom:1px solid #000;min-height:18px}
+  @page{margin:0.5in}
+}
+</style>
+
+<div class="wrap">
+    <div class="card hero">
+        <span class="eyebrow">For Referring Providers</span>
+        <h1>Patient Referral Form</h1>
+        <p>Complete this form and fax or email to Delta Healing Solutions. We handle insurance verification, prior authorization, and clinical intake from there. Referring provider is looped back in at treatment start and completion (with patient consent).</p>
+        <div class="send-to">
+            <div><strong>Fax</strong><span>435-251-1572</span></div>
+            <div><strong>Email</strong><span><a href="mailto:info@deltahealingsolutions.org" style="color:var(--primary);text-decoration:none;">info@deltahealingsolutions.org</a></span></div>
+            <div><strong>Phone</strong><span><a href="tel:+14358645151" style="color:var(--primary);text-decoration:none;">(435) 864-5151</a></span></div>
+        </div>
+        <p class="no-print" style="margin-top:16px;"><button type="button" class="print-btn" onclick="window.print()"><i class="fas fa-print"></i> Print Referral Form</button></p>
+    </div>
+
+    <div class="card content-card">
+        <h2>Referring Provider Information</h2>
+        <div class="row-2">
+            <div class="field"><label>Referring Provider Name</label><span class="fill-line"></span></div>
+            <div class="field"><label>Credentials (MD, DO, PA-C, etc.)</label><span class="fill-line"></span></div>
+        </div>
+        <div class="row-2">
+            <div class="field"><label>Clinic / Practice Name</label><span class="fill-line"></span></div>
+            <div class="field"><label>NPI</label><span class="fill-line"></span></div>
+        </div>
+        <div class="row-3">
+            <div class="field"><label>Phone</label><span class="fill-line"></span></div>
+            <div class="field"><label>Fax</label><span class="fill-line"></span></div>
+            <div class="field"><label>Email</label><span class="fill-line"></span></div>
+        </div>
+        <div class="field"><label>Preferred way to receive treatment updates</label>
+            <div class="checkbox-row">
+                <label>Fax</label>
+                <label>Encrypted email</label>
+                <label>Phone call</label>
+                <label>EHR referral loop</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="card content-card">
+        <h2>Patient Information</h2>
+        <div class="row-2">
+            <div class="field"><label>Patient Name (Last, First)</label><span class="fill-line"></span></div>
+            <div class="field"><label>Date of Birth</label><span class="fill-line"></span></div>
+        </div>
+        <div class="row-3">
+            <div class="field"><label>Patient Phone</label><span class="fill-line"></span></div>
+            <div class="field"><label>Preferred Contact Time</label><span class="fill-line"></span></div>
+            <div class="field"><label>Sex Assigned at Birth</label><span class="fill-line"></span></div>
+        </div>
+        <div class="row-2">
+            <div class="field"><label>Address (City, State, ZIP)</label><span class="fill-line"></span></div>
+            <div class="field"><label>Emergency Contact / Phone</label><span class="fill-line"></span></div>
+        </div>
+        <div class="row-2">
+            <div class="field"><label>Primary Insurance</label><span class="fill-line"></span></div>
+            <div class="field"><label>Member ID / Group #</label><span class="fill-line"></span></div>
+        </div>
+    </div>
+
+    <div class="card content-card">
+        <h2>Service Requested</h2>
+        <div class="checkbox-row">
+            <label>NeuroStar TMS evaluation</label>
+            <label>Psychiatric evaluation (new patient)</label>
+            <label>Medication management transfer of care</label>
+            <label>Ketamine therapy consult (cash pay)</label>
+            <label>ADHD / cognitive testing</label>
+            <label>Other (specify below)</label>
+        </div>
+        <div class="field" style="margin-top:12px;"><label>If Other</label><span class="fill-line"></span></div>
+    </div>
+
+    <div class="card content-card">
+        <h2>Clinical Context</h2>
+        <div class="field"><label>Working Diagnosis / DSM-5 Code(s)</label><span class="fill-line" style="min-height:44px"></span></div>
+        <div class="row-2">
+            <div class="field"><label>Most Recent PHQ-9 Score</label><span class="fill-line"></span></div>
+            <div class="field"><label>Date of PHQ-9</label><span class="fill-line"></span></div>
+        </div>
+        <div class="field"><label>Antidepressant Trials (medication, dose, duration, response)</label>
+            <span class="fill-line" style="min-height:60px"></span>
+            <span class="fill-line" style="min-height:24px;margin-top:6px"></span>
+        </div>
+        <div class="field"><label>Current Medications</label><span class="fill-line" style="min-height:44px"></span></div>
+        <div class="field"><label>Relevant Medical History (incl. seizure history, ferromagnetic implants near head, pregnancy, cardiac disease)</label><span class="fill-line" style="min-height:44px"></span></div>
+        <div class="field"><label>Suicidality / Safety Concerns (past or active)</label><span class="fill-line" style="min-height:36px"></span></div>
+        <div class="field"><label>Notes / Reason for Referral</label><span class="fill-line" style="min-height:44px"></span></div>
+    </div>
+
+    <div class="card content-card">
+        <h2>Consent & Signature</h2>
+        <p style="font-size:13px;">By submitting this form, the referring provider confirms the patient (or authorized representative) has consented to release the information above to Delta Healing Solutions for the purpose of scheduling and coordinating care, and that Delta Healing Solutions may return treatment updates to the referring provider at treatment start and completion.</p>
+        <div class="row-2">
+            <div class="field"><label>Referring Provider Signature</label><span class="fill-line" style="min-height:34px"></span></div>
+            <div class="field"><label>Date</label><span class="fill-line"></span></div>
+        </div>
+        <p class="footnote">Please attach: most recent progress note, medication list, and any relevant labs. Delta Healing Solutions completes insurance verification and prior authorization from our side. Referring provider is looped back in at treatment start, midpoint, and completion via the contact method selected above (with patient consent).</p>
+    </div>
+</div>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Patient Referral Form - Delta Healing Solutions",
+  "description": "Printable patient referral form for healthcare providers referring patients to Delta Healing Solutions for TMS therapy, ketamine therapy, psychiatric evaluation, medication management, or ADHD/cognitive testing.",
+  "url": "https://www.deltahealingsolutions.org/refer-a-patient",
+  "isPartOf": {"@id": "https://www.deltahealingsolutions.org/#clinic"}
+}
+</script>
+
+</section>

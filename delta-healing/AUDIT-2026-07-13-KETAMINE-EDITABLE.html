@@ -1,0 +1,188 @@
+<!-- =========================================================
+     Delta Healing Solutions - Ketamine Therapy Page Code Block
+     Paste in: /ketamine-therapy page > add Code Block
+     Created: 2026-07-13
+     Visual design: mirrors existing SPRAVATO-EDITABLE.html pattern
+     (same CSS variables, same #dhs-xxx scoping, no new colors/fonts).
+     Purpose: replaces the thin ketamine copy currently on the live
+     page with a full clinical page suitable for SEO and provider
+     referrals. Also adds MedicalTherapy schema + FAQPage schema.
+     ========================================================= -->
+<section id="dhs-ketamine">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+html{scroll-behavior:smooth}
+#dhs-ketamine *{margin:0;padding:0;box-sizing:border-box}
+#dhs-ketamine{--bg:#f6f7fb;--card:#fff;--border:#e6e8f2;--text:#202332;--muted:#666b7b;--primary:#1e4d8b;--accent:#3db8a8;--shadow:0 10px 28px rgba(26,32,44,.07);--shadow-hover:0 18px 40px rgba(26,32,44,.12);--radius:20px;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(30,77,139,.04),transparent 24%),radial-gradient(circle at bottom right,rgba(61,184,168,.035),transparent 20%),var(--bg);padding:40px 0 70px}
+#dhs-ketamine .wrap{width:min(1160px,calc(100% - 30px));margin:auto}
+#dhs-ketamine h1,#dhs-ketamine h2,#dhs-ketamine h3{margin:0 0 12px;line-height:1.15;color:var(--text)}
+#dhs-ketamine h1{font-size:clamp(32px,4.2vw,50px);letter-spacing:-.03em}
+#dhs-ketamine h2{font-size:clamp(25px,2.5vw,34px);letter-spacing:-.02em}
+#dhs-ketamine h3{font-size:21px}
+#dhs-ketamine p{margin:0 0 14px;color:var(--muted);line-height:1.72;font-size:16px}
+#dhs-ketamine ul{margin:0 0 14px;padding-left:20px;line-height:1.8}
+#dhs-ketamine li{margin-bottom:6px;color:var(--muted)}
+#dhs-ketamine .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+#dhs-ketamine .hero{padding:38px;margin-bottom:24px;background:radial-gradient(circle at top right,rgba(30,77,139,.1),transparent 30%),radial-gradient(circle at bottom left,rgba(61,184,168,.07),transparent 25%),#fff}
+#dhs-ketamine .eyebrow{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);font-weight:800;margin-bottom:12px}
+#dhs-ketamine .content-card{padding:28px;margin-bottom:24px}
+#dhs-ketamine .benefits-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:20px 0}
+#dhs-ketamine .benefit-card{padding:20px;background:var(--card);border:1px solid var(--border);border-radius:16px;text-align:center;box-shadow:var(--shadow);transition:transform .2s ease}
+#dhs-ketamine .benefit-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+#dhs-ketamine .benefit-card h4{color:var(--primary);margin-bottom:.5rem;font-size:1.2rem}
+#dhs-ketamine .highlight-box{background:rgba(30,77,139,.05);border-left:4px solid var(--primary);padding:24px;margin:20px 0;border-radius:12px}
+#dhs-ketamine .warning-box{background:#fff5f5;border-left:4px solid #f56565;padding:24px;margin:20px 0;border-radius:12px}
+#dhs-ketamine .warning-box strong{color:#c53030}
+#dhs-ketamine table{width:100%;border-collapse:collapse;margin:20px 0}
+#dhs-ketamine th,#dhs-ketamine td{padding:12px;border-bottom:1px solid var(--border);text-align:left}
+#dhs-ketamine th{background:#f7f8fd;color:var(--primary);font-weight:800}
+#dhs-ketamine tr:last-child td{border-bottom:none}
+@media (max-width:1000px){#dhs-ketamine .benefits-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:720px){#dhs-ketamine{padding:20px 0 42px}#dhs-ketamine .wrap{width:min(100% - 18px,1160px)}#dhs-ketamine .benefits-grid{grid-template-columns:1fr}#dhs-ketamine .hero,#dhs-ketamine .content-card{padding:22px}}
+</style>
+
+<div class="wrap">
+    <div class="card hero">
+        <span class="eyebrow">Now Offering in Delta</span>
+        <h1>Ketamine Therapy in Delta, Utah</h1>
+        <p style="font-size:17px;max-width:62ch;color:var(--muted)">Medically supervised ketamine treatment for adults who have not found enough relief through traditional approaches.</p>
+    </div>
+
+    <div class="card content-card">
+        <h2>What is Ketamine Therapy?</h2>
+        <p><strong>Ketamine</strong> is a medication that has been used in medicine for decades as an anesthetic and, more recently, in supervised low-dose settings as a treatment option for adults with depression that has not responded to standard antidepressants. It works differently than SSRIs and SNRIs by acting on the NMDA glutamate system, which may help support the brain in forming new patterns connected to mood, stress, and emotional processing.</p>
+        <p>At Delta Healing Solutions, ketamine therapy is administered in-clinic under monitoring by our medical team. It is a cash-pay service and is not billed to insurance.</p>
+    </div>
+
+    <div class="card content-card">
+        <h2>Who Ketamine Therapy May Help</h2>
+        <p>Ketamine therapy may be considered for adults who:</p>
+        <ul>
+            <li>Have been diagnosed with major depressive disorder or treatment-resistant depression</li>
+            <li>Have tried two or more antidepressant medications without adequate improvement</li>
+            <li>Cannot tolerate the side effects of standard antidepressants</li>
+            <li>Are looking for a treatment option with a different mechanism of action</li>
+            <li>Have completed a psychiatric evaluation and been screened for appropriateness</li>
+        </ul>
+        <div class="warning-box">
+            <strong>Not a first-line treatment.</strong> Ketamine therapy at Delta Healing Solutions is reserved for adults who have already tried standard treatments. All patients complete a psychiatric evaluation before starting.
+        </div>
+    </div>
+
+    <div class="card content-card">
+        <h2>How Ketamine Compares to Other Depression Treatments</h2>
+        <table>
+            <tr><th>Treatment</th><th>How It's Given</th><th>Insurance</th><th>Typical Best Fit</th></tr>
+            <tr><td><strong>NeuroStar TMS</strong></td><td>In-clinic, non-invasive magnetic pulses</td><td>Usually covered</td><td>Depression when medications have not worked; wants a non-medication option</td></tr>
+            <tr><td><strong>Ketamine Therapy</strong></td><td>In-clinic, medically supervised administration</td><td>Cash pay only</td><td>Depression when medications have not worked; wants a medication-based option with a different mechanism</td></tr>
+            <tr><td><strong>Medication Management</strong></td><td>Standard prescriptions with follow-up</td><td>Usually covered</td><td>First-line and maintenance treatment</td></tr>
+        </table>
+    </div>
+
+    <div class="card content-card">
+        <h2>What to Expect at Your Ketamine Session</h2>
+        <h3>Before Your Session</h3>
+        <ul>
+            <li>Consultation and psychiatric evaluation with our provider</li>
+            <li>Screening for medical and psychiatric contraindications</li>
+            <li>Arrange for someone to drive you home after each session</li>
+            <li>Follow any pre-session eating and medication instructions we give you</li>
+        </ul>
+        <h3>During Your Session</h3>
+        <ul>
+            <li>You will be in a comfortable, private clinical space</li>
+            <li>Our clinical team monitors blood pressure and response throughout</li>
+            <li>Many patients report feeling relaxed, sleepy, lightheaded, emotionally sensitive, or somewhat disconnected from surroundings during the session</li>
+            <li>Sessions last approximately 60-90 minutes including monitoring</li>
+        </ul>
+        <h3>After Your Session</h3>
+        <ul>
+            <li>Monitoring continues until you are safe to leave</li>
+            <li>A designated driver must take you home; you cannot drive after a session</li>
+            <li>Most acute effects resolve within a few hours</li>
+            <li>Plan a low-demand rest of the day</li>
+        </ul>
+    </div>
+
+    <div class="card content-card">
+        <h2>Safety, Side Effects, and Who Should Not Receive Ketamine</h2>
+        <p>Common temporary side effects during or shortly after a session may include:</p>
+        <ul>
+            <li>Feeling relaxed, sleepy, or lightheaded</li>
+            <li>Feeling emotionally sensitive</li>
+            <li>Feeling disconnected from usual thoughts or surroundings (dissociation)</li>
+            <li>Elevated blood pressure or heart rate</li>
+            <li>Nausea</li>
+        </ul>
+        <div class="warning-box">
+            <strong>Ketamine therapy is not appropriate for everyone.</strong> Contraindications include uncontrolled hypertension, unstable cardiovascular disease, active substance use disorder involving ketamine or dissociatives, active psychotic disorder, pregnancy, and certain other medical or psychiatric conditions. Our team screens for these during your evaluation.
+        </div>
+    </div>
+
+    <div class="card content-card">
+        <h2>Cost and Payment</h2>
+        <div class="highlight-box">
+            <h3 style="color:var(--primary);margin-top:0">Cash Pay Only</h3>
+            <p style="color:var(--text);margin-bottom:0">Ketamine therapy at Delta Healing Solutions is offered on a cash-pay basis. It is not billed to insurance. We work to keep pricing accessible for our rural Utah patient population. Call <a href="tel:+14358645151" style="color:var(--primary);font-weight:600;">(435) 864-5151</a> for current pricing.</p>
+        </div>
+    </div>
+
+    <div class="card content-card">
+        <h2>How to Get Started</h2>
+        <p>All ketamine therapy patients start with a psychiatric evaluation so we can confirm the treatment is a good fit and screen for contraindications. To begin:</p>
+        <ol style="padding-left:20px;line-height:1.9;color:var(--muted)">
+            <li>Call our clinic at <a href="tel:+14358645151" style="color:var(--primary);font-weight:600;">(435) 864-5151</a> or email <a href="mailto:info@deltahealingsolutions.org" style="color:var(--primary);font-weight:600;">info@deltahealingsolutions.org</a></li>
+            <li>Complete a psychiatric evaluation with our provider</li>
+            <li>Review whether ketamine therapy, TMS, or another option is the best next step</li>
+            <li>Schedule and begin treatment if appropriate</li>
+        </ol>
+    </div>
+</div>
+
+<!-- Schema Markup: MedicalTherapy + FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "name": "Ketamine Therapy in Delta, Utah",
+      "url": "https://www.deltahealingsolutions.org/ketamine-therapy",
+      "about": {
+        "@type": "MedicalTherapy",
+        "name": "Ketamine Therapy",
+        "therapyType": "Pharmacotherapy",
+        "usedToTreat": {"@type": "MedicalCondition", "name": "Treatment-Resistant Depression"}
+      },
+      "provider": {"@id": "https://www.deltahealingsolutions.org/#clinic"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does insurance cover ketamine therapy at Delta Healing Solutions?",
+          "acceptedAnswer": {"@type": "Answer", "text": "No. Ketamine therapy at Delta Healing Solutions is offered on a cash-pay basis only. It is not billed to insurance. Call (435) 864-5151 for current pricing."}
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between ketamine therapy and NeuroStar TMS at Delta Healing Solutions?",
+          "acceptedAnswer": {"@type": "Answer", "text": "TMS is a non-invasive, non-medication treatment that uses magnetic pulses and is typically covered by insurance. Ketamine therapy is a medication-based treatment given under in-clinic supervision and is cash-pay only. Both are options for adults with depression that has not responded to standard antidepressants. Our team helps patients decide which is a better fit during a psychiatric evaluation."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a referral for ketamine therapy?",
+          "acceptedAnswer": {"@type": "Answer", "text": "A referral is not required. Patients can self-refer by calling (435) 864-5151. All patients complete a psychiatric evaluation before starting ketamine therapy so we can confirm it is a safe and appropriate option."}
+        },
+        {
+          "@type": "Question",
+          "name": "Can I drive after a ketamine session?",
+          "acceptedAnswer": {"@type": "Answer", "text": "No. You cannot drive yourself home after a ketamine session. A designated driver must take you home. Plan a low-demand rest of the day."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</section>

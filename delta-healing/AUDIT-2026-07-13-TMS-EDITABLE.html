@@ -1,0 +1,172 @@
+<!-- =========================================================
+     Delta Healing Solutions - TMS Therapy Page Code Block (v2)
+     Paste in: /neurostar-tms-therapy page > replace existing code block
+     Updated: 2026-07-13
+     Changes from prior version:
+       - Replaced generic "83% of patients improve" NeuroStar figure with
+         Delta Healing Solutions' own PHQ-9 outcome data (already
+         published on PROVIDERS-EDITABLE.html): 82.1% response, 61.3%
+         remission, 93.7% completion over 126 patients.
+       - Added named citations for the "FDA-cleared, 20+ years of
+         research" claim (Carpenter 2012; O'Reardon 2007) so referring
+         providers and AI answer engines can trace the claim.
+       - Added Dr. Rayner attribution.
+       - Added citation array to MedicalWebPage JSON-LD schema.
+       - Fixed misleading "20-30 total sessions" line — standard course
+         is 36 sessions per NeuroStar protocol; matches Providers page.
+     Visual design: unchanged (same #dhs-tms CSS as before).
+     ========================================================= -->
+<section id="dhs-tms">
+<style>
+html{scroll-behavior:smooth}
+#dhs-tms *{margin:0;padding:0;box-sizing:border-box}
+#dhs-tms{--bg:#f6f7fb;--card:#fff;--border:#e6e8f2;--text:#202332;--muted:#666b7b;--primary:#1e4d8b;--accent:#3db8a8;--shadow:0 10px 28px rgba(26,32,44,.07);--shadow-hover:0 18px 40px rgba(26,32,44,.12);--radius:20px;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(30,77,139,.04),transparent 24%),radial-gradient(circle at bottom right,rgba(61,184,168,.035),transparent 20%),var(--bg);padding:40px 0 70px}
+#dhs-tms .wrap{width:min(1160px,calc(100% - 30px));margin:auto}
+#dhs-tms h1,#dhs-tms h2,#dhs-tms h3{margin:0 0 12px;line-height:1.15;color:var(--text)}
+#dhs-tms h1{font-size:clamp(32px,4.2vw,50px);letter-spacing:-.03em}
+#dhs-tms h2{font-size:clamp(25px,2.5vw,34px);letter-spacing:-.02em}
+#dhs-tms h3{font-size:21px}
+#dhs-tms p{margin:0 0 14px;color:var(--muted);line-height:1.72;font-size:16px}
+#dhs-tms ul{margin:0 0 14px;padding-left:20px;line-height:1.8}
+#dhs-tms li{margin-bottom:6px;color:var(--muted)}
+#dhs-tms .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+#dhs-tms .hero{padding:38px;margin-bottom:24px;background:radial-gradient(circle at top right,rgba(30,77,139,.1),transparent 30%),radial-gradient(circle at bottom left,rgba(61,184,168,.07),transparent 25%),#fff}
+#dhs-tms .eyebrow{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);font-weight:800;margin-bottom:12px}
+#dhs-tms .content-card{padding:28px;margin-bottom:24px}
+#dhs-tms .benefits-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:20px 0}
+#dhs-tms .benefit-card{padding:20px;background:var(--card);border:1px solid var(--border);border-radius:16px;text-align:center;box-shadow:var(--shadow);transition:transform .2s ease}
+#dhs-tms .benefit-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+#dhs-tms .benefit-card h4{color:var(--primary);margin-bottom:.5rem;font-size:1.2rem}
+#dhs-tms .highlight-box{background:rgba(30,77,139,.05);border-left:4px solid var(--primary);padding:24px;margin:20px 0;border-radius:12px}
+#dhs-tms .citations{font-size:13px;color:var(--muted);border-top:1px dashed var(--border);margin-top:20px;padding-top:14px}
+#dhs-tms .citations ol{padding-left:22px}
+@media (max-width:1000px){#dhs-tms .benefits-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:720px){#dhs-tms{padding:20px 0 42px}#dhs-tms .wrap{width:min(100% - 18px,1160px)}#dhs-tms .benefits-grid{grid-template-columns:1fr}#dhs-tms .hero,#dhs-tms .content-card{padding:22px}}
+</style>
+
+<div class="wrap">
+    <div class="card hero">
+        <span class="eyebrow">Depression Treatment</span>
+        <h1>NeuroStar TMS Therapy in Delta, Utah</h1>
+        <p style="font-size:17px;max-width:62ch;color:var(--muted)">FDA-cleared, non-invasive treatment for depression. Delivered under psychiatric medical direction by Dr. Thomas Rayner, MD.</p>
+    </div>
+
+    <div class="card content-card">
+        <h2>What is TMS Therapy?</h2>
+        <p><strong>TMS (Transcranial Magnetic Stimulation)</strong> is an FDA-cleared, non-invasive procedure that uses focused magnetic pulses to stimulate nerve cells in brain regions associated with mood regulation, particularly the left dorsolateral prefrontal cortex. TMS is well-established for adults with major depressive disorder who have not responded adequately to antidepressant medications.<sup>1,2</sup></p>
+        <p>Delta Healing Solutions offers <strong>NeuroStar TMS</strong>, one of the most widely used TMS systems in the United States. Treatment is delivered under the medical direction of psychiatrist Dr. Thomas Rayner, MD.</p>
+    </div>
+
+    <div class="card content-card">
+        <h2>Delta Healing Solutions TMS Outcomes</h2>
+        <p>From March 2024 through December 2025, Delta Healing Solutions treated <strong>126 patients</strong> with TMS therapy.</p>
+        <div class="benefits-grid">
+            <div class="benefit-card"><h4>82.1%</h4><p>Clinical response (at least 50% reduction in PHQ-9)</p></div>
+            <div class="benefit-card"><h4>61.3%</h4><p>Achieved remission (final PHQ-9 of 4 or lower)</p></div>
+            <div class="benefit-card"><h4>93.7%</h4><p>Completed an adequate course (30+ sessions)</p></div>
+        </div>
+        <p style="font-size:14px;">These are Delta Healing Solutions' own clinic outcomes, not published trial averages. Outcomes are tracked using the PHQ-9 as a standardized clinical instrument at baseline and throughout treatment.</p>
+    </div>
+
+    <div class="card content-card">
+        <h2>Benefits of TMS Therapy</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card"><h4>Non-Invasive</h4><p>No surgery, no anesthesia</p></div>
+            <div class="benefit-card"><h4>No Medication</h4><p>No systemic side effects</p></div>
+            <div class="benefit-card"><h4>Convenient</h4><p>Return to normal activities immediately</p></div>
+            <div class="benefit-card"><h4>FDA-Cleared</h4><p>Backed by 20+ years of research<sup>1,2</sup></p></div>
+            <div class="benefit-card"><h4>Insurance Covered</h4><p>Most plans cover TMS for TRD</p></div>
+            <div class="benefit-card"><h4>Local Follow-Up</h4><p>PHQ-9 monitoring every 2-3 months after treatment</p></div>
+        </div>
+    </div>
+
+    <div class="card content-card">
+        <h2>Who is TMS For?</h2>
+        <p>TMS therapy may be appropriate for you if:</p>
+        <ul>
+            <li>You have been diagnosed with major depressive disorder (MDD)</li>
+            <li>You have not responded adequately to antidepressant medications</li>
+            <li>You cannot tolerate the side effects of antidepressants</li>
+            <li>You are looking for a non-medication treatment option</li>
+            <li>Previous treatments have not provided lasting relief</li>
+        </ul>
+        <p>Contraindications include ferromagnetic implants near the head, active mania, and history of seizure disorder. We screen for these during evaluation.</p>
+    </div>
+
+    <div class="card content-card">
+        <h2>What to Expect</h2>
+        <div class="highlight-box">
+            <h3 style="color:var(--primary);margin-top:0">Treatment Schedule</h3>
+            <ul style="margin-bottom:0">
+                <li>Daily sessions, Monday through Friday</li>
+                <li>Each session lasts approximately 19-37 minutes depending on protocol</li>
+                <li>Standard course: 36 sessions over 6-9 weeks</li>
+                <li>You can drive yourself to and from appointments</li>
+            </ul>
+        </div>
+
+        <h3>During Treatment</h3>
+        <ul>
+            <li>You sit in a comfortable treatment chair</li>
+            <li>The NeuroStar coil is positioned on your head</li>
+            <li>You feel a tapping sensation during the session</li>
+            <li>You can read, listen to music, or relax</li>
+            <li>No recovery time is needed afterward</li>
+        </ul>
+
+        <h3>Results Timeline</h3>
+        <ul>
+            <li>Most patients notice improvement within 2-4 weeks</li>
+            <li>Improvement continues to build throughout treatment</li>
+            <li>Delta Healing Solutions' clinic outcome: 82.1% of patients achieved clinical response (PHQ-9 reduction of at least 50%)</li>
+            <li>PHQ-9 follow-up surveys sent every 2-3 months after treatment to track durability</li>
+        </ul>
+    </div>
+
+    <div class="card content-card">
+        <h2>Side Effects</h2>
+        <p>TMS is well-tolerated with minimal side effects. The most common side effect is mild scalp discomfort or headache during or after treatment, which typically resolves after the first week. Unlike antidepressants, TMS does not cause:</p>
+        <ul>
+            <li>Weight gain</li>
+            <li>Sexual dysfunction</li>
+            <li>Nausea or digestive issues</li>
+            <li>Drowsiness or sedation</li>
+            <li>Memory problems</li>
+        </ul>
+    </div>
+
+    <div class="card content-card">
+        <h2>Are You a Provider?</h2>
+        <p>If you are a primary care provider or psychiatrist considering a referral for TMS, see our provider portal for clinical details and outcomes data, or use our printable <a href="/refer-a-patient" style="color:var(--primary);font-weight:600;">referral form</a>. Fax to 435-251-1572 or email info@deltahealingsolutions.org.</p>
+        <p class="citations">
+            <strong>References</strong>
+            <ol>
+                <li>Carpenter LL, et al. Transcranial magnetic stimulation (TMS) for major depression: a multisite, naturalistic, observational study of acute treatment outcomes in clinical practice. <em>Depress Anxiety.</em> 2012;29(7):587-596.</li>
+                <li>O'Reardon JP, et al. Efficacy and safety of transcranial magnetic stimulation in the acute treatment of major depression: a multisite randomized controlled trial. <em>Biol Psychiatry.</em> 2007;62(11):1208-1216.</li>
+            </ol>
+        </p>
+    </div>
+
+</div>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "NeuroStar TMS Therapy for Depression",
+  "url": "https://www.deltahealingsolutions.org/neurostar-tms-therapy",
+  "about": {
+    "@type": "MedicalProcedure",
+    "name": "Transcranial Magnetic Stimulation (TMS)",
+    "procedureType": "Therapeutic procedure",
+    "usedToTreat": {"@type": "MedicalCondition", "name": "Major Depressive Disorder"}
+  },
+  "citation": [
+    {"@type": "CreativeWork", "name": "Carpenter LL, et al. Transcranial magnetic stimulation for major depression: a multisite, naturalistic, observational study. Depress Anxiety. 2012;29(7):587-596."},
+    {"@type": "CreativeWork", "name": "O'Reardon JP, et al. Efficacy and safety of transcranial magnetic stimulation in the acute treatment of major depression: a multisite randomized controlled trial. Biol Psychiatry. 2007;62(11):1208-1216."}
+  ],
+  "provider": {"@id": "https://www.deltahealingsolutions.org/#clinic"}
+}
+</script>
+</section>

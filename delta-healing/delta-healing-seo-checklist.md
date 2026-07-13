@@ -22,8 +22,8 @@
 ### Home Page
 **Settings** > **Marketing** > **SEO** > **Home Page SEO**
 
-- **SEO Title**: `Delta Healing Solutions | TMS Therapy & Spravato Treatment in Delta, UT`
-- **SEO Description**: `Non-profit mental health clinic in Delta, UT. Offering TMS therapy, Spravato (esketamine) for treatment-resistant depression, psychiatric evaluations, medication management, and ADHD testing. Serving Millard County. (435) 864-5151`
+- **SEO Title**: `Delta Healing Solutions | TMS Therapy & Ketamine-Assisted Therapy in Delta, UT`
+- **SEO Description**: `Non-profit mental health clinic in Delta, UT. Offering TMS therapy, ketamine-assisted therapy for treatment-resistant depression, psychiatric evaluations, medication management, and ADHD testing. Serving Millard County. (435) 864-5151`
 
 ### About Page
 **Edit Page** > **Settings** > **SEO Tab**
@@ -48,10 +48,10 @@
 - **SEO Title**: `ADHD Testing & Cognitive Evaluations | Delta, UT | Professional Assessment`
 - **SEO Description**: `Professional ADHD testing and cognitive evaluations in Delta, Utah. Comprehensive neuropsychological assessments for children and adults. Call (435) 864-5151.`
 
-### Spravato Treatment (NEW SERVICE)
-- **SEO Title**: `Spravato (Esketamine) Treatment | Treatment-Resistant Depression | Delta, UT`
-- **SEO Description**: `FDA-approved Spravato treatment for treatment-resistant depression in Delta, Utah. Esketamine nasal spray administered under medical supervision. Rapid-acting relief. (435) 864-5151`
-- **URL Slug**: `/spravato-treatment-delta-utah` (recommended)
+### Ketamine-Assisted Therapy (replaces retired Spravato service — 2026-07-13)
+- **SEO Title**: `Ketamine-Assisted Therapy | Treatment-Resistant Depression | Delta, UT`
+- **SEO Description**: `Medically supervised ketamine-assisted therapy in Delta, Utah for adults with treatment-resistant depression. IM injections plus IV available. Call (435) 864-5151.`
+- **URL Slug**: `/ketamine-therapy` (live nav slug — matches existing Squarespace page)
 
 ---
 
@@ -68,7 +68,7 @@
 - TMS equipment: `NeuroStar TMS therapy equipment for depression treatment`
 - Staff photos: `Mental health professional at Delta Healing Solutions`
 - Waiting room: `Comfortable waiting area at Delta Healing Solutions mental health clinic`
-- Exterior: `Delta Healing Solutions clinic exterior at 95 White Sage Avenue, Delta, UT`
+- Exterior: `Delta Healing Solutions clinic exterior at 95 White Sage Avenue, Suite A, Delta, UT`
 
 ---
 
@@ -81,7 +81,7 @@
 3. **Complete all fields**:
    - ✅ Business name: Delta Healing Solutions
    - ✅ Category: Mental Health Clinic (Primary), Psychiatrist (Secondary), Medical Clinic
-   - ✅ Address: 95 White Sage Avenue, Delta, UT 84624
+   - ✅ Address: 95 White Sage Avenue, Suite A, Delta, UT 84624
    - ✅ Phone: (435) 864-5151
    - ✅ Website: https://www.deltahealingsolutions.org
    - ✅ Hours: Mon-Fri 9am-4pm
@@ -89,7 +89,7 @@
 
 4. **Add Services** (in Google Business):
    - NeuroStar TMS Therapy
-   - Spravato (Esketamine) Treatment
+   - Ketamine-Assisted Therapy
    - Psychiatric Evaluation
    - Medication Management
    - ADHD Testing
@@ -188,8 +188,8 @@
 
 **Monthly blog topics:**
 - "Understanding TMS Therapy: What to Expect"
-- "Spravato Treatment: A New Hope for Treatment-Resistant Depression"
-- "TMS vs Spravato: Which Depression Treatment is Right for You?"
+- "Ketamine-Assisted Therapy: A New Option for Treatment-Resistant Depression"
+- "TMS vs Ketamine-Assisted Therapy: Which Depression Treatment is Right for You?"
 - "Signs You May Need a Psychiatric Evaluation"
 - "ADHD in Adults: When to Get Tested"
 - "Managing Depression in Rural Utah"
@@ -197,7 +197,7 @@
 - "Mental Health Resources in Millard County"
 - "The Difference Between Psychiatry and Psychology"
 - "How TMS Therapy Helps Treatment-Resistant Depression"
-- "What to Expect During Your First Spravato Treatment Session"
+- "What to Expect During Your First Ketamine-Assisted Therapy Session"
 - "FDA-Approved Breakthrough Treatments for Depression"
 
 **SEO tip**: Include "Delta, UT" or "Millard County" naturally in each post.
@@ -207,11 +207,11 @@
 
 **Suggested FAQs:**
 1. What is TMS therapy?
-2. What is Spravato (esketamine) treatment?
-3. How does Spravato work for depression?
+2. What is ketamine-assisted therapy?
+3. How does ketamine work for depression?
 4. How long does TMS therapy take?
 5. Is TMS covered by insurance?
-6. Is Spravato covered by insurance?
+6. Is ketamine-assisted therapy covered by insurance?
 7. What should I bring to my first appointment?
 8. Do you accept new patients?
 9. What areas do you serve?
@@ -220,7 +220,7 @@
 12. Do you prescribe medication?
 13. Is TMS therapy safe?
 14. What is treatment-resistant depression?
-15. Can I drive after a Spravato treatment session?
+15. Can I drive after a ketamine-assisted therapy session?
 
 ### Add Patient Testimonials
 - Create a "Testimonials" or "Success Stories" page
@@ -312,8 +312,8 @@ Content:
 
 **Monitor rankings:**
 - Google yourself: "TMS therapy Delta UT"
-- Google yourself: "Spravato treatment Delta UT"
-- Google yourself: "esketamine Delta Utah"
+- Google yourself: "ketamine therapy Delta UT"
+- Google yourself: "ketamine-assisted therapy Delta Utah"
 - Google yourself: "mental health clinic Delta Utah"
 - Google yourself: "ADHD testing Millard County"
 - Google yourself: "treatment-resistant depression Utah"
