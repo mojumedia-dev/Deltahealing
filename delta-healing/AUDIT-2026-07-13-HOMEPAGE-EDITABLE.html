@@ -1,12 +1,15 @@
 <!-- =========================================================
-     Delta Healing Solutions - Home Page Code Block (v2)
+     Delta Healing Solutions - Home Page Code Block (v3)
      Paste in: Home page > add Code Block (replace existing block)
      Updated: 2026-07-13
-     Changes from prior version:
-       - Spravato service card replaced with Ketamine Therapy (matches live nav)
-       - Service card URLs corrected to match live site slugs
-       - FAQ schema updated: Spravato Q replaced with Ketamine Q
-     Visual design: unchanged (same #dhs-home CSS as before)
+     Changes from v2 (2026-07-13 earlier):
+       - Bakes in Tyla's 3 tone priorities: synergy, safety-net, subtle privacy
+       - Adds synergy band above services grid
+       - Rewrites About block copy for combination-treatment framing
+       - Adds insurance help + non-profit cash pricing note
+       - Adds subtle small-community privacy line in hero note
+       - New FAQ items: privacy, combined treatment, insurance help
+     Visual design: unchanged (same #dhs-home CSS as v2, plus additive scoped classes)
      ========================================================= -->
 <section id="dhs-home">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -72,6 +75,19 @@ html {
 #dhs-home .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 18px; border-radius: 999px; font-weight: 700; font-size: 14px; text-decoration: none; border: 1px solid transparent; transition: transform .18s ease, background .18s ease; cursor: pointer; }
 #dhs-home .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 24px rgba(30,77,139,.22); }
 #dhs-home .btn-primary:hover { background: #2a5d9b; transform: translateY(-1px); }
+#dhs-home .btn-secondary { background: #fff; color: var(--primary); border-color: #d5d9ea; }
+#dhs-home .btn-secondary:hover { background: #f8f9fd; transform: translateY(-1px); }
+
+/* Synergy Band (new) */
+#dhs-home .synergy {
+    padding: 30px 34px;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, rgba(30,77,139,.06), rgba(61,184,168,.05));
+    border-left: 4px solid var(--accent);
+}
+#dhs-home .synergy h2 { color: var(--primary); margin-bottom: 10px; }
+#dhs-home .synergy p { color: var(--text); font-size: 17px; max-width: 68ch; margin-bottom: 8px; }
+#dhs-home .synergy p.sub { color: var(--muted); font-size: 15px; margin-top: 6px; }
 
 /* Services Grid */
 #dhs-home .services-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-bottom: 24px; }
@@ -83,23 +99,43 @@ html {
 #dhs-home .service-card p { margin-bottom: 16px; font-size: 15px; }
 #dhs-home .service-link { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; color: var(--primary); text-decoration: none; }
 
+/* Safety Net Band (new) */
+#dhs-home .safety-net { padding: 28px; margin-bottom: 24px; }
+#dhs-home .safety-net h2 { color: var(--primary); }
+#dhs-home .safety-net-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 18px; }
+#dhs-home .safety-net-card { padding: 20px; background: rgba(30,77,139,.05); border-radius: 14px; }
+#dhs-home .safety-net-card h3 { display: flex; align-items: center; gap: 10px; color: var(--primary); font-size: 17px; margin-bottom: 8px; }
+#dhs-home .safety-net-card h3 i { color: var(--accent); font-size: 20px; }
+#dhs-home .safety-net-card p { font-size: 14px; margin: 0; }
+
 /* About */
 #dhs-home .about { padding: 28px; margin-bottom: 24px; }
+#dhs-home .faq { padding: 28px; margin-bottom: 24px; }
+#dhs-home .faq h2 { text-align: center; margin-bottom: 8px; }
+#dhs-home .faq .faq-lead { text-align: center; max-width: 58ch; margin: 0 auto 24px; color: var(--muted); }
+#dhs-home .faq details { border: 1px solid var(--border); border-radius: 12px; padding: 0; margin-bottom: 12px; background: #fff; transition: box-shadow .18s ease; }
+#dhs-home .faq details[open] { box-shadow: var(--shadow); }
+#dhs-home .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 700; color: var(--text); font-size: 16px; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+#dhs-home .faq summary::-webkit-details-marker { display: none; }
+#dhs-home .faq summary::after { content: "\002B"; color: var(--primary); font-size: 22px; line-height: 1; transition: transform .18s ease; }
+#dhs-home .faq details[open] summary::after { content: "\2212"; }
+#dhs-home .faq details p { padding: 0 22px 20px; margin: 0; color: var(--muted); line-height: 1.6; font-size: 15px; }
 #dhs-home .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
 #dhs-home .about-features { list-style: none; padding: 0; }
 #dhs-home .about-features li { padding: 12px 0 12px 35px; position: relative; font-size: 1.1rem; color: var(--text); }
-#dhs-home .about-features li:before { content: "✓"; position: absolute; left: 0; color: #48bb78; font-weight: bold; font-size: 1.5rem; }
+#dhs-home .about-features li:before { content: "\2713"; position: absolute; left: 0; color: #48bb78; font-weight: bold; font-size: 1.5rem; }
 
 @media (max-width: 1000px) {
     #dhs-home .hero { grid-template-columns: 1fr; }
     #dhs-home .services-grid { grid-template-columns: 1fr 1fr; }
+    #dhs-home .safety-net-grid { grid-template-columns: 1fr; }
     #dhs-home .about-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
     #dhs-home { padding: 20px 0 42px; }
     #dhs-home .wrap { width: min(100% - 18px, 1160px); }
     #dhs-home .services-grid { grid-template-columns: 1fr; }
-    #dhs-home .hero, #dhs-home .about, #dhs-home .service-card { padding: 22px; }
+    #dhs-home .hero, #dhs-home .about, #dhs-home .service-card, #dhs-home .synergy, #dhs-home .safety-net, #dhs-home .faq { padding: 22px; }
     #dhs-home .hero-art { min-height: 235px; }
 }
 </style>
@@ -109,21 +145,29 @@ html {
     <!-- Hero -->
     <div class="card hero">
         <div>
-            <span class="eyebrow">Mental Health Care</span>
-            <h1>Compassionate Mental Health Care in Delta, Utah</h1>
+            <span class="eyebrow">Mental Health Care in Delta, Utah</span>
+            <h1>Safe, effective options for people who feel like they have tried everything.</h1>
             <p class="lead">
-                Non-profit clinic offering NeuroStar TMS therapy, ketamine therapy, psychiatric services, medication management, and ADHD testing. Serving Millard County and surrounding areas.
+                Delta Healing Solutions is a non-profit clinic offering NeuroStar TMS therapy, ketamine-assisted therapy, psychiatric services, medication management, and ADHD testing. We think in combinations, not silos, because TMS, talk therapy, and ketamine work better together than any one on its own.
             </p>
             <div class="btn-row">
                 <a href="tel:+14358645151" class="btn btn-primary"><i class="fas fa-phone"></i> Call (435) 864-5151</a>
+                <a href="/contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Request an Appointment</a>
             </div>
         </div>
         <div class="hero-art">
             <div class="hero-note">
-                <strong>Evidence-based treatment</strong>
-                Breakthrough therapies including NeuroStar TMS and ketamine for treatment-resistant depression.
+                <strong>Confidential care.</strong>
+                Your visit stays between you and our team. We understand the concerns of a small community.
             </div>
         </div>
+    </div>
+
+    <!-- Synergy Band -->
+    <div class="card synergy">
+        <h2>Treatment plans built around the person, not the service.</h2>
+        <p>TMS works better with talk therapy. Ketamine works better with TMS and talk therapy. We plan care in combinations because that is what the evidence supports and what most people actually need.</p>
+        <p class="sub">Not sure where to start? A psychiatric evaluation matches you to the right combination.</p>
     </div>
 
     <!-- Services Grid -->
@@ -132,42 +176,70 @@ html {
         <div class="service-card">
             <div class="service-icon"><i class="fas fa-brain"></i></div>
             <h3>NeuroStar TMS Therapy</h3>
-            <p>FDA-cleared, non-invasive magnetic brain stimulation for treatment-resistant depression. No medication, no anesthesia, no downtime.</p>
-            <a href="/neurostar-tms-therapy" class="service-link">Learn More →</a>
+            <p>FDA-cleared, non-invasive magnetic brain stimulation for treatment-resistant depression. No medication, no anesthesia, no downtime. Most major insurance plans accepted.</p>
+            <a href="/neurostar-tms-therapy" class="service-link">Learn More &rarr;</a>
         </div>
 
-        <!-- Ketamine Therapy (replaces prior Spravato card to match live nav) -->
+        <!-- Ketamine Therapy -->
         <div class="service-card">
             <div class="service-icon"><i class="fas fa-pills"></i></div>
-            <h3>Ketamine Therapy</h3>
-            <p>Medically supervised ketamine treatment for adults who have not found enough relief from traditional approaches. Cash-pay, in-clinic monitoring.</p>
-            <a href="/ketamine-therapy" class="service-link">Learn More →</a>
+            <h3>Ketamine-Assisted Therapy</h3>
+            <p>Medically supervised ketamine for adults who have not found enough relief from traditional approaches. Works alongside TMS and talk therapy for combined benefit.</p>
+            <a href="/ketamine-therapy" class="service-link">Learn More &rarr;</a>
         </div>
 
         <!-- Psychiatric Evaluation -->
         <div class="service-card">
             <div class="service-icon"><i class="fas fa-clipboard-list"></i></div>
             <h3>Psychiatric Evaluation</h3>
-            <p>Comprehensive mental health assessments to diagnose depression, anxiety, ADHD, and other conditions. Expert diagnostic care.</p>
-            <a href="/psychiatric-evaluation" class="service-link">Learn More →</a>
+            <p>Comprehensive mental health assessments to diagnose depression, anxiety, ADHD, and other conditions, and to build a personalized treatment plan.</p>
+            <a href="/psychiatric-evaluation" class="service-link">Learn More &rarr;</a>
         </div>
 
         <!-- Medication Management -->
         <div class="service-card">
             <div class="service-icon"><i class="fas fa-prescription-bottle"></i></div>
             <h3>Medication Management</h3>
-            <p>Ongoing psychiatric medication monitoring and adjustment. Personalized treatment plans to support your mental health.</p>
-            <a href="/medication-management" class="service-link">Learn More →</a>
+            <p>Ongoing psychiatric medication monitoring and adjustment. Personalized plans that pair with therapy and other services for lasting results.</p>
+            <a href="/medication-management" class="service-link">Learn More &rarr;</a>
         </div>
 
         <!-- Cognitive Testing -->
         <div class="service-card">
             <div class="service-icon"><i class="fas fa-bullseye"></i></div>
-            <h3>ADHD & Cognitive Testing</h3>
-            <p>Professional neuropsychological assessments for children and adults. Comprehensive ADHD evaluations and cognitive testing.</p>
-            <a href="/cognitive-testing" class="service-link">Learn More →</a>
+            <h3>ADHD &amp; Cognitive Testing</h3>
+            <p>Professional neuropsychological assessments for children and adults. Comprehensive ADHD evaluations and cognitive testing with clear next steps.</p>
+            <a href="/cognitive-testing" class="service-link">Learn More &rarr;</a>
         </div>
 
+        <!-- Referring Providers -->
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-user-md"></i></div>
+            <h3>For Referring Providers</h3>
+            <p>PHQ-9 outcomes: 82.1% response, 61.3% remission, 93.7% treatment completion across 126 patients. We handle prior auth and coordinate with your practice.</p>
+            <a href="/providers" class="service-link">Provider Portal &rarr;</a>
+        </div>
+
+    </div>
+
+    <!-- Safety Net Band -->
+    <div class="card safety-net">
+        <h2>Care that meets you where you are.</h2>
+        <p>Cost and paperwork should not stop anyone from getting help. As a non-profit, we work with you.</p>
+        <div class="safety-net-grid">
+            <div class="safety-net-card">
+                <h3><i class="fas fa-shield-alt"></i> Insurance we accept</h3>
+                <p>Humana, Select Health, Cigna, Aetna, UMR, United Healthcare, Medicare, PEHP, HMA, Tricare, EMI, and Blue Cross/Blue Shield. Call (435) 864-5151 to verify your plan.</p>
+            </div>
+            <div class="safety-net-card">
+                <h3><i class="fas fa-hand-holding-heart"></i> Non-profit cash pricing</h3>
+                <p>Medicaid is not currently accepted, but we offer affordable non-profit cash pricing designed specifically for patients without commercial coverage.</p>
+            </div>
+            <div class="safety-net-card">
+                <h3><i class="fas fa-file-medical"></i> Prior auth help</h3>
+                <p>Our team handles insurance verification and prior authorization for TMS and other services, so you can focus on treatment.</p>
+            </div>
+        </div>
     </div>
 
     <!-- About Section -->
@@ -175,24 +247,88 @@ html {
         <h2>About Delta Healing Solutions</h2>
         <div class="about-grid">
             <div>
-                <p>We are a <strong>non-profit mental health clinic</strong> dedicated to providing accessible, compassionate psychiatric care to Delta, Fillmore, Oak City, Hinckley, and all of Millard County, Utah.</p>
-                <p>Our experienced team offers NeuroStar TMS therapy and ketamine therapy alongside traditional psychiatric services, so patients in rural Utah have local access to the same treatments available in metro areas.</p>
+                <p>We are a <strong>non-profit mental health clinic</strong> serving Delta, Fillmore, Oak City, Hinckley, and all of Millard County, Utah. Our board-certified psychiatrist, Dr. Thomas Rayner, leads a team of PA-Cs, TMS technicians, and support staff who plan care as a combination of therapies, not a single service.</p>
+                <p>Rural communities deserve the same treatments available in metro areas. That is why we brought NeuroStar TMS, ketamine-assisted therapy, medication management, and psychiatric evaluation together under one roof at 95 White Sage Avenue, Suite A.</p>
             </div>
             <div>
                 <ul class="about-features">
                     <li>Non-profit organization committed to accessible care</li>
-                    <li>FDA-cleared TMS treatment for depression</li>
-                    <li>Board-eligible psychiatric medical direction</li>
-                    <li>Most insurance plans accepted for TMS and psychiatric care</li>
-                    <li>Serving rural Utah communities</li>
+                    <li>FDA-cleared TMS with 93.7% treatment completion rate</li>
+                    <li>Board-certified psychiatric medical direction</li>
+                    <li>Combination treatment plans: TMS, ketamine, talk therapy, meds</li>
+                    <li>Confidential care for a small community</li>
+                    <li>Serving all of Millard County and surrounding areas</li>
                 </ul>
             </div>
         </div>
     </div>
 
+    <!-- Common Questions -->
+    <div class="card faq">
+        <h2>Common Questions</h2>
+        <p class="faq-lead">A quick overview. Call us or send a message any time and we will walk you through your specific situation.</p>
+
+        <details>
+            <summary>Does Delta Healing Solutions accept new patients?</summary>
+            <p>Yes. We accept new patients for psychiatric evaluation, NeuroStar TMS therapy, ketamine-assisted therapy, medication management, and ADHD or cognitive testing. Call (435) 864-5151 to schedule.</p>
+        </details>
+
+        <details>
+            <summary>What insurance plans do you accept?</summary>
+            <p>Humana, Select Health, Cigna, Aetna, UMR, United Healthcare, Medicare, PEHP, HMA, Tricare, EMI, and Blue Cross/Blue Shield. Our team handles insurance verification and prior authorization. Medicaid is not currently accepted, but as a non-profit we offer affordable cash pricing for patients without commercial coverage.</p>
+        </details>
+
+        <details>
+            <summary>What is TMS therapy?</summary>
+            <p>TMS (Transcranial Magnetic Stimulation) is an FDA-cleared, non-invasive treatment for depression using magnetic pulses. Delta Healing Solutions offers NeuroStar TMS for patients who have not responded to traditional antidepressants. TMS is often planned alongside talk therapy for stronger, more durable results.</p>
+        </details>
+
+        <details>
+            <summary>What is ketamine-assisted therapy?</summary>
+            <p>Ketamine-assisted therapy is a medically supervised treatment for patients who have not found enough response through traditional antidepressants. At Delta Healing Solutions, ketamine is administered in-clinic under monitoring and is most effective when combined with TMS and talk therapy. It is cash-pay only, not billed to insurance.</p>
+        </details>
+
+        <details>
+            <summary>Is treatment at Delta Healing Solutions confidential?</summary>
+            <p>Yes. Every visit is confidential and stays between you and our team. We understand the concerns of a small community and take privacy seriously. Discretion is part of what we do.</p>
+        </details>
+
+        <details>
+            <summary>Where is Delta Healing Solutions located?</summary>
+            <p>95 White Sage Avenue, Suite A, Delta, UT 84624. We serve Millard County and surrounding rural Utah communities including Fillmore, Oak City, Hinckley, and Nephi.</p>
+        </details>
+    </div>
+
 </div>
 
-<!-- Schema Markup: FAQ (updated - Spravato Q swapped for Ketamine Q) -->
+<!-- Schema Markup: MedicalClinic + FAQ (v3, updated for combination-treatment framing) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Delta Healing Solutions",
+  "url": "https://www.deltahealingsolutions.org/",
+  "telephone": "+1-435-864-5151",
+  "email": "info@deltahealingsolutions.org",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "95 White Sage Avenue, Suite A",
+    "addressLocality": "Delta",
+    "addressRegion": "UT",
+    "postalCode": "84624",
+    "addressCountry": "US"
+  },
+  "medicalSpecialty": ["Psychiatry", "MentalHealth"],
+  "availableService": [
+    {"@type": "MedicalTherapy", "name": "NeuroStar TMS Therapy"},
+    {"@type": "MedicalTherapy", "name": "Ketamine-Assisted Therapy"},
+    {"@type": "MedicalTherapy", "name": "Psychiatric Medication Management"},
+    {"@type": "MedicalProcedure", "name": "Psychiatric Evaluation"},
+    {"@type": "MedicalTest", "name": "ADHD and Cognitive Testing"}
+  ]
+}
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -203,15 +339,31 @@ html {
       "name": "What is TMS therapy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TMS (Transcranial Magnetic Stimulation) is FDA-cleared, non-invasive treatment for depression using magnetic pulses. Delta Healing Solutions offers NeuroStar TMS therapy for patients who have not responded to traditional antidepressants."
+        "text": "TMS (Transcranial Magnetic Stimulation) is FDA-cleared, non-invasive treatment for depression using magnetic pulses. Delta Healing Solutions offers NeuroStar TMS for patients who have not responded to traditional antidepressants. TMS is often planned alongside talk therapy for stronger, more durable results."
       }
     },
     {
       "@type": "Question",
-      "name": "What is ketamine therapy?",
+      "name": "What is ketamine-assisted therapy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ketamine therapy is a medically supervised treatment that may help patients who have not found enough relief through traditional antidepressants. At Delta Healing Solutions, ketamine is administered in-clinic under monitoring. It is offered on a cash-pay basis and is not billed to insurance."
+        "text": "Ketamine-assisted therapy is a medically supervised treatment that may help patients who have not found enough relief through traditional antidepressants. At Delta Healing Solutions, ketamine is administered in-clinic under monitoring and is most effective when combined with TMS and talk therapy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What insurance plans does Delta Healing Solutions accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We accept Humana, Select Health, Cigna, Aetna, UMR, United Healthcare, Medicare, PEHP, HMA, Tricare, EMI, and Blue Cross/Blue Shield. Our team handles insurance verification and prior authorization. Medicaid is not currently accepted, but as a non-profit we offer affordable cash pricing designed for patients without commercial coverage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is treatment at Delta Healing Solutions confidential?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every visit is confidential and stays between you and our team. We understand the concerns of a small community and take privacy seriously. Discretion is part of what we do."
       }
     },
     {
@@ -219,7 +371,7 @@ html {
       "name": "Where is Delta Healing Solutions located?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Delta Healing Solutions is located at 95 White Sage Avenue, Suite A, Delta, UT 84624. The clinic serves Millard County and surrounding areas of rural Utah."
+        "text": "Delta Healing Solutions is located at 95 White Sage Avenue, Suite A, Delta, UT 84624. The clinic serves Millard County and surrounding rural Utah communities."
       }
     },
     {
@@ -227,7 +379,7 @@ html {
       "name": "Does Delta Healing Solutions accept new patients?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Delta Healing Solutions accepts new patients for psychiatric evaluation, TMS therapy, ketamine therapy, medication management, and ADHD or cognitive testing. Call (435) 864-5151 to schedule."
+        "text": "Yes. Delta Healing Solutions accepts new patients for psychiatric evaluation, TMS therapy, ketamine-assisted therapy, medication management, and ADHD or cognitive testing. Call (435) 864-5151 to schedule."
       }
     }
   ]

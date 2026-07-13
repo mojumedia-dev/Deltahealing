@@ -1,0 +1,196 @@
+<!-- =========================================================
+     Delta Healing Solutions - Global Header Code Injection
+     Paste in: Settings > Advanced > Code Injection > HEADER
+     v3 - 2026-07-13 (merged with existing production header)
+     Preserved from prior version:
+       - Google Analytics 4 (G-HK6GKR820B)
+       - Click-to-Call button CSS
+       - Facebook + Instagram sameAs
+       - Local SEO geo meta tags
+       - Performance preconnect links
+     Updated in v3:
+       - streetAddress corrected to include "Suite A"
+       - description: Spravato removed, ketamine added, "rural Utah" language added
+       - availableService: expanded with structured MedicalTherapy entries per service
+       - areaServed: expanded to Fillmore, Oak City, Hinckley, Nephi, Juab County, Utah
+       - medicalSpecialty: expanded to Depression/Anxiety/PTSD/OCD/Bipolar
+       - Added Physician sub-schema for Dr. Thomas Rayner (Medical Director)
+       - NonProfit 501(c)(3) status flagged
+       - isAcceptingNewPatients: true
+       - ICBM meta tag added (companion to geo.position)
+     Removed:
+       - Psychology Today sameAs URL — Delta is not yet listed there
+         (directory audit 2026-07-13). Restore this line once the profile exists.
+     ========================================================= -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HK6GKR820B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HK6GKR820B');
+</script>
+
+<style>
+/* Click-to-Call Button Style */
+.click-to-call {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #1e4d8b;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.click-to-call:hover {
+  background: #0052a3;
+}
+</style>
+
+<!-- Global Business Schema (appears on all pages) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["MedicalClinic", "NGO"],
+      "@id": "https://www.deltahealingsolutions.org/#clinic",
+      "name": "Delta Healing Solutions",
+      "alternateName": "Delta Healing Solutions TMS Clinic",
+      "description": "Non-profit mental health clinic in Delta, UT providing NeuroStar TMS therapy, ketamine-assisted therapy, psychiatric evaluation, medication management, and ADHD/cognitive testing. Serving Millard County and rural Utah.",
+      "url": "https://www.deltahealingsolutions.org",
+      "logo": "https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/ef9b868c-0580-4cb9-a1a1-a445980554f6/DeltaHealingSolutions_Logo.png",
+      "image": "https://images.squarespace-cdn.com/content/v1/655d0dd7fe98cc17ae90ce19/ef9b868c-0580-4cb9-a1a1-a445980554f6/DeltaHealingSolutions_Logo.png",
+      "telephone": "+1-435-864-5151",
+      "email": "info@deltahealingsolutions.org",
+      "faxNumber": "+1-435-251-1572",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "95 White Sage Avenue, Suite A",
+        "addressLocality": "Delta",
+        "addressRegion": "UT",
+        "postalCode": "84624",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.3510231",
+        "longitude": "-112.5593524"
+      },
+      "hasMap": "https://maps.app.goo.gl/zr9KbmTedrrQesBr6",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "16:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61557053634976",
+        "https://www.instagram.com/deltahealingsolutions/"
+      ],
+      "areaServed": [
+        {"@type": "City", "name": "Delta", "sameAs": "https://en.wikipedia.org/wiki/Delta,_Utah"},
+        {"@type": "City", "name": "Fillmore"},
+        {"@type": "City", "name": "Oak City"},
+        {"@type": "City", "name": "Hinckley"},
+        {"@type": "City", "name": "Nephi"},
+        {"@type": "AdministrativeArea", "name": "Millard County"},
+        {"@type": "AdministrativeArea", "name": "Juab County"},
+        {"@type": "State", "name": "Utah"}
+      ],
+      "medicalSpecialty": [
+        "Psychiatry",
+        "Mental Health",
+        "Depression Treatment",
+        "Treatment-Resistant Depression",
+        "Anxiety Disorders",
+        "ADHD",
+        "PTSD",
+        "Bipolar Disorder",
+        "OCD"
+      ],
+      "availableService": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "NeuroStar TMS Therapy",
+          "alternateName": "Transcranial Magnetic Stimulation",
+          "url": "https://www.deltahealingsolutions.org/neurostar-tms-therapy",
+          "usedToTreat": {"@type": "MedicalCondition", "name": "Major Depressive Disorder"}
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Ketamine-Assisted Therapy",
+          "url": "https://www.deltahealingsolutions.org/ketamine-therapy",
+          "usedToTreat": {"@type": "MedicalCondition", "name": "Treatment-Resistant Depression"}
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Psychiatric Evaluation",
+          "procedureType": "Diagnostic procedure",
+          "url": "https://www.deltahealingsolutions.org/psychiatric-evaluation"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Psychiatric Medication Management",
+          "url": "https://www.deltahealingsolutions.org/medication-management"
+        },
+        {
+          "@type": "MedicalTest",
+          "name": "ADHD and Cognitive Testing",
+          "url": "https://www.deltahealingsolutions.org/cognitive-testing",
+          "usedToDiagnose": [
+            {"@type": "MedicalCondition", "name": "Attention Deficit Hyperactivity Disorder"},
+            {"@type": "MedicalCondition", "name": "Cognitive Impairment"}
+          ]
+        }
+      ],
+      "employee": [
+        {"@id": "https://www.deltahealingsolutions.org/#dr-rayner"}
+      ],
+      "nonprofitStatus": "Nonprofit501c3",
+      "isAcceptingNewPatients": true
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://www.deltahealingsolutions.org/#dr-rayner",
+      "name": "Thomas Rayner, MD",
+      "givenName": "Thomas",
+      "familyName": "Rayner",
+      "honorificSuffix": "MD",
+      "jobTitle": "Medical Director",
+      "medicalSpecialty": ["Psychiatry", "Adult Psychiatry"],
+      "affiliation": [
+        {"@type": "Organization", "name": "American Psychiatric Association"},
+        {"@type": "Organization", "name": "Clinical TMS Society"}
+      ],
+      "alumniOf": [
+        {"@type": "MedicalOrganization", "name": "University of Utah School of Medicine"},
+        {"@type": "MedicalOrganization", "name": "University of Nevada, Reno (Adult Psychiatry Residency)"}
+      ],
+      "worksFor": {"@id": "https://www.deltahealingsolutions.org/#clinic"},
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "Doctor of Medicine (MD)"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Local SEO Meta Tags -->
+<meta name="geo.region" content="US-UT" />
+<meta name="geo.placename" content="Delta" />
+<meta name="geo.position" content="39.3510231;-112.5593524" />
+<meta name="ICBM" content="39.3510231, -112.5593524" />
+
+<!-- Performance - Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.squarespace-cdn.com">

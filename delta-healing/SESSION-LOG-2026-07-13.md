@@ -122,3 +122,80 @@ Adam is doing the code install himself (not Tyla for this iteration). The AUDIT-
 4. Claude adjusts the file, Adam re-pastes
 
 Iterative until Squarespace state matches intent.
+
+---
+
+# Afternoon iteration (2026-07-13 PM)
+
+## Tyla's email response captured
+
+Tyla responded positively to the authority strategy proposal:
+
+- **12 insurance plans accepted:** Humana, Select Health, Cigna, Aetna, UMR, United Healthcare, Medicare (NO MEDICAID), PEHP, HMA, Tricare, EMI, Blue Cross/Blue Shield
+- **Angie's role:** clinical citations / peer-reviewed content (Item #4 workstream). Contact `angie@deltahealingsolutions.org` — also the contact-form recipient.
+- **Tone/topic priorities (baked into every code block going forward):**
+  1. Synergy angle — TMS + Talk Therapy + Ketamine work together, not siloed
+  2. Safety-net messaging — insurance/prior auth help, non-profit affordable cash pricing
+  3. Subtle privacy signal for small-community patients
+- **Chronicle outreach:** approved by Tyla. Draft email to Sam Jacobson in scratchpad.
+- **EIN 96-4598362** — saved to memory, baked into Donate BOTTOM tax-ID line.
+
+## Directory listings audit (Item #5) — 3 structural discoveries
+
+`DIRECTORY_AUDIT_20260713.md` in root. Explains referral drought + AI-search invisibility:
+
+1. **NeuroStar Provider Locator listing is LIVE but broken:** URL exists (neurostar.com/providers/delta-healing-solutions/). Says Suite B (should be A). TMS-only description. Dr. Rayner not listed. 15-min NeuroStar rep call fixes.
+2. **Federal entity name mismatch:** Delta is registered as "Unified Healing Solutions" on GuideStar / IRS Form 990. Requires DBA filing.
+3. **Dr. Rayner's NPI (1194008979)** still shows Provo/Pleasant Grove Whole Mind address, not Delta. One NPI update at nppes.cms.hhs.gov cascades to Healthgrades/Vitals/Zocdoc/WebMD/Doximity + insurance directories.
+
+Also NOT listed: Psychology Today, Yelp, BBB, Healthgrades (Utah), Vitals-at-Delta. TrailBlaze Utah pulled its listing (HTTP 410) — the source ChatGPT was citing for Delta.
+
+## Full site code-block batch (12 files pasted by Adam)
+
+Second subagent produced 11 `AUDIT-2026-07-13-*` code blocks + Global Header v3. Adam pasted iteratively and requested many refinements.
+
+**Pages delivered:**
+- Global Header v3 (merged with production; GA4 preserved)
+- Homepage, About, Providers, TMS, Ketamine, Med Mgmt, Psych Eval, ADHD, Events, Thank You
+- Contact TOP + Contact BOTTOM (3-block form structure)
+- Donate TOP + Donate BOTTOM (2-block donation-button structure)
+
+**Corrections applied during rapid iteration:**
+
+- **TMS subhead mid-phrase break** — removed `max-width: 62ch`, rephrased, wrapped "Dr. Thomas Rayner, MD" in `nowrap`.
+- **Self-assessment CTA restored to TMS** — Adam flagged missing block. Wasn't in any local file (Tyla added it in Squarespace after last snapshot). Rebuilt as gradient card linking to PHQ-9 survey.
+- **Providers page referral CTA** — anchor-link `#refer` instead of nonexistent `/referral-form` URL. Removed Online Form contact box. Bottom "Submit a Referral" button → `tel:` link.
+- **FAQ + TMS referral copy** — removed all `/refer-a-patient` references (Delta doesn't have that page).
+- **Elend LeBaron photo URL** — Adam provided real CDN URL (fe051f46 UUID, IMG_5240.jpg). Swapped placeholder in both card + modal.
+- **Events "No Events" empty state** — padded up substantially (110px desktop, 60px mobile).
+- **Global Header v3 merged** — original was missing GA4 (G-HK6GKR820B). Merged GA4 + click-to-call CSS + FB/IG sameAs + geo meta + preconnect links. Removed Psychology Today sameAs (Delta not listed there).
+- **Contact page split into 3-block structure** — Squarespace native Form Block in middle. Wrong-shape single-block audit contact archived.
+- **Insurance Widget on Contact TOP** — 12-plan CSS Grid (auto-fit for full-width span) + tactful Medicaid callout with non-profit cash-pricing framing. Iterated once when chip layout was too centered.
+- **Common Questions FAQ on Homepage** — 6 native `<details>` accordions mirroring the FAQPage JSON-LD schema. Zero JS.
+- **Donate page split into 2-block structure** — Squarespace donation block in middle. Impact amounts synced to LIVE site ($150 / $220 / $2,500). EIN baked in. Donor privacy callout added.
+
+**Files archived to `_archive/UNUSED-*`:**
+- `REFERRAL-FORM-EDITABLE` (Delta has no web referral form)
+- `CONTACT-EDITABLE-SINGLE-BLOCK` (wrong shape for 3-block structure)
+- `DONATE-EDITABLE-SINGLE-BLOCK` (wrong shape for 2-block structure)
+- `PATIENT-PORTAL-EDITABLE` (goes to external CRM)
+- `INSURANCE-EDITABLE` (no dedicated page — content lives on Contact widget + other pages)
+- `FAQ-EDITABLE` (no dedicated page — Q&As now on Homepage)
+
+## Deferred / next-session items
+
+**Tyla or Delta staff action:**
+- NeuroStar Provider Locator fix (15-min rep call) — HIGHEST ROI
+- Dr. Rayner NPI update at nppes.cms.hhs.gov (1 hr form)
+- DBA filing "Unified Healing Solutions" → "Delta Healing Solutions" (multi-week)
+- Google Business Profile claim + optimize (30 min)
+- Psychology Today listing (30 min)
+
+**Adam:**
+- Send Chronicle outreach email (draft at scratchpad)
+
+**Claude (queued for next session):**
+- Peer-reviewed citations for service pages (Angie's Item #4 workstream, once she shares what she's gathered)
+- Yelp, BBB, Utah DSAMH secondary directory work
+- Talk Therapy dedicated page (still orphaned service)
+- Re-run TrailBlaze Utah re-submission if directory link matters

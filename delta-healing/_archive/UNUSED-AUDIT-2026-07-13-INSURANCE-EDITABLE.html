@@ -1,0 +1,313 @@
+<!-- =========================================================
+     Delta Healing Solutions - Insurance & Payment Page Code Block (NEW)
+     Paste in: Insurance page > Code Block (new page)
+     Updated: 2026-07-13
+     Priorities baked in:
+       - Full list of 12 accepted plans
+       - Safety-net: prior auth handled, non-profit cash pricing, sliding options
+       - Tactful Medicaid handling: after accepted list, framed as alternative pathway
+       - Privacy: subtle confidentiality note
+       - Synergy: combination-treatment framing on covered services
+     ========================================================= -->
+<section id="dhs-insurance">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+html { scroll-behavior: smooth; }
+
+#dhs-insurance {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --border: #e6e8f2;
+    --text: #202332;
+    --muted: #666b7b;
+    --primary: #1e4d8b;
+    --accent: #3db8a8;
+    --shadow: 0 10px 28px rgba(26,32,44,.07);
+    --shadow-hover: 0 18px 40px rgba(26,32,44,.12);
+    --radius: 20px;
+
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, rgba(30,77,139,.04), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(61,184,168,.035), transparent 20%),
+        var(--bg);
+    padding: 40px 0 70px;
+}
+
+#dhs-insurance * { box-sizing: border-box; }
+#dhs-insurance .wrap { width: min(1160px, calc(100% - 30px)); margin: auto; }
+#dhs-insurance h1, #dhs-insurance h2, #dhs-insurance h3 { margin: 0 0 12px; line-height: 1.15; color: var(--text); }
+#dhs-insurance h1 { font-size: clamp(32px, 4.2vw, 50px); letter-spacing: -.03em; }
+#dhs-insurance h2 { font-size: clamp(25px, 2.5vw, 34px); letter-spacing: -.02em; }
+#dhs-insurance h3 { font-size: 21px; }
+#dhs-insurance p { margin: 0 0 14px; color: var(--muted); line-height: 1.72; font-size: 16px; }
+#dhs-insurance ul { margin: 0 0 14px; padding-left: 20px; line-height: 1.8; }
+#dhs-insurance li { margin-bottom: 6px; color: var(--muted); }
+#dhs-insurance .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+
+#dhs-insurance .hero {
+    padding: 38px; margin-bottom: 24px;
+    background:
+        radial-gradient(circle at top right, rgba(30,77,139,.10), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(61,184,168,.07), transparent 25%),
+        #fff;
+}
+#dhs-insurance .eyebrow { display: inline-block; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--primary); font-weight: 800; margin-bottom: 12px; }
+#dhs-insurance .lead { font-size: 17px; max-width: 62ch; }
+
+#dhs-insurance .content-card { padding: 32px; margin-bottom: 24px; }
+#dhs-insurance .highlight-box { background: rgba(30,77,139,.05); border-left: 4px solid var(--primary); padding: 24px; margin: 20px 0; border-radius: 12px; }
+
+#dhs-insurance .plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+}
+#dhs-insurance .plan-card {
+    padding: 18px 20px;
+    background: rgba(30,77,139,.05);
+    border-radius: 12px;
+    display: flex; align-items: center; gap: 12px;
+    font-weight: 600; color: var(--text); font-size: 15px;
+}
+#dhs-insurance .plan-card i { color: var(--accent); font-size: 18px; }
+
+#dhs-insurance .cash-band {
+    padding: 32px;
+    margin: 24px 0;
+    background: linear-gradient(135deg, rgba(61,184,168,.09), rgba(30,77,139,.06));
+    border-radius: 16px;
+    border-left: 4px solid var(--accent);
+}
+#dhs-insurance .cash-band h3 { color: var(--primary); margin-top: 0; }
+#dhs-insurance .cash-band p { color: var(--text); }
+
+#dhs-insurance .btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+#dhs-insurance .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 24px; border-radius: 999px; font-weight: 700; font-size: 14px; text-decoration: none; border: 1px solid transparent; transition: transform .18s ease, background .18s ease; cursor: pointer; }
+#dhs-insurance .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 24px rgba(30,77,139,.22); }
+#dhs-insurance .btn-primary:hover { background: #2a5d9b; transform: translateY(-1px); }
+#dhs-insurance .btn-secondary { background: #fff; color: var(--primary); border-color: #d5d9ea; }
+#dhs-insurance .btn-secondary:hover { background: #f8f9fd; transform: translateY(-1px); }
+
+#dhs-insurance .steps-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
+#dhs-insurance .step-card { padding: 22px 18px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); text-align: center; }
+#dhs-insurance .step-num { width: 40px; height: 40px; margin: 0 auto 12px; background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; }
+#dhs-insurance .step-card h3 { font-size: 16px; margin-bottom: 6px; color: var(--primary); }
+#dhs-insurance .step-card p { font-size: 13px; margin: 0; }
+
+#dhs-insurance .faq-item { padding: 20px 0; border-bottom: 1px solid var(--border); }
+#dhs-insurance .faq-item:last-child { border-bottom: none; }
+#dhs-insurance .faq-item h3 { color: var(--primary); font-size: 18px; margin-bottom: 8px; }
+#dhs-insurance .faq-item p { margin: 0; }
+
+@media (max-width: 1000px) {
+    #dhs-insurance .plans-grid { grid-template-columns: 1fr 1fr; }
+    #dhs-insurance .steps-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+    #dhs-insurance { padding: 20px 0 42px; }
+    #dhs-insurance .wrap { width: min(100% - 18px, 1160px); }
+    #dhs-insurance .plans-grid, #dhs-insurance .steps-grid { grid-template-columns: 1fr; }
+    #dhs-insurance .hero, #dhs-insurance .content-card, #dhs-insurance .cash-band { padding: 22px; }
+}
+</style>
+
+<div class="wrap">
+
+    <!-- Hero -->
+    <div class="card hero">
+        <span class="eyebrow">Insurance &amp; Payment</span>
+        <h1>Coverage, cash pricing, and the paperwork we handle for you.</h1>
+        <p class="lead">
+            We accept most major commercial and government plans, our team handles insurance verification and prior authorization, and as a non-profit we offer affordable cash pricing for patients without commercial coverage. Cost should not decide who can get help.
+        </p>
+        <div class="btn-row">
+            <a href="tel:+14358645151" class="btn btn-primary"><i class="fas fa-phone"></i> Call to Verify (435) 864-5151</a>
+            <a href="/contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Ask About Coverage</a>
+        </div>
+    </div>
+
+    <!-- Accepted Plans -->
+    <div class="card content-card">
+        <h2>Insurance Plans We Accept</h2>
+        <p>These plans cover psychiatric evaluation, medication management, ADHD testing, and NeuroStar TMS therapy at Delta Healing Solutions. If you do not see your plan listed, call us at <a href="tel:+14358645151" style="color:var(--primary);">(435) 864-5151</a>. Coverage details change and we can often verify in a single call.</p>
+
+        <div class="plans-grid">
+            <div class="plan-card"><i class="fas fa-check-circle"></i> Humana</div>
+            <div class="plan-card"><i class="fas fa-check-circle"></i> Select Health</div>
+            <div class="plan-card"><i class="fas fa-check-circle"></i> Cigna</div>
+            <div class="plan-card"><i class="fas fa-check-circle"></i> Aetna</div>
+            <div class="plan-card"><i class="fas fa-check-circle"></i> UMR</div>
+            <div class="plan-card"><i class="fas fa-check-circle"></i> United Healthcare</div>
+            <div class="plan-card"><i class="fas fa-check-circle"></i> Medicare</div>
+            <div class="plan-card"><i class="fas fa-check-circle"></i> PEHP</div>
+            <div class="plan-card"><i class="fas fa-check-circle"></i> HMA</div>
+            <div class="plan-card"><i class="fas fa-check-circle"></i> Tricare</div>
+            <div class="plan-card"><i class="fas fa-check-circle"></i> EMI</div>
+            <div class="plan-card"><i class="fas fa-check-circle"></i> Blue Cross/Blue Shield</div>
+        </div>
+    </div>
+
+    <!-- Non-profit cash pricing (tactful Medicaid handling) -->
+    <div class="card content-card">
+        <h2>No Commercial Insurance? We Have a Path.</h2>
+        <p>Medicaid is not currently accepted at Delta Healing Solutions. As a non-profit, we built an alternative specifically for patients without commercial coverage.</p>
+
+        <div class="cash-band">
+            <h3>Non-Profit Cash Pricing</h3>
+            <p style="margin-bottom:8px;"><strong>Affordable, straightforward cash pricing you will not find at other clinics.</strong> Because we are a 501(c)(3), we set cash rates to serve the community, not to profit from it.</p>
+            <p style="margin-bottom:0;">Call us to get a plain-English estimate for any service. We will walk you through what things cost and what payment options exist.</p>
+        </div>
+
+        <ul>
+            <li><strong>Cash-pay psychiatric evaluation, medication management, and ADHD testing</strong> at non-profit rates</li>
+            <li><strong>Ketamine-assisted therapy</strong> is offered on a cash-pay basis in-clinic under monitoring</li>
+            <li><strong>Payment plans</strong> that work with your situation, ask us what is possible</li>
+            <li><strong>Sliding options</strong> discussed on a case-by-case basis</li>
+        </ul>
+    </div>
+
+    <!-- Prior Auth Help -->
+    <div class="card content-card">
+        <h2>Prior Authorization: We Handle It</h2>
+        <p>TMS and some other psychiatric services require prior authorization from your insurance. That paperwork is our job, not yours.</p>
+
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>Call or Submit</h3>
+                <p>Contact us with your insurance card. We verify benefits.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>We File</h3>
+                <p>Our insurance specialist submits the prior auth paperwork.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>We Follow Up</h3>
+                <p>We chase the approval so you do not have to.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">4</div>
+                <h3>You Get Care</h3>
+                <p>Once approved, we schedule and start treatment.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Covered services -->
+    <div class="card content-card">
+        <h2>Services and Coverage</h2>
+        <p>We plan care as a combination, and different pieces of that plan are billed differently. Here is a quick guide.</p>
+        <ul>
+            <li><strong>NeuroStar TMS Therapy</strong> - covered by most listed plans; prior authorization required</li>
+            <li><strong>Psychiatric Evaluation</strong> - covered by most listed plans; no prior authorization needed</li>
+            <li><strong>Medication Management</strong> - covered by most listed plans</li>
+            <li><strong>ADHD and Cognitive Testing</strong> - covered by most listed plans; some testing may require prior auth</li>
+            <li><strong>Ketamine-Assisted Therapy</strong> - offered on a cash-pay basis, not billed to insurance</li>
+        </ul>
+    </div>
+
+    <!-- Privacy note -->
+    <div class="card content-card">
+        <h2>Your Coverage Details Stay Private</h2>
+        <p>Insurance conversations happen one-on-one. In a small community, we understand the difference between "small town" and "small business," and we treat both with equal discretion. Your visit stays between you and our team.</p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card content-card">
+        <h2>Insurance FAQ</h2>
+
+        <div class="faq-item">
+            <h3>How do I find out if my plan covers TMS?</h3>
+            <p>Call us at (435) 864-5151 with your insurance card. Our specialist verifies your benefits, usually the same day, and tells you what to expect for out-of-pocket costs.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do I need a referral?</h3>
+            <p>Most plans do not require a referral for psychiatric evaluation or medication management. TMS typically requires prior authorization, which we handle. Some HMO-style plans require a PCP referral, and we can tell you which.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What if my plan is not on the list?</h3>
+            <p>Call anyway. Plan networks change, and we may still be in-network or able to offer out-of-network options. If neither works, we can quote non-profit cash pricing.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>You said Medicaid is not accepted. What are my options?</h3>
+            <p>Our non-profit cash pricing was built specifically for patients without commercial coverage. Call us for a plain estimate and to discuss payment plans that fit your situation.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is ketamine-assisted therapy covered by insurance?</h3>
+            <p>Ketamine is offered on a cash-pay basis and is not billed to insurance. We can provide detailed pricing and, in many cases, combine ketamine with insurance-covered TMS and medication management as one plan.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How long does prior authorization take?</h3>
+            <p>Most TMS prior authorizations come back within 5-10 business days. Complex cases can take longer. We keep you updated at every step.</p>
+        </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <div class="card content-card">
+        <h2>Ready to Verify Your Coverage?</h2>
+        <p>Have your insurance card handy. One call and we will tell you what is covered, what is not, and what your options are.</p>
+        <div class="btn-row">
+            <a href="tel:+14358645151" class="btn btn-primary"><i class="fas fa-phone"></i> Call (435) 864-5151</a>
+            <a href="mailto:info@deltahealingsolutions.org" class="btn btn-secondary"><i class="fas fa-envelope"></i> Email Us</a>
+        </div>
+        <p style="margin-top:20px; font-size:14px;">95 White Sage Avenue, Suite A, Delta, UT 84624</p>
+    </div>
+
+</div>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Insurance & Payment - Delta Healing Solutions",
+  "description": "Insurance plans accepted at Delta Healing Solutions: Humana, Select Health, Cigna, Aetna, UMR, United Healthcare, Medicare, PEHP, HMA, Tricare, EMI, Blue Cross/Blue Shield. Non-profit cash pricing available for patients without commercial coverage.",
+  "url": "https://www.deltahealingsolutions.org/insurance"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What insurance does Delta Healing Solutions accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Humana, Select Health, Cigna, Aetna, UMR, United Healthcare, Medicare, PEHP, HMA, Tricare, EMI, and Blue Cross/Blue Shield. Call (435) 864-5151 to verify your specific plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Delta Healing Solutions accept Medicaid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Medicaid is not currently accepted. As a non-profit, Delta Healing Solutions offers affordable cash pricing designed specifically for patients without commercial coverage, along with payment plans and sliding options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who handles prior authorization for TMS therapy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Delta Healing Solutions handles all prior authorization paperwork for TMS and covered services. Patients do not need to navigate insurance approvals themselves."
+      }
+    }
+  ]
+}
+</script>
+
+</section>
