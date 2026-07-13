@@ -184,18 +184,33 @@ Second subagent produced 11 `AUDIT-2026-07-13-*` code blocks + Global Header v3.
 
 ## Deferred / next-session items
 
-**Tyla or Delta staff action:**
-- NeuroStar Provider Locator fix (15-min rep call) — HIGHEST ROI
-- Dr. Rayner NPI update at nppes.cms.hhs.gov (1 hr form)
-- DBA filing "Unified Healing Solutions" → "Delta Healing Solutions" (multi-week)
-- Google Business Profile claim + optimize (30 min)
-- Psychology Today listing (30 min)
+**Waiting on Delta staff action:**
+- **NeuroStar Provider Locator fix** — Tyla, 15-min rep call. Suite B → A, add ketamine + med mgmt + ADHD, add Dr. Rayner. HIGHEST single ROI.
+- **Dr. Rayner NPI update at nppes.cms.hhs.gov** — 1 hr NPPES form. Cascades to Healthgrades, Vitals, Zocdoc, WebMD, Doximity + insurance directories.
+- **DBA filing** for Unified Healing Solutions → Delta Healing Solutions. County clerk paperwork, multi-week but foundational; also prerequisite for X.509 cert order.
+- **Google Business Profile claim + optimize** — 30 min. GBP already exists (5.0/7 reviews), needs verification + services added.
+- **AdvancedMD reply on X.509 cert question** — Tyla emailed 2026-07-13 evening. Three possible outcomes: (1) AdvancedMD holds it, nothing to buy; (2) Delta supplies IdenTrust cert; (3) separate CMS program, IdenTrust direct.
+- **Ketamine clinical protocol document** — Tyla mentioned it but attached the marketing flyer instead. Actual protocol doc still to come.
+- **Reply from Sam Jacobson (Chronicle)** — pending Adam sending the outreach email once he tracks down Sam's email (not published; newsroom number 435-864-2400 or best-guess patterns).
 
 **Adam:**
-- Send Chronicle outreach email (draft at scratchpad)
+- Send Chronicle outreach email (draft at scratchpad, cleaned of em dashes).
+- Reply forwarded to Tyla on X.509 cert (sent 2026-07-13 evening).
 
-**Claude (queued for next session):**
-- Peer-reviewed citations for service pages (Angie's Item #4 workstream, once she shares what she's gathered)
-- Yelp, BBB, Utah DSAMH secondary directory work
-- Talk Therapy dedicated page (still orphaned service)
-- Re-run TrailBlaze Utah re-submission if directory link matters
+**Claude (queued proactive options):**
+- **(a) Peer-reviewed citation starter kit for TMS + ketamine** — 10–15 strongest studies per modality (Carpenter 2012, THREE-D trial, O'Reardon 2007, Loo 2018, Wilkinson 2017 ketamine, etc.) formatted for direct paste as service-page footnotes. Gives Angie a running start on Item #4.
+- **(b) Pre-drafted profile copy for Yelp / BBB / Psychology Today / TrailBlaze Utah re-submission** — copy-paste-ready for whoever sits down to submit each site.
+- **(c) Talk Therapy dedicated page** — orphaned service, needs its own AUDIT code block with synergy/safety-net/privacy tone.
+- **(d) Referring-provider ketamine protocol page scaffold** — build shell now, drop clinical details in once Tyla sends the actual protocol doc.
+- **(e) Chronicle follow-up piece pitch to Sam Jacobson** — dedicated ketamine-therapy story with Dr. Rayner as subject. Bigger authority signal than the link ask.
+
+## Delta AdvancedMD context saved 2026-07-13 PM
+
+Delta runs EHR + Practice Management + Patient Portal + Billing through **AdvancedMD**. Tenant ID 157829. Patient portal URL that lives on Squarespace's "Patient Portal" nav button:
+`https://pp-wfe-100.advancedmd.com/157829/account/logon`
+
+**Practical implication for CMS work:** AdvancedMD includes their own EDI clearinghouse, so any Medicare X.509 certificate / EDI / billing-related question should route to AdvancedMD support FIRST. They may already hold the cert on Delta's behalf, or they'll tell Tyla exactly what Delta needs to supply. Do not order IdenTrust certificates without checking with AdvancedMD first.
+
+## Dr. Terrell Sellers — name + role reconciled 2026-07-13 PM
+
+Correct name is **Dr. Terrell Sellers**, not "Terry" (Chronicle used a nickname or errored). Tyla confirmed Delta is running its ketamine protocol WITH him — meaning he's involved as a consulting / prescribing / collaborating physician for the ketamine program (his Board-Certified Addiction Medicine credential is directly relevant). He is NOT a W-2 employee (do not add to About team roster or Physician schema for Delta), but he IS clinically involved. If we build a dedicated ketamine-protocol page for referring providers, his role can be cited there.
